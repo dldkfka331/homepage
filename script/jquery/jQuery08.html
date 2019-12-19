@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery08</title>
+    <style>
+        .span{ font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 0px 6px 2px 6px;}
+        .span2 {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #215770; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    </style>
+</head>
+<body>
+    <h1>웹 디자인의 정보</h1>
+    <p class="txt" aria-label="정보디자인 (Information Design), 유저 인터페이스 디자인(User Interface Design), 그래픽 디자인(Graphic Design), 컴퓨터그래픽(Computer Design)  운영 등 필요 지식을 기반으로 정보를 계층화하고 설계해야한다.">정보디자인 (Information Design), 유저 인터페이스 디자인(User Interface Design), 그래픽 디자인(Graphic Design), 컴퓨터그래픽(Computer Design)  운영 등 필요 지식을 기반으로 정보를 계층화하고 설계해야한다.</p>
+    <button class="btn">이게 중요합니다.</button>
+    <button class="btn2">취소합니다.</button>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        let text = $(".txt").text().split(" ").join("</span> <span aria-hidden='true'>"); //p태그의 text를 변수에 저장
+            text = "<span aria-hidden='true'>"+text+"</span>"
+        $(".txt").html(text).find("span").hover(function(){
+            $(this).addClass("span");
+        }, function (){
+            $(this).removeClass("span");
+        });
+
+        //정보디자인 서치 - >강조 -> 버튼을 클릭했을 때 /contains 글자찾기
+        $(".btn").click(function(){
+            $(".txt").find(":contains('정보디자인')").addClass("span2");
+        })
+        //취소하면 강조표시 삭제-> 버튼 클릭 
+        $(".btn2").click(function(){
+            $(".txt").find(".span2").removeClass("span2");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript34</title>
+    <style>
+         span{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h1 id="h1">오늘은 월요일 이니까 집에가고 싶습니다.</h1>
+    <script>
+        let text = document.getElementById("h1").textContent;
+        let spanText = text.split(" ").join("</span> <span>");          //한단어씩 자름 
+            spanText = "<span>" + spanText + "</span><br>";
+
+        let spanText2 = text.split("").join("</span> <span>");          //한글자씩 자름 
+            spanText2 = "<span>" + spanText2 + "</span><br>";
+        
+        document.write(spanText);
+        document.write(spanText2);
+    </script>
+</body>
+</html>

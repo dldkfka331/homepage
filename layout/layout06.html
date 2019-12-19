@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃 기본6</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap {width: 100%; font-size: 50px; text-align: center; text-transform: uppercase;}
+        #header-wrap {width: 100%; height: 100px; background-color: #f9fbe7;}
+        #banner-wrap {width: 100%; height: 450px; background-color: #f0f4c3;}
+        #content-wrap {width: 100%; height: 650px; background-color: #e6ee9c;}
+        #footer-wrap {width: 100%; height: 100px; background-color: #e5f269;}
+        /*전체배경, width값 100%로줘서 화면크기가 줄어도 같이줄어든다*/
+        
+        .header {width: 1100px; height: 100px; line-height: 100px; margin: 0 auto; background-color: #ffa726;}
+        .banner {width: 1100px; height: 450px; line-height: 450px; margin: 0 auto; background-color: #ff9800;}
+        .content {width: 1100px; height: 650px; line-height: 650px; margin: 0 auto; background-color: #f57c00;}
+        .footer {width: 1100px; height: 100px; line-height:100px ; margin: 0 auto; background-color: #e65100;}
+    </style>
+    
+</head>
+<body>
+   <div id="wrap">
+       <div id="header-wrap">
+           <div class="header">header</div> <!--header-wrap안에 header박스를 넣음-->
+       </div>
+       <div id="banner-wrap">
+           <div class="banner">banner</div>
+       </div>
+       <div id="content-wrap">
+           <div class="content">content</div>
+       </div>
+       <div id="footer-wrap">
+           <div class="footer">footer</div>
+       </div>
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive layout2</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		#wrap {width: 1200px; margin: 0 auto; }
+		#header {width: 100%; height: 100px; background-color: #f9b4ab;}
+		#side {width: 30%; height: 700px; background-color: #fdebd3; float: left;}
+		#cont {width: 70%;height: 700px; background-color: #264e70; float: left;}
+		#footer {width: 100%; height: 100px; background-color: #679186; clear: both;}
+
+		/*화면 너비 (0)769~1220 px*/
+		@media (max-width: 1220px) { 
+			#wrap {width: 95%;}
+		 }
+
+		 /*화면 너비 (0)481~768 px*/
+		 @media (max-width: 768px) { 
+		 	#wrap {width: 100%;}
+		 }
+
+		 /*화면 너비 0~480 px*/
+		 @media (max-width: 480px) { 
+		 	#side {width: 100%; height: 300px; float: none;}
+		 	#cont {width: 100%; height: 300px; float: none;}
+		 }
+		 
+	</style>
+
+
+
+
+</head>
+<body>
+	<div id="wrap">
+		<div id="header"></div>
+		<div id="side"></div>
+		<div id="cont"></div>
+		<div id="footer"></div>
+	</div>
+	
+</body>
+</html>

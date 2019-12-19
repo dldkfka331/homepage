@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Test01</title>
+    <script>
+        // 화면에 "자바스크립트 1"를 출력해주세요
+        document.write("자바스크립트1");
+        document.write("<br>");
+        //변수를 만들어서 "자바스크립트2"를 출력해주세요
+        let x1 = "자바스크립트2";
+        document.write (x1);
+        document.write("<br>");
+        //상수를 만들어서 "자바스크립트3"를 출력해주세요
+        const x2 = "자바스크립트3";
+        document.write(x2);
+        document.write("<br>");
+        //함수를 만들어서 "자바스크립트4"를 출력해주세요
+        function x3(){
+            document.write("자바스크립트4")
+        }
+        x3();
+        document.write("<br>");
+        //함수와  매개변수 하나를 만들어서 "자바스크립트5"를 출력해주세요
+        function x4(x4_1){
+            document.write(x4_1); 
+        }
+        x4("자바스크립트5");
+        document.write("<br>");
+        //함수와 매개변수 두개를 만들어서 "자바스크립트", "6"를 출력해주세요
+        function x5(x5_1,x5_2){
+            document.write(x5_1,x5_2); 
+        }
+        x5("자바스크립트","6");
+        document.write("<br>");
+        //배열을 만들어서 "자바스크립트","7" 를 출력해주세요
+        const arr1 = new Array;
+        arr1[0] = "자바스크립트";
+        arr1[1] = "7";
+        document.write(arr1[0]);
+        document.write(arr1[1]);
+        document.write("<br>");
+        //배열을 선언과 동시에 초기화 해서 "자바스크립트","8" 를 출력해주세요
+        const arr2 = new Array("자바스크립트","8");
+        document.write(arr2[0]);
+        document.write(arr2[1]);
+        document.write("<br>");
+        //배열을 선언하지 않고 "자바스크립트", "9"를 출력해주세요
+        const arr3 = ["자바스크립트", "9"];
+        document.write(arr3[0]);
+        document.write(arr3[1]);
+        document.write("<br>");
+        //배열에 "자""바""스""크""립""트""10" 를 저장하고 출력해주세요
+        const arr4 = ["자","바","스","크","립","트","10"];
+        for(i=0; i<arr4.length; i++){
+            document.write(arr4[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

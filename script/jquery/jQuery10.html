@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery10</title>
+</head>
+<body>
+    <h3>each</h3>
+    <div class="list">
+        <ol>
+            <li>add</li>
+            <li>add</li>
+            <li>add</li>
+            <li>add</li>
+            <li>add</li>
+            <li>add</li>
+        </ol>
+    </div>
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        //li 컬러값을 빨간색으로
+        //$(".list").css("color","red");
+        $(".list li").each(function(index){
+            //setTimeout(함수,시간)
+            setTimeout(function(){
+                $(".list li").eq(index).css("color","blue");
+            },1000*(index+1));
+           //$(this).css("color","blue");
+        });
+    </script>
+</body>
+</html>

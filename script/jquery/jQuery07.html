@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery07</title>
+</head>
+<body>
+    <h3>탐색</h3>
+    <div class="list">
+        <ul>
+            <li>1. children()</li>
+            <li class="select">2. find()
+                <ul class="sub_Select1">
+                    <li>첫번째 자식입니다.</li>
+                    <li>첫번째 자식입니다.</li>
+                </ul>
+            </li>
+            <li class="select">3. next()
+                <ul>
+                    <li>첫번째 자식입니다.</li>
+                    <li>첫번째 자식입니다.
+                        <ul>
+                            <li class="one">두번째 자식입니다.</li>
+                            <li>두번째 자식입니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>4. nextAll()</li>
+            <li>5. nextAll()</li>
+            <li>6. parent()</li>
+            <li>7. parentAll()</li>
+        </ul>
+    </div>
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+            //$(".list li.select li").children().css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})  //여러개속성사용법
+            //$(".list li.select").children(" .sub_Select1").css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"}) 
+            //$(".list li.select").find("li").css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"}) //li를 하나하나 찾음
+            //$(".list li:nth-child(5)").next().css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})
+            //$(".list li:nth-child(5)").nextAll().css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})
+            //$(".one").parent().css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})
+            //$(".one").parentsUntil(".select").css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})
+            $(".list li:nth-child(7)").prevUntil(".select").css({"color":"red" ,"backgroundColor":"#ccc","border":"1px dashed #000"})
+    </script>
+</body>
+</html>

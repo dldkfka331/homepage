@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="#">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | Filter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .abox{ background: #f4f8fa; padding: 5px; overflow: hidden; display: flex; flex-wrap: wrap;}
+        .abox > div {
+             width: 33.333%; transition: all 0.5s ease;
+        }
+        .abox > div:hover {filter: none; background-blend-mode: normal;}
+        .abox > div img {width: 100%;}
+       h2 .btn{float: right; background: #ccc; margin-left: 10px; color: #fff;}
+        .abox.height >div {min-height: 200px;}
+    </style>
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">ARAM'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs9" id="content">
+        <div class="container">
+            <h1>Filter</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <!-- col-md-9 -->
+            <div class="col-md-9" role="main">
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Filter</h2>                    
+                    <div class="well">filter : none | blur() | brihgtness() | contrast | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url()</div>
+                    <table class="table table-striped table-bordered table-hover">
+                       <thead>
+                          <tr>
+                             <th>Porperty</th>
+                             <th>Description</th>
+                          </tr>
+                       </thead>
+                       <tbody>
+                          <tr>
+                             <td>none</td>
+                             <td>이미지의 아무런 효과를 주지 않습니다.</td>
+                          </tr>
+                          <tr>
+                             <td>blur(px)</td>
+                             <td>이미지의 블러 효과를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>brihgtness(%)</td>
+                             <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>contrast(%)</td>
+                             <td>이미지의 대비를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>drop-shadow()</td>
+                             <td>이미지의 그림자를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>grayscale(%)</td>
+                             <td>이미지의 그레이스케일을 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>hue-ratate(deg)</td>
+                             <td>이미지의 색조를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>invert(%)</td>
+                             <td>이미지의  반전색상을 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>opacity(%)</td>
+                             <td>이미지의 투명도를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>saturate(%)</td>
+                             <td>이미지의 채도를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>sepia(%)</td>
+                             <td>이미지의 세피아 효과를 설정합니다.</td>
+                          </tr>
+                          <tr>
+                             <td>url()</td>
+                             <td>이미지의 경로를 설정합니다.</td>
+                          </tr>
+                          
+                       </tbody>
+                    </table>
+                </div>
+                <!--//intro1-->
+
+                <style>
+                    .blur1 {filter:blur(1px)}
+                    .blur2 {filter:blur(3px)}
+                    .blur3 {filter:blur(5px)}
+                    .blur4 {filter:blur(7px)}
+                    .blur5 {filter:blur(10px)}
+                    .blur6 {filter:blur(20px)}
+                </style>
+                <!--sample1-->
+                <div class="bs-docs-section">
+                        <h2 id="sample1" class="page-header">blur() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="blur1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="blur2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="blur3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="blur4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="blur5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="blur6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.blur1 {filter:blur(1px)}
+.blur2 {filter:blur(3px)}
+.blur3 {filter:blur(5px)}
+.blur4 {filter:blur(7px)}
+.blur5 {filter:blur(10px)}
+.blur6 {filter:blur(20px)}</code></pre>   
+                </div>    
+                <!--//sample1-->
+
+                <style>
+                .brihgtness1 {filter: brightness(10%);}
+                .brihgtness2 {filter: brightness(20%);}
+                .brihgtness3 {filter: brightness(30%);}
+                .brihgtness4 {filter: brightness(40%);}
+                .brihgtness5 {filter: brightness(60%);}
+                .brihgtness6 {filter: brightness(80%);}
+                </style>
+                <!--sample2-->
+                <div class="bs-docs-section">
+                        <h2 id="sample2" class="page-header">brihgtness() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="brihgtness1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="brihgtness2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="brihgtness3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="brihgtness4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="brihgtness5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="brihgtness6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.brihgtness1 {filter: brightness(10%);}
+.brihgtness2 {filter: brightness(20%);}
+.brihgtness3 {filter: brightness(30%);}
+.brihgtness4 {filter: brightness(40%);}
+.brihgtness5 {filter: brightness(60%);}
+.brihgtness6 {filter: brightness(80%);}</code></pre>   
+                </div>    
+                <!--//sample2-->
+
+                <style>
+                .contrast1 {filter: contrast(10%);}
+                .contrast2 {filter: contrast(20%);}
+                .contrast3 {filter: contrast(30%);}
+                .contrast4 {filter: contrast(40%);}
+                .contrast5 {filter: contrast(60%);}
+                .contrast6 {filter: contrast(80%);}
+                .contrast7 {filter: contrast(0);}      /*완전히 회색*/
+                .contrast8 {filter: contrast(1);}      /*대비 변화 없음 none*/
+                .contrast9 {filter: contrast(200%);} /*대비2배*/
+                </style>
+                <!--sample3-->
+                <div class="bs-docs-section">
+                        <h2 id="sample3" class="page-header">contrast() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="contrast1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast6"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast7"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast8"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="contrast9"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.contrast1 {filter: contrast(10%);}
+.contrast2 {filter: contrast(20%);}
+.contrast3 {filter: contrast(30%);}
+.contrast4 {filter: contrast(40%);}
+.contrast5 {filter: contrast(60%);}
+.contrast6 {filter: contrast(80%);}
+.contrast7 {filter: contrast(0);}    /*완전히 회색*/
+.contrast8 {filter: contrast(1);}    /*대비 변화 없음 none*/
+.contrast9 {filter: contrast(200%);} /*대비2배*/</code></pre>   
+                </div>    
+                <!--//sample3-->
+
+                <style>
+                .grayscale1 {filter: grayscale(10%);}
+                .grayscale2 {filter: grayscale(20%);}
+                .grayscale3 {filter: grayscale(30%);}
+                .grayscale4 {filter: grayscale(40%);}
+                .grayscale5 {filter: grayscale(60%);}
+                .grayscale6 {filter: grayscale(80%);}
+                </style>
+                <!--sample4-->
+                <div class="bs-docs-section">
+                        <h2 id="sample4" class="page-header">grayscale() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="grayscale1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="grayscale2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="grayscale3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="grayscale4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="grayscale5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="grayscale6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.grayscale1 {filter: grayscale(10%);}
+.grayscale2 {filter: grayscale(20%);}
+.grayscale3 {filter: grayscale(30%);}
+.grayscale4 {filter: grayscale(40%);}
+.grayscale5 {filter: grayscale(60%);}
+.grayscale6 {filter: grayscale(80%);}</code></pre>   
+                </div>    
+                <!--//sample4-->
+
+                <style>
+                .hue-rotate1 {filter: hue-rotate(10deg);}
+                .hue-rotate2 {filter: hue-rotate(20deg);}
+                .hue-rotate3 {filter: hue-rotate(30deg);}
+                .hue-rotate4 {filter: hue-rotate(60deg);}
+                .hue-rotate5 {filter: hue-rotate(150deg);}
+                .hue-rotate6 {filter: hue-rotate(460deg);}/*100deg와 같음*/
+                .hue-rotate7 {filter: hue-rotate(-90deg);} /*270deg와 같음*/
+                .hue-rotate8 {filter: hue-rotate(0);}    /*효과 없음*/
+                .hue-rotate9 {filter: hue-rotate(.5turn);}/*180deg 와 같음*/
+                </style>
+                <!--sample5-->
+                <div class="bs-docs-section">
+                        <h2 id="sample5" class="page-header">hue-rotate() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="hue-rotate1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate6"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate7"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate8"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="hue-rotate9"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.hue-rotate1 {filter: hue-rotate(10deg);}
+.hue-rotate2 {filter: hue-rotate(20deg);}
+.hue-rotate3 {filter: hue-rotate(30deg);}
+.hue-rotate4 {filter: hue-rotate(60deg);}
+.hue-rotate5 {filter: hue-rotate(150deg);}
+.hue-rotate6 {filter: hue-rotate(460deg);}/*100deg와 같음*/
+.hue-rotate7 {filter: hue-rotate(-90deg);}/*270deg와 같음*/
+.hue-rotate8 {filter: hue-rotate(0);}     /*효과 없음*/
+.hue-rotate9 {filter: hue-rotate(.5turn);}/*180deg 와 같음*/</code></pre>   
+                </div>    
+                <!--//sample5-->
+
+                <style>
+                .invert1 {filter: invert(10%);}
+                .invert2 {filter: invert(20%);}
+                .invert3 {filter: invert(40%);}
+                .invert4 {filter: invert(60%);}
+                .invert5 {filter: invert(80%);}
+                .invert6 {filter: invert(100%);}
+                </style>
+                <!--sample6-->
+                <div class="bs-docs-section">
+                        <h2 id="sample6" class="page-header">invert() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="invert1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="invert2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="invert3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="invert4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="invert5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="invert6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.invert1 {filter: invert(10%);}
+.invert2 {filter: invert(20%);}
+.invert3 {filter: invert(40%);}
+.invert4 {filter: invert(60%);}
+.invert5 {filter: invert(80%);}
+.invert6 {filter: invert(100%);}</code></pre>   
+                </div>    
+                <!--//sample6-->
+
+                <style>
+                .opacity1 {filter: opacity(10%);}
+                .opacity2 {filter: opacity(20%);}
+                .opacity3 {filter: opacity(40%);}
+                .opacity4 {filter: opacity(60%);}
+                .opacity5 {filter: opacity(80%);}
+                .opacity6 {filter: opacity(100%);}
+                </style>
+                <!--sample7-->
+                <div class="bs-docs-section">
+                        <h2 id="sample7" class="page-header">opacity() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="opacity1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="opacity2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="opacity3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="opacity4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="opacity5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="opacity6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.opacity1 {filter: opacity(10%);}
+.opacity2 {filter: opacity(20%);}
+.opacity3 {filter: opacity(40%);}
+.opacity4 {filter: opacity(60%);}
+.opacity5 {filter: opacity(80%);}
+.opacity6 {filter: opacity(100%);}</code></pre>   
+                </div>    
+                <!--//sample7-->
+
+                <style>
+                .saturate1 {filter: saturate(0);} /*무채색*/
+                .saturate2 {filter: saturate(40%);}
+                .saturate3 {filter: saturate(80%);}
+                .saturate4 {filter: saturate(100%);} /*효과 없음*/
+                .saturate5 {filter: saturate(200%);}
+                .saturate6 {filter: saturate(300%);}
+                </style>
+                <!--sample8-->
+                <div class="bs-docs-section">
+                        <h2 id="sample8" class="page-header">saturate() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="saturate1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="saturate2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="saturate3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="saturate4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="saturate5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="saturate6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.saturate1 {filter: saturate(0);} /*무채색*/
+.saturate2 {filter: saturate(40%);}
+.saturate3 {filter: saturate(80%);}
+.saturate4 {filter: saturate(100%);} /*효과 없음*/
+.saturate5 {filter: saturate(200%);}
+.saturate6 {filter: saturate(300%);}</code></pre>   
+                </div>    
+                <!--//sample8-->
+
+                <style>
+                .sepia1 {filter: sepia(0);}
+                .sepia2 {filter: sepia(20%);}
+                .sepia3 {filter: sepia(40%);}
+                .sepia4 {filter: sepia(60%);}
+                .sepia5 {filter: sepia(80%);}
+                .sepia6 {filter: sepia(100%);}
+                </style>
+                <!--sample9-->
+                <div class="bs-docs-section">
+                        <h2 id="sample9" class="page-header">sepia() 
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="sepia1"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="sepia2"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="sepia3"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="sepia4"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="sepia5"><img src="img/img01.jpg" alt="이미지1"></div>
+                            <div class="sepia6"><img src="img/img01.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.sepia1 {filter: sepia(0);}
+.sepia2 {filter: sepia(20%);}
+.sepia3 {filter: sepia(40%);}
+.sepia4 {filter: sepia(60%);}
+.sepia5 {filter: sepia(80%);}
+.sepia6 {filter: sepia(100%);}</code></pre>   
+                </div>    
+                <!--//sample9-->
+
+                <style>
+                    .mix1 {filter: blur(2px) hue-rotate(30deg);}
+                    .mix2 {filter: opacity(30%) saturate(300%);}
+                    .mix3 {filter: invert(20%) opacity(80%);}
+                    .mix4 {filter: grayscale(30%) sepia(30%);}
+                    .mix5 {filter: blur(3px) grayscale(50%) hue-rotate(150deg); }
+                    .mix6 {filter: invert(5%) saturate(200%);}
+                </style>
+                <!--sample10-->
+                <div class="bs-docs-section">
+                    <h2 id="sample10" class="page-header">Mix Filter 
+                        <a href="#c" class="btn btn1">IMG1</a>
+                        <a href="#c" class="btn btn2">IMG2</a>
+                        <a href="#c" class="btn btn3">IMG3</a>
+                        <a href="#c" class="btn btn4">IMG4</a>
+                        <a href="#c" class="btn btn5">IMG5</a>
+                    </h2>
+                    <div class="abox">
+                        <div class="mix1"><img src="img/img01.jpg" alt="이미지1"></div>
+                        <div class="mix2"><img src="img/img01.jpg" alt="이미지1"></div>
+                        <div class="mix3"><img src="img/img01.jpg" alt="이미지1"></div>
+                        <div class="mix4"><img src="img/img01.jpg" alt="이미지1"></div>
+                        <div class="mix5"><img src="img/img01.jpg" alt="이미지1"></div>
+                        <div class="mix6"><img src="img/img01.jpg" alt="이미지1"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.mix1 {filter: blur(2px) hue-rotate(30deg);}
+.mix2 {filter: opacity(30%) saturate(300%);}
+.mix3 {filter: invert(20%) opacity(80%);}
+.mix4 {filter: grayscale(30%) sepia(30%);}
+.mix5 {filter: blur(3px) grayscale(50%) hue-rotate(150deg); }
+.mix6 {filter: invert(5%) saturate(200%);}</code></pre>   
+            </div>    
+            <!--//sample10-->
+
+
+                <!--intro2-->
+                <div class="bs-docs-section">
+                <h2 id="intro2" class="page-header">Blend Mode</h2>
+                <div class="well">normal | multiply | screen | overlay | darken | lighten | color-dodge | saturation | color | luminosity</div>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Porperty</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>normal</td>
+                                <td>배경색의 기본 값을 정의합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>multiply</td>
+                                <td>더 어두운 색으로 변경됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>screen</td>
+                                <td>더 밝은 색으로 변경됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>overlay</td>
+                                <td>원래 색상의 농도와 밝기를 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>darken</td>
+                                <td>어두운 색으로 변경됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>lighten</td>
+                                <td>밝은 색으로 변경됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>color-dodge</td>
+                                <td>기본 색상을 밝게 합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>saturation</td>
+                                <td>채도의 변화로 색상이 변경됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>색을 통해 색상을 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>luminosity</td>
+                                <td>밝기를/ 통해 색상을 변경합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //intro2 -->
+
+                <style>
+                .multiply1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .multiply2 {background-blend-mode: multiply; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .multiply3 {background-blend-mode: multiply; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .multiply4 {background-blend-mode: multiply; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .multiply5 {background-blend-mode: multiply; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .multiply6 {background-blend-mode: multiply; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}
+                </style>
+                <!--sample11-->
+                <div class="bs-docs-section">
+                        <h2 id="sample11" class="page-header">multiply
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="multiply1"></div>
+                            <div class="multiply2"></div>
+                            <div class="multiply3"></div>
+                            <div class="multiply4"></div>
+                            <div class="multiply5"></div>
+                            <div class="multiply6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.multiply1 {background-image: url(img/img09.jpg); background-size: cover;}
+.multiply2 {background-blend-mode: multiply; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.multiply3 {background-blend-mode: multiply; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.multiply4 {background-blend-mode: multiply; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.multiply5 {background-blend-mode: multiply; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.multiply6 {background-blend-mode: multiply; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample11-->
+
+                <style>
+                .screen1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .screen2 {background-blend-mode: screen; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .screen3 {background-blend-mode: screen; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .screen4 {background-blend-mode: screen; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .screen5 {background-blend-mode: screen; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .screen6 {background-blend-mode: screen; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}
+                </style>
+                <!--sample12-->
+                <div class="bs-docs-section">
+                        <h2 id="sample12" class="page-header">screen
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="screen1"></div>
+                            <div class="screen2"></div>
+                            <div class="screen3"></div>
+                            <div class="screen4"></div>
+                            <div class="screen5"></div>
+                            <div class="screen6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.screen1 {background-image: url(img/img09.jpg); background-size: cover;}
+.screen2 {background-blend-mode: screen; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.screen3 {background-blend-mode: screen; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.screen4 {background-blend-mode: screen; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.screen5 {background-blend-mode: screen; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.screen6 {background-blend-mode: screen; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample12-->
+
+                <style>
+                .overlay1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .overlay2 {background-blend-mode: overlay; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .overlay3 {background-blend-mode: overlay; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .overlay4 {background-blend-mode: overlay; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .overlay5 {background-blend-mode: overlay; background-color: thistle; background-image: url(img/img09.jpg); background-size: cover;}
+                .overlay6 {background-blend-mode: overlay; background-color:brown; background-image: url(img/img09.jpg); background-size: cover;}
+                </style>
+                <!--sample13-->
+                <div class="bs-docs-section">
+                        <h2 id="sample13" class="page-header">overlay
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <div class="overlay3"></div>
+                            <div class="overlay4"></div>
+                            <div class="overlay5"></div>
+                            <div class="overlay6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.overlay1 {background-image: url(img/img09.jpg); background-size: cover;}
+.overlay2 {background-blend-mode: overlay; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.overlay3 {background-blend-mode: overlay; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.overlay4 {background-blend-mode: overlay; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.overlay5 {background-blend-mode: overlay; background-color: thistle; background-image: url(img/img09.jpg); background-size: cover;}
+.overlay6 {background-blend-mode: overlay; background-color:brown; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample13-->
+
+                <style>
+                .darken1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .darken2 {background-blend-mode: darken; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .darken3 {background-blend-mode: darken; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .darken4 {background-blend-mode: darken; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .darken5 {background-blend-mode: darken; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .darken6 {background-blend-mode: darken; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample14-->
+                <div class="bs-docs-section">
+                        <h2 id="sample14" class="page-header">darken
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="darken1"></div>
+                            <div class="darken2"></div>
+                            <div class="darken3"></div>
+                            <div class="darken4"></div>
+                            <div class="darken5"></div>
+                            <div class="darken6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.darken1 {background-image: url(img/img09.jpg); background-size: cover;}
+.darken2 {background-blend-mode: darken; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.darken3 {background-blend-mode: darken; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.darken4 {background-blend-mode: darken; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.darken5 {background-blend-mode: darken; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.darken6 {background-blend-mode: darken; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;} </code></pre>   
+                </div>    
+                <!--//sample14-->
+
+                <style>
+                .lighten1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .lighten2 {background-blend-mode: lighten; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .lighten3 {background-blend-mode: lighten; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .lighten4 {background-blend-mode: lighten; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .lighten5 {background-blend-mode: lighten; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .lighten6 {background-blend-mode: lighten; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample15-->
+                <div class="bs-docs-section">
+                        <h2 id="sample15" class="page-header">lighten
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="lighten1"></div>
+                            <div class="lighten2"></div>
+                            <div class="lighten3"></div>
+                            <div class="lighten4"></div>
+                            <div class="lighten5"></div>
+                            <div class="lighten6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.lighten1 {background-image: url(img/img09.jpg); background-size: cover;}
+.lighten2 {background-blend-mode: lighten; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.lighten3 {background-blend-mode: lighten; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.lighten4 {background-blend-mode: lighten; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.lighten5 {background-blend-mode: lighten; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.lighten6 {background-blend-mode: lighten; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample15-->
+
+                <style>
+                .color-dodge1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .color-dodge2 {background-blend-mode: color-dodge; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .color-dodge3 {background-blend-mode: color-dodge; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .color-dodge4 {background-blend-mode: color-dodge; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .color-dodge5 {background-blend-mode: color-dodge; background-color: thistle; background-image: url(img/img09.jpg); background-size: cover;}
+                .color-dodge6 {background-blend-mode: color-dodge; background-color:brown; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample16-->
+                <div class="bs-docs-section">
+                        <h2 id="sample16" class="page-header">color-dodge
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="color-dodge1"></div>
+                            <div class="color-dodge2"></div>
+                            <div class="color-dodge3"></div>
+                            <div class="color-dodge4"></div>
+                            <div class="color-dodge5"></div>
+                            <div class="color-dodge6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.color-dodge1 {background-image: url(img/img09.jpg); background-size: cover;}
+.color-dodge2 {background-blend-mode: color-dodge; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.color-dodge3 {background-blend-mode: color-dodge; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.color-dodge4 {background-blend-mode: color-dodge; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.color-dodge5 {background-blend-mode: color-dodge; background-color: thistle; background-image: url(img/img09.jpg); background-size: cover;}
+.color-dodge6 {background-blend-mode: color-dodge; background-color:brown; background-image: url(img/img09.jpg); background-size: cover;}  </code></pre>   
+                </div>    
+                <!--//sample16-->
+
+                <style>
+                .saturation1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .saturation2 {background-blend-mode: saturation; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .saturation3 {background-blend-mode: saturation; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .saturation4 {background-blend-mode: saturation; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .saturation5 {background-blend-mode: saturation; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .saturation6 {background-blend-mode: saturation; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample17-->
+                <div class="bs-docs-section">
+                        <h2 id="sample17" class="page-header">saturation
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="saturation1"></div>
+                            <div class="saturation2"></div>
+                            <div class="saturation3"></div>
+                            <div class="saturation4"></div>
+                            <div class="saturation5"></div>
+                            <div class="saturation6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.saturation1 {background-image: url(img/img09.jpg); background-size: cover;}
+.saturation2 {background-blend-mode: saturation; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.saturation3 {background-blend-mode: saturation; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.saturation4 {background-blend-mode: saturation; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.saturation5 {background-blend-mode: saturation; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.saturation6 {background-blend-mode: saturation; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample17-->
+
+                <style>
+                .color01 {background-image: url(img/img09.jpg); background-size: cover;}
+                .color02 {background-blend-mode: color; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .color03 {background-blend-mode: color; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .color04 {background-blend-mode: color; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .color05 {background-blend-mode: color; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .color06 {background-blend-mode: color; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample18-->
+                <div class="bs-docs-section">
+                        <h2 id="sample18" class="page-header">color
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="color01"></div>
+                            <div class="color02"></div>
+                            <div class="color03"></div>
+                            <div class="color04"></div>
+                            <div class="color05"></div>
+                            <div class="color06"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.color01 {background-image: url(img/img09.jpg); background-size: cover;}
+.color02 {background-blend-mode: color; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.color03 {background-blend-mode: color; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.color04 {background-blend-mode: color; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.color05 {background-blend-mode: color; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.color06 {background-blend-mode: color; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}</code></pre>   
+                </div>    
+                <!--//sample18-->
+
+                <style>
+                .luminosity1 {background-image: url(img/img09.jpg); background-size: cover;}
+                .luminosity2 {background-blend-mode: luminosity; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+                .luminosity3 {background-blend-mode: luminosity; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+                .luminosity4 {background-blend-mode: luminosity; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+                .luminosity5 {background-blend-mode: luminosity; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+                .luminosity6 {background-blend-mode: luminosity; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  
+                </style>
+                <!--sample19-->
+                <div class="bs-docs-section">
+                        <h2 id="sample19" class="page-header">luminosity
+                            <a href="#c" class="btn color1">COLOR1</a>
+                            <a href="#c" class="btn color2">COLOR2</a>
+                            <a href="#c" class="btn color3">COLOR3</a>
+                            <a href="#c" class="btn color4">COLOR4</a>
+                            <a href="#c" class="btn color5">COLOR5</a>
+                        </h2>
+                        <div class="abox height">
+                            <div class="luminosity1"></div>
+                            <div class="luminosity2"></div>
+                            <div class="luminosity3"></div>
+                            <div class="luminosity4"></div>
+                            <div class="luminosity5"></div>
+                            <div class="luminosity6"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.luminosity1 {background-image: url(img/img09.jpg); background-size: cover;}
+.luminosity2 {background-blend-mode: luminosity; background-color: teal; background-image: url(img/img09.jpg); background-size: cover;}
+.luminosity3 {background-blend-mode: luminosity; background-color: coral; background-image: url(img/img09.jpg); background-size: cover;}
+.luminosity4 {background-blend-mode: luminosity; background-color: rebeccapurple; background-image: url(img/img09.jpg); background-size: cover; }
+.luminosity5 {background-blend-mode: luminosity; background-color: yellow; background-image: url(img/img09.jpg); background-size: cover;}
+.luminosity6 {background-blend-mode: luminosity; background-color:cyan; background-image: url(img/img09.jpg); background-size: cover;}  </code></pre>   
+                </div>    
+                <!--//sample19-->
+
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">Filter Effect</a>
+                            <ul class="nav">
+                                <li><a href="#sample1">blur()</a></li>
+                                <li><a href="#sample2">brihgtness()</a></li>
+                                <li><a href="#sample3">contrast()</a></li>
+                                <li><a href="#sample4">grayscale()</a></li>
+                                <li><a href="#sample5">hue-rotate()</a></li>
+                                <li><a href="#sample6">invert()</a></li>
+                                <li><a href="#sample7">opacity()</a></li>
+                                <li><a href="#sample8">saturate()</a></li>
+                                <li><a href="#sample9">sepia()</a></li>
+                                <li><a href="#sample10">Mix Filter</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro2">Blend Mode</a>
+                            <ul class="nav">
+                                <li><a href="#sample11">multiply</a></li>
+                                <li><a href="#sample12">screen</a></li>
+                                <li><a href="#sample13">overlay</a></li>
+                                <li><a href="#sample14">darken</a></li>
+                                <li><a href="#sample15">lighten</a></li>
+                                <li><a href="#sample16">color-dodge</a></li>
+                                <li><a href="#sample17">saturation</a></li>
+                                <li><a href="#sample18">color</a></li>
+                                <li><a href="#sample19">luminosity</a></li>
+                            </ul>
+                        </li>
+                        
+                       
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="http://dldkfka331.dothome.co.kr">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script>
+     //.btn1 버튼을 클릭했을 때 
+     $(".btn1").click(function(){
+        $(".abox > div img").attr("src","img/img02.jpg")
+     });
+     //.btn2 버튼을 클릭했을 때 
+     $(".btn2").click(function(){
+        $(".abox > div img").attr("src","img/img03.jpg")
+     });
+     //.btn3 버튼을 클릭했을 때 
+     $(".btn3").click(function(){
+        $(".abox > div img").attr("src","img/img04.jpg")
+     });
+     //.btn4 버튼을 클릭했을 때 
+     $(".btn4").click(function(){
+        $(".abox > div img").attr("src","img/img07.jpg")
+     });
+     //.btn5 버튼을 클릭했을 때 
+     $(".btn5").click(function(){
+        $(".abox > div img").attr("src","img/img10.jpg")
+     });
+
+     //.color1 버튼을 클릭했을 때
+     $(".color1").click(function(){
+        $(".abox > div").css("background-image","url(img/img02.jpg)")
+     });
+     //.color2 버튼을 클릭했을 때
+     $(".color2").click(function(){
+        $(".abox > div").css("background-image","url(img/img03.jpg)")
+     });
+     //.color3 버튼을 클릭했을 때
+     $(".color3").click(function(){
+        $(".abox > div").css("background-image","url(img/img04.jpg)")
+     });
+     //.color4 버튼을 클릭했을 때
+     $(".color4").click(function(){
+        $(".abox > div").css("background-image","url(img/img07.jpg)")
+     });
+     //.color1 버튼을 클릭했을 때
+     $(".color5").click(function(){
+        $(".abox > div").css("background-image","url(img/img10.jpg)")
+     });
+    </script>
+</body>
+
+</html>

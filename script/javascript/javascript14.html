@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript14</title>
+    <script>
+        let userID = "dldkfka331";
+        let userPW="1234";
+        let id = prompt("아이디를 입력해주세요");
+        let pw = prompt("비밀번호를 입력해주세요");
+
+        if(userID == id){
+            //아이디가 맞다면
+            if(userPW ==pw){
+                //아이디도 맞고 비밀번호도 맞았을 때
+                document.write(id+"님의 로그인이 성공하셨습니다.")
+            }else{
+                document.write("비밀번호가 일치하지 않습니다.")
+            }
+        }else {
+            document.write("아이디가 일치하지 않습니다.")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

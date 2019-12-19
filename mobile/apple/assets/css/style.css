@@ -1,0 +1,53 @@
+/* container */
+.container {width: 1000px; margin: 0 auto;}
+
+/* row */
+.row {margin: 0 20px; position: relative;}
+
+/* header */
+#header { height: 100px;}
+#header .head_date {
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    color: #A8A8AA;
+    padding-top: 30px;
+    display: block;
+}
+#header .head_tit {
+    font-size: 32px;
+    color: #000;
+    font-family: "SF Display";
+    font-weight: 600;
+}
+#header .head_id { background: radial-gradient(50% 50% at 50% 50%, rgba(157, 165, 176, 0.49) 27.08%, #9DA5B0 99.98%, #9DA5B0 99.99%);
+    border-radius: 50px; width: 40px; height: 40px; line-height: 40px; color: #fff; font-size: 18px;
+    text-align: center; position: absolute; right: 0; bottom: 10px; }
+
+ /* music */
+.music { }
+
+/* bestM */
+.bestM { padding-top: 10px; border-top: 1px solid #ebebeb;}
+.bestM .st_stit {color: #E6557C; font-size: 12px; line-height: 1.67; }
+.bestM .st_tit {font-size: 22px; padding-bottom: 5px;}
+.bestM .st_desc {font-size: 22px; color: #8E8E90; margin-bottom: 10px; font-weight: 100;}
+.bestM .bestM_img { margin-top: 16px; }
+.bestM .bestM_img img{border-radius: 5px;}
+
+/* recentM */
+.recentM {padding: 10px 0 ; margin-top: 10px;}
+.recentM .row {margin-top: 20px; border-top: 1px solid #ebebeb; }
+.recentM .recent_tit {font-size: 22px; padding: 10px 0; font-weight: bold;}
+.recentM .st_tit2 {font-size: 15px; padding: 6px 0;}
+.recentM .st_desc2 {font-size: 14px; color: #8E8E90; padding-bottom: 5px; font-weight: 100;} 
+
+/* nextM */
+.nextM { }
+
+
+
+/* 미디어 쿼리 */
+@media (max-width:1040px){
+    .container {width: 100%;}
+}

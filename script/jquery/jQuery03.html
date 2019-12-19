@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery03</title>
+</head>
+<body>
+    <h2>기본필터 선택자</h2>
+    <div class="list">
+        <ul>
+            <li>:eq()</li>
+            <li>:gt()</li>
+            <li>:lt()</li>
+            <li>:header</li>
+            <li>:first</li>
+            <li>:last</li>
+            <li>:odd</li>
+            <li>:even</li>
+            <li>:not()</li>
+        </ul>
+    </div>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        // $(".list ul li:eq(2)").css("color","red");   //0부터 시작하니까 3번째에 red
+        // $(".list ul li:eq(-3)").css("color","red");  //뒤에서부터 3번째 
+        // $(".list ul li:gt(2)").css("color","red");    //3번째 부터 끝까지
+        // $(".list ul li:lt(2)").css("color","red");   //0,1만 선택
+        // $(".list ul li:first").css("color","red");
+        // $(".list ul li:last").css("color","red");
+        // $(".list ul li:odd").css("color","red");   //1부터 시작한다고 생각하면됨
+        // $(".list ul li:even").css("color","red");
+        // $(".list ul li:not(:eq(2),:eq(4))").css("color","red"); //not(또 다른선택자))
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript12</title>
+    <script>
+        let num= 300;     
+        if(num>100){
+            document.write("이 숫자는 100보다 큽니다. <br> ");
+        }else{
+            document.write("이 숫자는 100보다 작거나 같습니다. <br> ");
+        }
+        //짝수 홀수 구하기
+        let num2 = prompt("당신이 좋아하는 숫자는?","");
+        if(num2 % 2 ==0){
+            document.write("당신이 좋아하는 숫자는 짝수입니다!<br> ");
+        }else{
+            document.write("당신이 좋아하는 숫자는 홀수입니다!<br> ");
+        }
+        //아이디 / 비밀번호 구분하기
+        let userID = prompt ("아이디를 입력하세요","");
+        let userPW = prompt ("비밀번호를 입력하세요","");
+        if(userID == "dldkfka331" && userPW =="1234" ){
+            document.write("WellCome!<br> ");
+        }else{
+            document.write("아이디 또는 비밀번호를 확인해주세요<br> ");
+        }
+        //확인하기
+        let conf = confirm("정말로 회원을 탈퇴하시겠습니까?")    // 확인or취소하는 창뜨기
+        if(conf){
+            document.write("탈퇴처리 되었습니다. 안녕히가세요")
+        }else{
+            document.write("탈퇴처리가 취소되었습니다.")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

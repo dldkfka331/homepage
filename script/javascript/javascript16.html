@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript16</title>
+    <script>
+        let site = prompt("네이버 , 다음, 구글, 네이트 중 자주가는 사이트는?");
+        let url;    
+        switch(site){
+            case "네이버":
+              url = "https://www.naver.com/"
+              break;
+            case "다음":
+              url = "https://www.daum.net/"
+              break;
+            case "구글":
+              url = "https://www.google.co.kr/"
+              break;
+            case "네이트":
+              url = "https://www.nate.com/"
+              break;
+            default:
+            document.write("잘못 입력하셨습니다.");
+            break;
+        }
+        console.log(url);
+        if(url)  location.href = url;    //단독 if문 쓰는법
+
+        let site2 = prompt("방은영, 김길록, 서경민, 홍예라 중 자주가는 사이트는?");
+        let url2;
+        if(site2 == "방은영"){
+          url2 = "http://mine002.dothome.co.kr/";
+        }else if(site2 == "김길록"){
+          url2 = "http://loga301.dothome.co.kr/";
+        }else if(site2 == "서경민"){
+          url2 = "http://mr1011.dothome.co.kr/";
+        }else if(site2 == "홍예라"){
+          url2 = "http://dpfk1994.dothome.co.kr/";
+        }else{
+          document.write("잘못 입력하셨습니다.")
+        }
+         if(url2) location.href =url2;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

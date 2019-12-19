@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript32</title>
+</head>
+<body>
+    <div>당신의 마지막 접속 시간은 : <span id="last"></span></div>
+    <script>
+        window.onload = function(){
+            let today = new Date();
+            let year = today.getFullYear();
+            let month = today.getMonth();
+            let date = today.getDate();
+            let hour = today.getHours();
+            let min = today.getMinutes();
+            let ampm = "";
+            if(hour < 12){
+                ampm = "오전";
+            }else {
+                ampm = "오후"
+            }
+            let last2 = year+"." + (month+1) +"."+ date + "  " + ampm+ "  "  + (hour % 12)  + ":" +  min   ;
+            document.getElementById("last").innerHTML = last2;
+        } 
+    </script>
+</body>
+</html>

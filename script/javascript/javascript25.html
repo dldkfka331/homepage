@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript25</title>
+    <script>
+        //while 문을 이용해서 1~20까지 출력하기
+        let num=1;
+        while(num<=20){
+            document.write("숫자"+num+"<br>");
+            num++;
+        }
+        document.write("<br><br>")
+         //for 문을 이용해서 1~20까지 출력하기
+         for(var i=1; i<=20; i++){
+            document.write("숫자"+i+"<br>");
+         }
+         document.write("<br><br>")
+         //break, continue
+         var count=0;
+         while(true){
+             count++;
+             if(count ==3){
+                 continue;         //해당부분은 실행하지 않음
+             }
+             document.write("카운트"+count+"<br>");
+             if(count>19){
+                 break;
+             }
+         }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

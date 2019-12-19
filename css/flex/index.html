@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="#">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | Flexbox</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">ARAM'S</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs6" id="content">
+        <div class="container">
+            <h1>Flexbox</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <!-- col-md-9 -->
+            <div class="col-md-9" role="main">
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">display : flex</h2>
+                    <p class="bs-callout bs-callout-info">flex는  요소의 크기가 불분명하거나 동적인 경우에도, 각 요소를 정렬할 수 있는 효율적인 방법을 제공합니다. flexbox를 만들려면 정렬하려는 요소의 부모 요소에 display: flex 속성을 선언하면 됩니다.</p>
+                    <h3 class="pt30">Flexbox</h3>
+                    <p class="bs-callout bs-callout-warning">flex container 속성 : flex-direction | flex-wrap |  justify-content | align-items | align-content</p>   
+                    <p class="bs-callout bs-callout-warning">flex item 속성 : flex | flex-grow |  flex-shrink |  flex-basis | order</p>   
+                    <img src="box01.jpg" alt="flexbox이미지">
+                    <img src="box.jpg" alt="flexbox이미지">
+                    <h3 class="pt30">사용법</h3>
+<pre class="line-numbers language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        *{padding: 0; margin: 0; font-size: 1.5rem; box-sizing: border-box;}
+        .container {
+            display: flex;
+            /* flex-direction: row; 아이템의 방향*/
+            /* flex-wrap: wrap; 폭이좁아졌을 때 밑으로 내려가냐 안내려가냐 */
+            /* justify-content:space-around; 좌우 정렬방법/가운데 사이조절 */
+            /* align-items: center; 위아래로 정렬 */
+            /* align-content: flex-end; flex-wrap: wrap;이게 꼭있어야함 그래서 떨어졌을 때 위아래 위치조절*/
+            height: 100vh;
+            background: #ccc;
+        }
+        .item {background: rgba(255,0,0,.5);
+            /* flex-grow:1; 가로의 비율? 남은 여백의 비율을 나눠갖는것 */
+            /* flex-basis: 0; 원래 점유하는 공간 */
+            /* flex: 1;  flex-basis: 0으로 세팅하고 안의내용물의 비율*/
+        }
+        .item:nth-child(1){
+            /* align-self: flex-start; 아이템의 각각의 위아래 위치 */
+            /* order: 2; 이 순서대로 위치가 바뀜 */
+        }
+        .item:nth-child(2) {background: rgba(255,255,0,.5);
+                /* flex:1; 얘만늘어남 */
+            /* align-self: flex-end; */
+            order: 3;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="item"&gt;
+            &lt;p&gt;aaaaaaaaaaaaaaaaaaa&lt;/p&gt;
+            &lt;p&gt;aaaaaaaaaaaaaaaaaaa&lt;/p&gt;
+            &lt;p&gt;aaaaaaaaaaaaaaaaaaa&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+            &lt;p&gt;bbbbbbbbbbbbbbbbbbbbbb&lt;/p&gt;
+            &lt;p&gt;bbbbbbbbbbbbbbbbbbbbbb&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <br>
+        <br>
+                </div>
+                <!-- //intro1 -->
+
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">flex container 속성 </h2>
+                    
+                    <h3 id="intro2_1">flex-direction</h3>
+                    <p class="bs-callout bs-callout-info">flex-direction는 item들의 방향을 설정합니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>row	(기본값)</td>
+                                    <td>item들의 방향이 수평축 (왼쪽에서 오른쪽)</td>
+                                </tr>
+                                <tr>
+                                    <td>row-reverse</td>
+                                    <td>item들의 방향이 row방향의 반대 (오른쪽에서 왼쪽)</td>
+                                </tr>
+                                <tr>
+                                    <td>column</td>
+                                    <td>item들의 방향이 수직축 (위쪽에서 아래쪽)</td>
+                                </tr>
+                                <tr>
+                                    <td>column-reverse</td>
+                                    <td>item들의 방향이 column방향의 반대 (아래쪽에서 위쪽)</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <div>
+                        <p>[row]<br><img src="img/direction01.png" alt="direction01" style="width: 500px;"></p>
+                        <p>[row-reverse]<br><img src="img/direction02.png" alt="direction01" style="width: 500px;"></p>
+                        <p>[column]<br><img src="img/direction03.png" alt="direction01" style="width: 500px;"></p>
+                        <p>[column-reverse]<br><img src="img/direction04.png" alt="direction01" style="width: 500px;"></p>
+                        
+                    </div>
+
+                    <h3 id="intro2_2">flex-wrap</h3>
+                    <p class="bs-callout bs-callout-info">flex-wrap은 item들의 줄바꿈을 설정합니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nowrap	(기본값)</td>
+                                    <td>모든 item들이 줄바꿈 되지 않고 한 줄에 있음</td>
+                                </tr>
+                                <tr>
+                                    <td>wrap</td>
+                                    <td>item들이 브라우저의 너비를 넘어가면 줄바꿈이 됨</td>
+                                </tr>
+                                <tr>
+                                    <td>wrap-reverse</td>
+                                    <td>item들이 브라우저의 너비를 넘어가면 역순으로 줄바꿈이 됨</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <p>[wrap]<br><img src="img/wrap01.png" alt="wrap01" style="width: 500px;"></p>
+                    <p>[wrap-reverse]<br><img src="img/wrap02.png" alt="wrap02" style="width: 500px;"></p>
+
+                    <h3 id="intro2_3">justify-content</h3>
+                    <p class="bs-callout bs-callout-info">justify-content는 item들의 정렬 방법을 설정합니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flex-start	(기본값)</td>
+                                    <td>item을 시작점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-end</td>
+                                    <td>item을 끝점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>center</td>
+                                    <td>item을 가운데로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>space-between</td>
+                                    <td>시작 item을 시작점, 마지막 item을 끝점으로 정렬하고 사이값(margin)을 자동으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>space-around</td>
+                                    <td>item의 양쪽 여백 값을 포함하여 균등하게 정렬</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <p>[flex-start]<br><img src="img/justify-content01.png" alt="content01" style="width: 500px;"></p>
+                    <p>[flex-end]<br><img src="img/justify-content02.png" alt="content01" style="width: 500px;"></p>
+                    <p>[center]<br><img src="img/justify-content03.png" alt="content01" style="width: 500px;"></p>
+                    <p>[space-between]<br><img src="img/justify-content04.png" alt="content01" style="width: 500px;"></p>
+                    <p>[space-around]<br><img src="img/justify-content05.png" alt="content01" style="width: 500px;"></p>
+
+                    <h3 id="intro2_4">align-items</h3>
+                    <p class="bs-callout bs-callout-info">align-items은 item들의 위아래 정렬 방법을 설정합니다. 이 속성은 item들이 한 줄 일 때 사용합니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stretch	(기본값)</td>
+                                    <td>item들이 container 높이만큼 늘어남</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-start</td>
+                                    <td>item을 각 줄의 시작점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-end</td>
+                                    <td>item을 각 줄의 끝점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>center</td>
+                                    <td>item을 각 줄의 가운데로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>baseline</td>
+                                    <td>item을 문자 기준선으로 정렬</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <p>[stretch]<br><img src="img/align-items01.png" alt="items01" style="width: 500px;"></p>
+                    <p>[flex-start]<br><img src="img/align-items02.png" alt="items01" style="width: 500px;"></p>
+                    <p>[flex-end]<br><img src="img/align-items03.png" alt="items01" style="width: 500px;"></p>
+                    <p>[center]<br><img src="img/align-items04.png" alt="items01" style="width: 500px;"></p>
+
+                    <h3 id="intro2_5">align-content</h3>
+                    <p class="bs-callout bs-callout-info">align-content은 item들의 위아래 정렬 방법을 설정합니다. 이 속성은 flex-wrap을 통해 item들이 여러줄 일 때 사용할 수 있습니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stretch	(기본값)</td>
+                                    <td>item들이 container 높이만큼 늘어남</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-start</td>
+                                    <td>item을 각 줄의 시작점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-end</td>
+                                    <td>item을 각 줄의 끝점으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>center</td>
+                                    <td>item을 각 줄의 가운데로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>space-between</td>
+                                    <td>시작 item을 시작점, 마지막 item을 끝점으로 정렬하고 사이값(margin)을 자동으로 정렬</td>
+                                </tr>
+                                <tr>
+                                    <td>space-around</td>
+                                    <td>item의 양쪽 여백 값을 포함하여 균등하게 정렬</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <p>[stretch]<br><img src="img/align-content01.png" alt="content01" style="width: 500px;"></p>
+                    <p>[flex-start]<br><img src="img/align-content02.png" alt="content01" style="width: 500px;"></p>
+                    <p>[flex-end]<br><img src="img/align-content03.png" alt="content01" style="width: 500px;"></p>
+                    <p>[center]<br><img src="img/align-content04.png" alt="content01" style="width: 500px;"></p>
+                    <p>[space-between]<br><img src="img/align-content05.png" alt="content01" style="width: 500px;"></p>
+                    <p>[space-around]<br><img src="img/align-content06.png" alt="content01" style="width: 500px;"></p>
+
+                </div>
+                <!-- //intro2 -->
+
+                <!-- intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">flex item 속성</h2>
+                    
+                    <h3 id="intro3_1">flex</h3>
+                    <p class="bs-callout bs-callout-info">flex는 item의 너비(증가, 감소, 기본)를 설정하는 단축 속성입니다.</p> 
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped table-hover"> 
+                            <thead>
+                                <tr>
+                                    <th>값</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flex-grow (기본값 : 0)</td>
+                                    <td>item들의 증가 너비 비율을 설정</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-shrink (기본값 : 1)</td>
+                                    <td>item들의 감소 너비 비율을 설정</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-basis (기본값 : auto)</td>
+                                    <td>item들의 (공간 배분 전) 기본 너비 설정	</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    
+                    <h3 id="intro3_2">flex-grow</h3>
+                    <p class="bs-callout bs-callout-info">flex-grow는 item의 증가 너비 비율을 설정합니다. 숫자가 크면 더 많은 너비를 가집니다.</p> 
+                    
+                    <h3 id="intro3_3">flex-shrink</h3>
+                    <p class="bs-callout bs-callout-info">flex-shrink는 item의 감소 너비 비율을 설정합니다. 숫자가 크면 더 많은 너비가 감소합니다.</p> 
+                    
+                    <h3 id="intro3_4">flex-basis</h3>
+                    <p class="bs-callout bs-callout-info">flex-shrink는 item의 (공간 배분 전) 기본 너비를 설정합니다. 숫자가 크면 더 많은 너비가 감소합니다.</p> 
+                    
+                    <h3 id="intro3_5">order</h3>
+                    <p class="bs-callout bs-callout-info">order는 item들의 순서를 설정합니다. html의 순서가 아니라 보여지는 순서만 바뀌기 때문에 주의해야 합니다.</p> 
+                    <p>[order - a:2 b:1 c:3]<br><img src="img/order.png" alt="order" style="width: 500px;"></p>
+
+                </div>
+                <!-- //intro3 -->
+
+
+
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">display : flex</a></li>
+                        <li><a href="#intro2">flex container 속성</a>
+                            <ul class="nav">
+                                <li><a href="#intro2_1">flex-direction</a></li>
+                                <li><a href="#intro2_2">flex-wrap</a></li>
+                                <li><a href="#intro2_3">justify-content</a></li>
+                                <li><a href="#intro2_4">align-items</a></li>
+                                <li><a href="#intro2_5">align-content</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro3">flex item 속성</a>
+                            <ul class="nav">
+                                <li><a href="#intro3_1">flex</a></li>
+                                <li><a href="#intro3_2">flex-grow</a></li>
+                                <li><a href="#intro3_3">flex-shrink</a></li>
+                                <li><a href="#intro3_4">flex-basis</a></li>
+                                <li><a href="#intro3_5">order</a></li>
+                            </ul>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="http://dldkfka331.dothome.co.kr">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+</body>
+
+</html>

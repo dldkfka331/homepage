@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive layout4</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		#wrap {width: 1200px; margin: 0	auto;}
+		header {width: 100%; height: 150px; background-color: #072448;}
+		aside {width: 20%; height: 900px; background-color: #54d2d2; float: left;}
+		#art_01 {width: 80%; height: 300px; background-color: #ffcb00;float: left;}
+		#art_02 {width: 80%; height: 300px; background-color: #f8aa4b;float: left;}
+		#art_03 {width: 80%; height: 300px; background-color: #ff6150;float: left;}
+		footer{width: 100%; height: 100px; background-color: #072448;clear: both;}
+
+		@media (max-width: 1220px){
+			#wrap {width: 100%;}
+			#art_01 {height: 450px;}
+			#art_02 {height: 450px;}
+			#art_03 {width: 100%;}
+		}
+
+		@media (max-width: 768px){
+			aside {width: 100%; height: 300px; float: none;}
+			#art_01 {width: 50%;}
+			#art_02 {width: 50%;}
+		}
+
+		@media (max-width: 480px){
+			#art_01 {width: 100%;}
+			#art_02 {width: 100%;}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header></header>
+		<aside></aside>
+		<article id="art_01"></article>
+		<article id="art_02"></article>
+		<article id="art_03"></article>
+		<footer></footer>
+	</div>
+	
+</body>
+</html>

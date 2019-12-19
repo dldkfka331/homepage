@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="#">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | BOX-SHADOW</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">ARAM'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs6" id="content">
+        <div class="container">
+            <h1>Box-shadow</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <!-- col-md-9 -->
+            <div class="col-md-9" role="main">
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">box-shadow</h2>
+                    <p class="bs-callout bs-callout-info">box-shadow 속성은 박스 요소의 그림자를 설정합니다.</p>
+
+                    <h3 class="pt30">문법</h3>
+                    <p class="bs-callout bs-callout-warning">box-shadow : none | h-shadow | v-shadow | blur | spread |
+                        color | inset </p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>none</td>
+                                    <td>박스에 그림자를 적용하지 않습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>h-shadow</td>
+                                    <td>그림자의 수평(X축) 거리를 나타냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>v-shadow</td>
+                                    <td>그림자의 수직(Y축) 거리를 나타냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>blur</td>
+                                    <td>그림자의 흐림정도를 나타냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>spread</td>
+                                    <td>그림자의 거리를 나타냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>그림자의 색을 나타냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>inset</td>
+                                    <td>그림자를 내부에 적용할 수 있습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //intro1 -->
+
+                <style>
+                    .sBox > div > div {transition: all .3S ease;}
+                    .sBox > div > div:hover {box-shadow: none;}
+                    .box.sha1 {
+                        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+                    }
+                    .shadow01 {box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);}
+                    .shadow02 {box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);}
+                    .shadow03 {box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.8);}
+                    .shadow04 {box-shadow: 6px 6px 5px rgba(0, 0, 0, .8);}
+                    .shadow05 {box-shadow: 8px 8px 5px rgba(0, 0, 0, .8);}
+                    .shadow06 {box-shadow: 10px 10px 5px rgba(0, 0, 0, .8);}
+                    .shadow07 {box-shadow: 12px 12px 5px rgba(0, 0, 0, .8);}
+                    .shadow08 {box-shadow: 14px 14px 5px rgba(0, 0, 0, .8);}
+                    .shadow09 {box-shadow: 16px 16px 5px rgba(0, 0, 0, .8);}
+                    .shadow10 {
+                        animation-name: shadow10;
+                        animation-duration: 1s;
+                        animation-iteration-count: 100;
+                        animation-timing-function: ease-in-out;
+                    }
+                    @keyframes shadow10{
+                        0% {box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);}
+                        50% {box-shadow: 18px 18px 5px rgba(0, 0, 0, 0.8);}
+                        100% {box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);}
+                    }
+
+                </style>
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Sample 1 - x축, y축 변경</h2>
+                    <div class="sBox">
+                        <div class="box sha1">
+                            <div class="shadow01">shadow01</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow02">shadow02</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow03">shadow03</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow04">shadow04</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow05">shadow05</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow06">shadow06</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow07">shadow07</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow08">shadow08</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow09">shadow09</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow10">shadow10</div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.box.sha1 {background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);}
+.shadow01 {box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);}
+.shadow02 {box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);}
+.shadow03 {box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.8);}
+.shadow04 {box-shadow: 6px 6px 5px rgba(0, 0, 0, .8);}
+.shadow05 {box-shadow: 8px 8px 5px rgba(0, 0, 0, .8);}
+.shadow06 {box-shadow: 10px 10px 5px rgba(0, 0, 0, .8);}
+.shadow07 {box-shadow: 12px 12px 5px rgba(0, 0, 0, .8);}
+.shadow08 {box-shadow: 14px 14px 5px rgba(0, 0, 0, .8);}
+.shadow09 {box-shadow: 16px 16px 5px rgba(0, 0, 0, .8);}
+.shadow10 {box-shadow: 18px 18px 5px rgba(0, 0, 0, .8);}
+</code></pre>
+                </div>
+                <!-- //intro2 -->
+
+                <style>
+                    .shadow11 {box-shadow: 4px 4px 0 rgba(0,0,0,.8);}
+                    .shadow12 {box-shadow: 4px 4px 3px rgba(0,0,0,.8);}
+                    .shadow13 {box-shadow: 4px 4px 6px rgba(0,0,0,.8);}
+                    .shadow14 {box-shadow: 4px 4px 9px rgba(0,0,0,.8);}
+                    .shadow15 {box-shadow: 4px 4px 12px rgba(0,0,0,.8);}
+                    .shadow16 {box-shadow: 4px 4px 15px rgba(0,0,0,.8);}
+                    .shadow17 {box-shadow: 4px 4px 18px rgba(0,0,0,.8);}
+                    .shadow18 {box-shadow: 4px 4px 21px rgba(0,0,0,.8);}
+                    .shadow19 {box-shadow: 4px 4px 24px rgba(0,0,0,.8);}
+                    .shadow20 {box-shadow: 4px 4px 27px rgba(0,0,0,.8);}                
+                </style>
+                <!-- intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Sample 2 - blur</h2>
+                    <div class="sBox">
+                        <div class="box sha1">
+                            <div class="shadow11">shadow11</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow12">shadow12</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow13">shadow13</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow14">shadow14</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow15">shadow15</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow16">shadow16</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow17">shadow17</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow18">shadow18</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow19">shadow19</div>
+                        </div>
+                        <div class="box sha1">
+                            <div class="shadow20">shadow20</div>
+                        </div>
+                    </div>    
+<pre class="line-numbers language-css"><code>.shadow11 {box-shadow: 4px 4px 0 rgba(0,0,0,.8);}
+.shadow12 {box-shadow: 4px 4px 3px rgba(0,0,0,.8);}
+.shadow13 {box-shadow: 4px 4px 6px rgba(0,0,0,.8);}
+.shadow14 {box-shadow: 4px 4px 9px rgba(0,0,0,.8);}
+.shadow15 {box-shadow: 4px 4px 12px rgba(0,0,0,.8);}
+.shadow16 {box-shadow: 4px 4px 15px rgba(0,0,0,.8);}
+.shadow17 {box-shadow: 4px 4px 18px rgba(0,0,0,.8);}
+.shadow18 {box-shadow: 4px 4px 21px rgba(0,0,0,.8);}
+.shadow19 {box-shadow: 4px 4px 24px rgba(0,0,0,.8);}
+.shadow20 {box-shadow: 4px 4px 27px rgba(0,0,0,.8);}   
+</code></pre>
+                </div>
+                <!-- //intro3 -->
+
+                <style>
+                    .shadow21 {box-shadow: 5px 5px 0px 5px rgba(0,0,0,.8);}
+                    .shadow22 {box-shadow: 8px 8px 0px 5px rgba(0,0,0,.8);}
+                    .shadow23 {box-shadow: 11px 8px 0px 5px rgba(0,0,0,.8);}
+                    .shadow24 {box-shadow: 14px 8px 0px 5px rgba(0,0,0,.8);}
+                    .shadow25 {box-shadow: 17px 8px 0px 5px rgba(0,0,0,.8);}
+                    .shadow26 {box-shadow: -5px -5px 0px 5px rgba(0,0,0,.8);}
+                    .shadow27 {box-shadow: -8px -8px 0px 5px rgba(0,0,0,.8);}
+                    .shadow28 {box-shadow: -11px -11px 0px 5px rgba(0,0,0,.8);}
+                    .shadow29 {box-shadow: -14px -14px 0px 5px rgba(0,0,0,.8);}
+                    .shadow30 {box-shadow: -17px -17px 0px 5px rgba(0,0,0,.8);}
+                </style>
+                <!-- intro4 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro4" class="page-header">Sample 3 - -x축, -y축(방향)</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow21">shadow21</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow22">shadow22</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow23">shadow23</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow24">shadow24</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow25">shadow25</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow26">shadow26</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow27">shadow27</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow28">shadow28</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow29">shadow29</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow30">shadow30</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow21 {box-shadow: 5px 5px 0px 5px rgba(0,0,0,.8);}
+.shadow22 {box-shadow: 8px 8px 0px 5px rgba(0,0,0,.8);}
+.shadow23 {box-shadow: 11px 8px 0px 5px rgba(0,0,0,.8);}
+.shadow24 {box-shadow: 14px 8px 0px 5px rgba(0,0,0,.8);}
+.shadow25 {box-shadow: 17px 8px 0px 5px rgba(0,0,0,.8);}
+.shadow26 {box-shadow: -5px -5px 0px 5px rgba(0,0,0,.8);}
+.shadow27 {box-shadow: -8px -8px 0px 5px rgba(0,0,0,.8);}
+.shadow28 {box-shadow: -11px -11px 0px 5px rgba(0,0,0,.8);}
+.shadow29 {box-shadow: -14px -14px 0px 5px rgba(0,0,0,.8);}
+.shadow30 {box-shadow: -17px -17px 0px 5px rgba(0,0,0,.8);}
+</code></pre>
+                </div>
+                <!-- //intro4 -->
+
+                <style>
+                    .shadow31 {box-shadow: 0px 0px 0px 1px rgba(0,0,0,.8);}
+                    .shadow32 {box-shadow: 0px 0px 0px 3px rgba(0,0,0,.8);}
+                    .shadow33 {box-shadow: 0px 0px 0px 5px rgba(0,0,0,.8);}
+                    .shadow34 {box-shadow: 0px 0px 0px 7px rgba(0,0,0,.8);}
+                    .shadow35 {box-shadow: 0px 0px 0px 9px rgba(0,0,0,.8);}
+                    .shadow36 {box-shadow: 0px 0px 0px 11px rgba(0,0,0,.8);}
+                    .shadow37 {box-shadow: 0px 0px 0px 13px rgba(0,0,0,.8);}
+                    .shadow38 {box-shadow: 0px 0px 0px 15px rgba(0,0,0,.8);}
+                    .shadow39 {box-shadow: 0px 0px 0px 17px rgba(0,0,0,.8);}
+                    .shadow40 {box-shadow: 0px 0px 0px 19px rgba(0,0,0,.8);}
+                </style>
+                <!-- intro5 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro5" class="page-header">Sample 4 - spread</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow31">shadow31</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow32">shadow32</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow33">shadow33</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow34">shadow34</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow35">shadow35</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow36">shadow36</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow37">shadow37</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow38">shadow38</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow39">shadow39</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow40">shadow40</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow31 {box-shadow: 0px 0px 0px 1px rgba(0,0,0,.8);}
+.shadow32 {box-shadow: 0px 0px 0px 3px rgba(0,0,0,.8);}
+.shadow33 {box-shadow: 0px 0px 0px 5px rgba(0,0,0,.8);}
+.shadow34 {box-shadow: 0px 0px 0px 7px rgba(0,0,0,.8);}
+.shadow35 {box-shadow: 0px 0px 0px 9px rgba(0,0,0,.8);}
+.shadow36 {box-shadow: 0px 0px 0px 11px rgba(0,0,0,.8);}
+.shadow37 {box-shadow: 0px 0px 0px 13px rgba(0,0,0,.8);}
+.shadow38 {box-shadow: 0px 0px 0px 15px rgba(0,0,0,.8);}
+.shadow39 {box-shadow: 0px 0px 0px 17px rgba(0,0,0,.8);}
+.shadow40 {box-shadow: 0px 0px 0px 19px rgba(0,0,0,.8);}</code></pre>
+                </div>
+                <!-- //intro5 -->
+
+                <style>
+                    .shadow41 {box-shadow: 0px 0px 3px 1px rgba(0,0,0,.8);}
+                    .shadow42 {box-shadow: 0px 0px 3px 3px rgba(0,0,0,.8);}
+                    .shadow43 {box-shadow: 0px 0px 3px 5px rgba(0,0,0,.8);}
+                    .shadow44 {box-shadow: 0px 0px 3px 7px rgba(0,0,0,.8);}
+                    .shadow45 {box-shadow: 0px 0px 3px 9px rgba(0,0,0,.8);}
+                    .shadow46 {box-shadow: 0px 0px 3px 11px rgba(0,0,0,.8);}
+                    .shadow47 {box-shadow: 0px 0px 3px 13px rgba(0,0,0,.8);}
+                    .shadow48 {box-shadow: 0px 0px 3px 15px rgba(0,0,0,.8);}
+                    .shadow49 {box-shadow: 0px 0px 3px 17px rgba(0,0,0,.8);}
+                    .shadow50 {box-shadow: 0px 0px 3px 19px rgba(0,0,0,.8);}
+                </style>
+                <!-- intro6 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro6" class="page-header">Sample 5 - blur, spread</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow41">shadow41</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow42">shadow42</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow43">shadow43</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow44">shadow44</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow45">shadow45</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow46">shadow46</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow47">shadow47</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow48">shadow48</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow49">shadow49</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow50">shadow50</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow41 {box-shadow: 0px 0px 3px 1px rgba(0,0,0,.8);}
+.shadow42 {box-shadow: 0px 0px 3px 3px rgba(0,0,0,.8);}
+.shadow43 {box-shadow: 0px 0px 3px 5px rgba(0,0,0,.8);}
+.shadow44 {box-shadow: 0px 0px 3px 7px rgba(0,0,0,.8);}
+.shadow45 {box-shadow: 0px 0px 3px 9px rgba(0,0,0,.8);}
+.shadow46 {box-shadow: 0px 0px 3px 11px rgba(0,0,0,.8);}
+.shadow47 {box-shadow: 0px 0px 3px 13px rgba(0,0,0,.8);}
+.shadow48 {box-shadow: 0px 0px 3px 15px rgba(0,0,0,.8);}
+.shadow49 {box-shadow: 0px 0px 3px 17px rgba(0,0,0,.8);}
+.shadow50 {box-shadow: 0px 0px 3px 19px rgba(0,0,0,.8);}</code></pre>
+                </div>
+                <!-- //intro6 -->
+
+                <style>
+                    .shadow51 {box-shadow: 0px 0px 5px -3px rgba(0,0,0,.8);}
+                    .shadow52 {box-shadow: 0px 2px 5px -3px rgba(0,0,0,.8);}
+                    .shadow53 {box-shadow: 0px 4px 5px -3px rgba(0,0,0,.8);}
+                    .shadow54 {box-shadow: 0px 6px 5px -3px rgba(0,0,0,.8);}
+                    .shadow55 {box-shadow: 0px 8px 5px -3px rgba(0,0,0,.8);}
+                    .shadow56 {box-shadow: 0px 10px 5px -3px rgba(0,0,0,.8);}
+                    .shadow57 {box-shadow: 0px 12px 5px -3px rgba(0,0,0,.8);}
+                    .shadow58 {box-shadow: 0px 14px 5px -3px rgba(0,0,0,.8);}
+                    .shadow59 {box-shadow: 0px 16px 5px -3px rgba(0,0,0,.8);}
+                    .shadow60 {box-shadow: 0px 18px 5px -3px rgba(0,0,0,.8);}
+                </style>
+                <!-- intro7 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro7" class="page-header">Sample 6 - y축에만 그림자</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow51">shadow51</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow52">shadow52</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow53">shadow53</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow54">shadow54</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow55">shadow55</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow56">shadow56</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow57">shadow57</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow58">shadow58</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow59">shadow59</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow60">shadow60</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow51 {box-shadow: 0px 0px 5px -3px rgba(0,0,0,.8);}
+.shadow52 {box-shadow: 0px 2px 5px -3px rgba(0,0,0,.8);}
+.shadow53 {box-shadow: 0px 4px 5px -3px rgba(0,0,0,.8);}
+.shadow54 {box-shadow: 0px 6px 5px -3px rgba(0,0,0,.8);}
+.shadow55 {box-shadow: 0px 8px 5px -3px rgba(0,0,0,.8);}
+.shadow56 {box-shadow: 0px 10px 5px -3px rgba(0,0,0,.8);}
+.shadow57 {box-shadow: 0px 12px 5px -3px rgba(0,0,0,.8);}
+.shadow58 {box-shadow: 0px 14px 5px -3px rgba(0,0,0,.8);}
+.shadow59 {box-shadow: 0px 16px 5px -3px rgba(0,0,0,.8);}
+.shadow60 {box-shadow: 0px 18px 5px -3px rgba(0,0,0,.8);}
+</code></pre>
+                </div>
+                <!-- //intro7 -->
+
+                <style>
+                    .shadow61 {box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow62 {box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow63 {box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow64 {box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow65 {box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow66 {box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow67 {box-shadow: 0px 0px 11px 7px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow68 {box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow69 {box-shadow: 0px 0px 13px 9px rgba(0, 0, 0, 0.8) inset;}
+                    .shadow70 {box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.8) inset;}
+                </style>
+                <!-- intro8 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro8" class="page-header">Sample 7 - inset</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow61">shadow61</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow62">shadow62</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow63">shadow63</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow64">shadow64</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow65">shadow65</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow66">shadow66</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow67">shadow67</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow68">shadow68</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow69">shadow69</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow70">shadow70</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow61 {box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;}
+.shadow62 {box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8) inset;}
+.shadow63 {box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.8) inset;}
+.shadow64 {box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.8) inset;}
+.shadow65 {box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.8) inset;}
+.shadow66 {box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.8) inset;}
+.shadow67 {box-shadow: 0px 0px 11px 7px rgba(0, 0, 0, 0.8) inset;}
+.shadow68 {box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.8) inset;}
+.shadow69 {box-shadow: 0px 0px 13px 9px rgba(0, 0, 0, 0.8) inset;}
+.shadow70 {box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.8) inset;}
+</code></pre>
+                </div>
+                <!-- //intro8 -->
+                <style>
+                    .shadow71 {box-shadow: 5px 5px 0 0 #4a148c;}
+                    .shadow72 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a;
+                        }
+                    .shadow73 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2;
+                    }
+                    .shadow74 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa;
+                    }
+                    .shadow75 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc;
+                    }
+                    .shadow76 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc,
+                        30px 30px 0 0 #ba68c8;
+                    }
+                    .shadow77 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc,
+                        30px 30px 0 0 #ba68c8,
+                        35px 35px 0 0 #ce93d8;
+                    }
+                    .shadow78 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc,
+                        30px 30px 0 0 #ba68c8,
+                        35px 35px 0 0 #ce93d8,
+                        40px 40px 0 0 #e1bee7;
+                    }
+                    .shadow79 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc,
+                        30px 30px 0 0 #ba68c8,
+                        35px 35px 0 0 #ce93d8,
+                        40px 40px 0 0 #e1bee7,
+                        45px 45px 0 0 #f3e5f5;
+                    }
+                    .shadow80 {box-shadow: 
+                        5px 5px 0 0 #4a148c,
+                        10px 10px 0 0 #6a1b9a,
+                        15px 15px 0 0 #7b1fa2,
+                        20px 20px 0 0 #8e24aa,
+                        25px 25px 0 0 #ab47bc,
+                        30px 30px 0 0 #ba68c8,
+                        35px 35px 0 0 #ce93d8,
+                        40px 40px 0 0 #e1bee7,
+                        45px 45px 0 0 #f3e5f5,
+                        50px 50px 0 0 #fce4ec;
+                    }
+                </style>
+                <!-- intro9 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro9" class="page-header">Sample 8 - 여러개의 그림자 넣기</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow71">shadow71</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow72">shadow72</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow73">shadow73</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow74">shadow74</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow75">shadow75</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow76">shadow76</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow77">shadow77</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow78">shadow78</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow79">shadow79</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow80">shadow80</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow71 {box-shadow: 5px 5px 0 0 #4a148c;}
+.shadow72 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a;
+}
+.shadow73 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2;
+}
+.shadow74 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa;
+}
+.shadow75 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc;
+}
+.shadow76 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc,
+30px 30px 0 0 #ba68c8;
+}
+.shadow77 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc,
+30px 30px 0 0 #ba68c8,
+35px 35px 0 0 #ce93d8;
+}
+.shadow78 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc,
+30px 30px 0 0 #ba68c8,
+35px 35px 0 0 #ce93d8,
+40px 40px 0 0 #e1bee7;
+}
+.shadow79 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc,
+30px 30px 0 0 #ba68c8,
+35px 35px 0 0 #ce93d8,
+40px 40px 0 0 #e1bee7,
+45px 45px 0 0 #f3e5f5;
+}
+.shadow80 {box-shadow: 
+5px 5px 0 0 #4a148c,
+10px 10px 0 0 #6a1b9a,
+15px 15px 0 0 #7b1fa2,
+20px 20px 0 0 #8e24aa,
+25px 25px 0 0 #ab47bc,
+30px 30px 0 0 #ba68c8,
+35px 35px 0 0 #ce93d8,
+40px 40px 0 0 #e1bee7,
+45px 45px 0 0 #f3e5f5,
+50px 50px 0 0 #fce4ec;
+}</code></pre>
+                </div>
+                <!-- //intro9 -->
+                <style>
+                        .shadow81 {box-shadow: 0px 0px 0 3px #4a148c inset;}
+                        .shadow82 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset;
+                            }
+                        .shadow83 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset;
+                        }
+                        .shadow84 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset;
+                        }
+                        .shadow85 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset;
+                        }
+                        .shadow86 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset,
+                            0px 0px 0 18px #ba68c8 inset;
+                        }
+                        .shadow87 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset,
+                            0px 0px 0 18px #ba68c8 inset,
+                            0px 0px 0 21px #ce93d8 inset;
+                        }
+                        .shadow88 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset,
+                            0px 0px 0 18px #ba68c8 inset,
+                            0px 0px 0 21px #ce93d8 inset,
+                            0px 0px 0 24px #e1bee7 inset;
+                        }
+                        .shadow89 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset,
+                            0px 0px 0 18px #ba68c8 inset,
+                            0px 0px 0 21px #ce93d8 inset,
+                            0px 0px 0 24px #e1bee7 inset,
+                            0px 0px 0 27px #f3e5f5 inset;
+                        }
+                        .shadow90 {box-shadow: 
+                            0px 0px 0 3px #4a148c inset,
+                            0px 0px 0 6px #6a1b9a inset,
+                            0px 0px 0 9px #7b1fa2 inset,
+                            0px 0px 0 12px #8e24aa inset,
+                            0px 0px 0 15px #ab47bc inset,
+                            0px 0px 0 18px #ba68c8 inset,
+                            0px 0px 0 21px #ce93d8 inset,
+                            0px 0px 0 24px #e1bee7 inset,
+                            0px 0px 0 27px #f3e5f5 inset,
+                            0px 0px 0 30px #fce4ec inset;
+                        }
+                    </style>
+
+                <!-- intro10 -->
+                <div class="bs-docs-section">
+                        <h2 id="intro10" class="page-header">Sample 9 - 여러개의 그림자 안으로 넣기</h2>
+                        <div class="sBox">
+                            <div class="box sha1">
+                                <div class="shadow81">shadow81</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow82">shadow82</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow83">shadow83</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow84">shadow84</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow85">shadow85</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow86">shadow86</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow87">shadow87</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow88">shadow88</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow89">shadow89</div>
+                            </div>
+                            <div class="box sha1">
+                                <div class="shadow90">shadow90</div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.shadow81 {box-shadow: 0px 0px 0 3px #4a148c inset;}
+.shadow82 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset;
+}
+.shadow83 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset;
+}
+.shadow84 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset;
+}
+.shadow85 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset;
+}
+.shadow86 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset,
+0px 0px 0 18px #ba68c8 inset;
+}
+.shadow87 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset,
+0px 0px 0 18px #ba68c8 inset,
+0px 0px 0 21px #ce93d8 inset;
+}
+.shadow88 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset,
+0px 0px 0 18px #ba68c8 inset,
+0px 0px 0 21px #ce93d8 inset,
+0px 0px 0 24px #e1bee7 inset;
+}
+.shadow89 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset,
+0px 0px 0 18px #ba68c8 inset,
+0px 0px 0 21px #ce93d8 inset,
+0px 0px 0 24px #e1bee7 inset,
+0px 0px 0 27px #f3e5f5 inset;
+}
+.shadow90 {box-shadow: 
+0px 0px 0 3px #4a148c inset,
+0px 0px 0 6px #6a1b9a inset,
+0px 0px 0 9px #7b1fa2 inset,
+0px 0px 0 12px #8e24aa inset,
+0px 0px 0 15px #ab47bc inset,
+0px 0px 0 18px #ba68c8 inset,
+0px 0px 0 21px #ce93d8 inset,
+0px 0px 0 24px #e1bee7 inset,
+0px 0px 0 27px #f3e5f5 inset,
+0px 0px 0 30px #fce4ec inset;
+}
+</code></pre>
+                </div>
+                <!-- //intro10 -->
+
+                <!-- intro11 -->
+                <div class="bs-docs-section">
+                <h2 id="intro11" class="page-header">Button sample</h2>
+                <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="result" data-user="ARAM31" data-slug-hash="ZEEoLBV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Box-shadow Button">
+                <span>See the Pen <a href="https://codepen.io/ARAM31/pen/ZEEoLBV">
+                Box-shadow Button</a> by leearam (<a href="https://codepen.io/ARAM31">@ARAM31</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //intro11 -->
+
+
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">box-shadow</a></li>
+                        <li><a href="#intro2">Sample 1 - x축, y축 변경</a></li>
+                        <li><a href="#intro3">Sample 2 - blur</a></li>
+                        <li><a href="#intro4">Sample 3 - -x축, -y축(방향)</a></li>
+                        <li><a href="#intro5">Sample 4 - spread</a></li>
+                        <li><a href="#intro6">Sample 5 - blur, spread</a></li>
+                        <li><a href="#intro7">Sample 6 - y축에만 그림자</a></li>
+                        <li><a href="#intro8">Sample 7 - inset</a></li>
+                        <li><a href="#intro9">Sample 8 - 여러개의 그림자 넣기</a></li>
+                        <li><a href="#intro10">Sample 9 - 여러개의 그림자 안으로 넣기</a></li>
+                        <li><a href="#intro11">Button sample</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="http://dldkfka331.dothome.co.kr">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+</body>
+
+</html>

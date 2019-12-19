@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rlayout6</title>
+    <style>
+
+    /* 전체 */
+    *{padding: 0; margin: 0;}
+    #wrap {width: 1200px; margin: 0 auto;}
+    #header {width: 100%; height: 100px; background:#BADEFB;}
+    #banner {width: 100%; height: 300px; background: #8ECBF9;}
+    #nav {width: 100%; height: 500px;}
+    #cont {width: 100%; height: 300px;}
+    #section {width: 90%; padding: 5%; background: #3DA7F5; overflow: hidden;}
+    #footer {width: 100%; height: 100px; background: #61B6F6; clear: both;}
+
+    /* 박스 */
+    #nav .nav_01 {width: 40%; height: 500px; background: #61B6F6; float: left;}
+    #nav .nav_02 {width: 60%; height: 250px; background: #3DA7F5; float: left;}
+    #nav .nav_03 {width: 60%; height: 250px; background: #1799F3; float: left;}
+    #cont .cont_01 {width: 40%; height: 300px; background: #168BE5; float: left;}
+    #cont .cont_02 {width: 30%; height: 300px; background: #127AD2; float: left;}
+    #cont .cont_03 {width: 30%; height: 300px; background: #0F69C0; float: left;}
+    #section > .article {width: 21%; height: 250px; margin: 2%; background: #127AD2; float: left; border-radius: 20%;}
+
+    /* 미디어쿼리 ~960px */
+    @media (max-width:960px){
+        #wrap {width: 100%;}
+        #cont .cont_02 {display: none;}
+        #cont .cont_01 {width: 50%;}
+        #cont .cont_03 {width: 50%;}
+        #section > .article:last-child {display: none;}
+        #section > .article {width: 29.333%;}
+    }
+    /* ~768px */
+    @media (max-width:768px){
+        #cont .cont_01 {width: 100%; height: 150px;}
+        #cont .cont_03 {width: 100%; height: 150px;}
+        #section > .article {height: 200px;}
+        #nav .nav_01 {width: 30%;}
+        #nav .nav_02 {width: 70%;}
+        #nav .nav_03 {width: 70%;}
+    }
+    /* ~480px */
+    @media (max-width:480px){
+        #nav .nav_01 {width: 100%; height: 150px;}
+        #nav .nav_02 {width: 100%; height: 150px;}
+        #nav .nav_03 {width: 100%; height: 200px;}
+        #section > .article {width: 96%;}
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="banner"></div>
+        <div id="nav">
+            <div class="nav_01"></div>
+            <div class="nav_02"></div>
+            <div class="nav_03"></div>
+        </div>
+        <div id="cont">
+            <div class="cont_01"></div>
+            <div class="cont_02"></div>
+            <div class="cont_03"></div>
+        </div>
+        <div id="section">
+            <div class="article"></div>
+            <div class="article"></div>
+            <div class="article"></div>
+            <div class="article"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

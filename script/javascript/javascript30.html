@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript30</title>
+    <script>
+        window.onload = function(){           //아래에 안쓰고 먼저 읽게 하기위해  사용
+            let clock = document.getElementById("clock");              //id값을 불러옴
+            setInterval(function(){
+                clock.innerHTML = new Date().toLocaleString();
+            },1000);                //1000ms 1초에 한번 움직임
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="clock"> </div>
+
+    
+</body>
+</html>

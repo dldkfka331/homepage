@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery06</title>
+</head>
+<body>
+    <h1>자식 요소 필터 선택자</h1>
+    <div class="list">
+        <p>1_1.(p)기본 선택자</p>
+        <p>1_2.(p)계층 선택자</p>
+        <div>1_3.(div):first-child</div>
+        <div>1_4.(div):last-child</div>
+    </div>
+    <div class="list">
+        <p>2_1.(p)기본 선택자</p>
+        <p>2_2.(p)계층 선택자</p>
+    </div>
+    <div class="list">
+        <span>3_1.(span)기본 선택자</span>
+    </div>
+    <div class="list">
+        <div>4_1.(div)기본 선택자</div>
+    </div>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        // $(".list :first-child").css("color","red");
+        // $(".list :first").css("color","red");  //맨위에 하나만됨
+        // $(".list div:first-of-type").css("color","red");   //div박스중 첫번째 꺼에만 먹힘
+        // $(".list :last-child").css("color","red");
+        // $(".list :last").css("color","red");
+        // $(".list :only-child").css("color","red");
+        // $(".list :nth-of-type(2n+1)").css("color","red");
+        // $(".list :nth-child(3)").css("color","red");
+        // $(".list span:nth-of-type(1)").css("color","red");
+        // $(".list div:nth-of-type(2)").css("color","red");
+        $(".list p:nth-of-type(2)").css("color","red");
+
+    </script>
+</body>
+</html>

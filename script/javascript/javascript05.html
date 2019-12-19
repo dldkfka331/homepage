@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript05</title>
+    <script>
+        //전역 변수
+        let x = 1000;
+        let y = 2000;
+        let z = 700;
+       
+       //함수 선언
+       function fun1(){
+           //지역 변수 - 함수 안에 있기 때문에 함수 안에서만 작동됨
+         let x = 1000;
+         let y = 2000;
+         y = 3000;     //지역변수 y가 2000에서 3000으로 변한 것
+         z = 800;      //전역변수 z가 700에서 800으로 변한 것 - 함수안에 지역변수 z가 없기 때문에
+         //함수안의 지역 변수를 읽음
+         document.write("함수 선언 <br>");
+         document.write(x);
+         document.write("<br>");
+         document.write(y);
+         document.write("<br>");
+         document.write(z);
+         document.write("<br><br>");
+       }
+       fun1(); //함수 실행
+
+       //전역 변수를 읽음
+        document.write("변수 선언 <br>");
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+        document.write(z);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
