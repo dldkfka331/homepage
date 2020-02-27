@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery18</title>
+    <style>
+        .red > li{font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 10px; margin: 10px;}
+        .blue {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #215770; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul class="red">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <p class="desc"></p>
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        function he(element, height){
+            $(".desc ").text(element + "은 " + height + "px")
+        }
+        $(".btn1").click(function(){
+            let h=$(".list li").height();
+            he("리스트의 height 값" , h)
+        });
+        $(".btn2").click(function(){
+            let h=$(".list li").innerHeight();
+            he("리스트의 innerHeight 값" , h)        //마진+패딩 포함값
+        });
+        $(".btn3").click(function(){
+            let h=$(".list li").outerHeight();
+            he("리스트의 outerHeight 값" , h)        //마진+패딩+보더 포함값
+        });
+    </script>
+</body>
+</html>

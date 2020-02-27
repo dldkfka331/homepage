@@ -1,0 +1,55 @@
+/*리셋*/
+body, div,ul,ol,li {margin: 0; padding: 0; }
+p, h1,h2,h3,h4,h5,a,ul,ol,li,em {font-size: 16px; text-decoration: none; color: #000; list-style: none; font-style: normal; font-weight: normal;}
+img {width: 100%;}
+
+
+/* 전체 */
+#header {height: 100px; width: 100%;}
+#content {margin-top: 20px;}
+#experience{margin: 20px 0 30px 0 ;}
+#footer { margin: 30px 0;}
+#layer {width: 600px; z-index: 10; position: absolute; top: 260px; left: 400px; border: 5px solid #ccc; display: none;}
+#layer img {display: block;}
+#layer .exit{position: absolute; top: 4px; right: 10px; color: #fff; font-weight: bold;}
+
+/* container */
+.container {width: 960px; margin: 0 auto;}
+
+/* header */
+.header .logo {width: 100px; float: left; margin-top: 20px;}
+.header .menu { float: right;}
+.header .menu ul {margin-top: 50px; }
+.header .menu ul li {display: inline; margin-left: 15px;}
+
+/* content */
+.content { overflow: hidden;}
+.content .news {float: left; width: 49%; border: 1px solid #ccc; box-sizing: border-box; margin-right: 2%; position: relative; padding:24px 20px 18px 20px;}
+.content .news .main {padding-bottom: 30px;}
+.content .news .main li {display: inline; margin-right: 10px; position: relative;}
+.content .news .main li:last-child:after{width: 0;}
+.content .news .main li::after {content: ''; width: 2px; height: 18px; background-color: #000; position: absolute; top: 4px; right: -8px; }
+.content .news .main li.active a{font-weight: bold; }
+
+.content .news .sub li {margin: 6px 0;}
+.content .news .sub a {font-size: 14px;}
+.content .news .sub em {float: right; font-size: 14px;}
+.content .news a.more {font-size: 14px; position: absolute; right: 23px; top: 25px;}
+.content .news a.more i {font-size: 18px; color: purple;}
+.content .ON {float: left;width: 49%; }
+.list2 {display: none;}
+
+/* experience */
+.experience {overflow: hidden;}
+.experience h2 {font-weight: bold;}
+.experience div {}
+.experience div:last-child {margin-right: 0;}
+.experience img {display: block;}
+.experience div p {font-size: 14px;}
+
+/* footer */
+.footer {border-top: 1px solid #999; padding-top: 20px;}
+.footer ul li {color: #999; font-size: 12px; display: inline; position: relative;margin-right: 10px;}
+.footer ul li::after{content: ''; width: 1px; height: 10px; background: #ccc; position: absolute; right: -8px; top: 4px; }
+.footer ul li:last-child::after {width: 0;}
+.footer p {color: #999; font-size: 12px;}

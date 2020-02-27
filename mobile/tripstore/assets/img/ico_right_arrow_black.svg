@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-/-back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="button-area" fill-opacity="0.01" fill="#FFFFFF" points="4 3 14 3 14 21 4 21"></polygon>
+        <path d="M13.4142136,12 L19.7071068,5.70710678 C20.0976311,5.31658249 20.0976311,4.68341751 19.7071068,4.29289322 C19.3165825,3.90236893 18.6834175,3.90236893 18.2928932,4.29289322 L11.2928932,11.2928932 C10.9023689,11.6834175 10.9023689,12.3165825 11.2928932,12.7071068 L18.2928932,19.7071068 C18.6834175,20.0976311 19.3165825,20.0976311 19.7071068,19.7071068 C20.0976311,19.3165825 20.0976311,18.6834175 19.7071068,18.2928932 L13.4142136,12 Z" id="Path" fill="#222222" fill-rule="nonzero" transform="translate(15.500000, 12.000000) rotate(-180.000000) translate(-15.500000, -12.000000) "></path>
+    </g>
+</svg>

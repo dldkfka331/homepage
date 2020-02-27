@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php02</title>
+    <script>
+        let x = "javascript"  //자바스크립트 변수
+        document.write(x ,"<br>");
+        document.write("나는 "+x+"를 배우고 있습니다. <br>");  //자바스크립트 출력
+        document.write(`나는 ${x}를 배우고 있습니다. <br><br>`);  //탬플릿 리터럴
+    </script>
+</head>
+<body>
+    <?php
+        $php = "php";
+        echo $php;
+        echo "<br>";
+        echo "나는 ".$php."를 배우고 있습니다. <br>";
+        echo "나는 {$php}를 배우고 있습니다. <br><br>";
+    ?>
+</body>
+</html>

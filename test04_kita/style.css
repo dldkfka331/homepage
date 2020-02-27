@@ -1,0 +1,102 @@
+/*reser*/
+*, div, img, li{margin: 0; padding: 0; box-sizing: border-box;}
+h1,h2,h3,h4,p,a,strong,em,li,ul,div { 
+    font-family: 'Nanum Gothic', sans-serif; text-decoration: none; color: #000; list-style: none; font-style: normal; font-weight: normal;}
+
+/*전체*/
+#wrap {width: 100%;}
+#header {}
+#banner {}
+#business {background: #f4f8f9;}
+#contents .container {padding: 30px 0; display: flex; justify-content: space-between; flex-wrap: wrap;}
+#contents .container > div {height: 180px; border: 1px solid #d8d9db;}
+#press {width: 30%;  margin-bottom: 30px;}
+#research {width: 68%; margin-bottom: 30px;}
+#seminar {width: 30%; background: url(img/sem.png) no-repeat center center; background-size: 100%;}
+#infor {width: 68%; }
+#footer {background: #27405F;}
+
+.more {background: url(img/plus.png); display: block; width: 25px; height: 25px; background-size: contain}
+
+/* container */
+.container {width: 1100px; margin: 0 auto;}
+
+/* header */
+.header {padding: 20px 0; overflow: hidden; }
+.header .logo {float: left; width: 150px;}
+.header .logo img {width: 100%;}
+.header .menu {float: right;}
+.header .menu ul li {display: inline-block; padding: 20px 20px 0 20px;}
+.header .menu ul li a {font-weight: bold;}
+
+/* banner */
+.banner {width: 100%; }
+.banner img{width: 100%;}
+
+/*business*/
+.business {padding: 25px 0; position: relative;}
+.business h2 {text-align: center; margin-bottom: 30px;font-weight: bold;}
+.business .more {position: absolute; top: 25px; right: 0; }
+.business .B_list {display: flex; justify-content: space-between;}
+.B_list > div { width: 23%; padding: 25px 20px; background: #fff; border: 1px solid #d8d9db;}
+.B_list > div span {display: inline-block; border: 3px solid #6a8fd3; padding: 3px 5px; border-radius: 5px; font-size: 12px; font-weight: bold; color: #6a8fd3 ;margin-bottom: 10px;}
+.B_list > div h3 {font-size: 14px; margin-bottom: 10px; font-weight: bold;}
+.B_list > div ul li {margin-bottom: 5px;}
+.B_list > div ul li strong {font-size: 12px; color:#fff; background-color: #6a8fd3; padding: 2px 3px; border-radius: 3px; margin-right: 7px;}
+.B_list > div ul li em  { font-size: 12px; color: #333;}
+
+
+/* press */
+.press {padding: 20px 30px; position: relative;}
+.press .main ul {margin-bottom: 25px;}
+.press .main ul li {display: inline;}
+.press .main ul li:first-child {position: relative; margin-right: 10px;}
+.press .main ul li:first-child::after {content: ''; position: absolute; top: 2px; right: -4px; width: 2px; height: 15px; background: #000;}
+.press .main ul li a {font-size: 18px; font-weight: bold; color: #777;}
+.press .main ul li.active a {color: #000;}
+.press .P_list01 ul li { font-size: 14px; margin-bottom: 15px;} 
+.press .P_list01 ul li em {display: block; margin-top: 5px; font-size: 12px; color: #777;}
+.press .more {position: absolute; top: 15px; right: 15px; }
+
+/* research */
+.research {padding: 20px 30px; position: relative;}
+.research h2 {font-size: 18px; font-weight: bold; margin-bottom: 20px;}
+.research .R_list li {margin-bottom: 7px; font-size: 14px; overflow: hidden;  }
+.research .R_list li > strong {display: inline-block; background: #6a8fd3; color: #fff; font-size: 12px; padding: 2px 15px; margin-right: 15px; width: 100px; text-align: center;}
+.research .R_list li  > a {display: inline-block; width: 430px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.research .R_list li > em {float: right; color: #777;}
+.research .more {position: absolute; top: 15px; right: 15px; }
+
+/* infor */
+.infor {padding: 20px 30px; position: relative; overflow: hidden;}
+.infor h2 {font-size: 18px; font-weight: bold;  margin-bottom: 20px;}
+.infor .I_list01 {float: left; width: 47%;margin-right: 6%; position: relative;}
+.infor .I_list01:after {content: ''; position: absolute; top: 0; right: -17px; width: 1px; height: 80px; background: #ddd;}
+.infor .I_list02 {float: left; width: 47%;}
+.infor > div > ul > li {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-bottom: 10px; font-size: 14px;}
+.infor > div > ul > li em {display: block; margin-top: 5px; color: #777; font-size: 12px;}
+.infor .more {position: absolute; top: 15px; right: 15px; }
+
+/* footer */
+.footer {padding: 25px 0;}
+.footer_list {padding-bottom: 25px; border-bottom: 1px solid #3f5771;}
+.footer_list ul li {display: inline; position: relative; margin-right: 20px;}
+.footer_list ul li:after {content: ''; position: absolute; top: 3px; right: -13px; width: 2px; height: 15px; background: #3f5771;}
+.footer_list ul li:last-child:after {width: 0;}
+.footer_list ul li a {color: #ccc; font-size: 14px;}
+.footer_list  .container {position: relative;}
+.footer_list #family {position: absolute; right: 0; top: 0;  background: transparent; padding: 3px 60px 7px 10px; color: #fff; font-size: 12px; }
+.footer_list #family > option {color: #000;  }
+
+.footer_logo {overflow: hidden; padding-top: 25px;}
+.footer_logo img {display: inline-block;}
+.footer_logo .fLogo {float: left; margin-right: 25px;}
+.footer_logo .fLogo img {width: 200px;}
+.footer_logo .copy {float: left; margin: 20px 25px 0 0;}
+.footer_logo .copy ul li {color: #ccc; font-size: 12px; margin-bottom: 5px;}
+.footer_logo .social {float: left;margin-top: 10px;}
+.footer_logo .social img {width: 100px;}
+.footer_logo .call {float: right; position: relative;margin-top: 10px;}
+.footer_logo .call::before {content: ''; position: absolute; left: -26px; top: 0; width: 1px; height: 40px; background: #ccc;}
+.footer_logo .call p {color: #ccc; font-size: 14px;}
+.footer_logo .call p strong {display: block; color: #ccc; font-size: 24px;}

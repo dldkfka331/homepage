@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | PHP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="https://dldkfka331.dothome.co.kr" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!--style-->
+    <style>
+    ul {list-style: none;}
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">ARAM'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs10" id="content">
+        <div class="container">
+            <h1>PHP</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">PHP</h2>
+                    <div class="well">PHP는 서버측에서 실행되는 스크립트 언어입니다.</div>
+                    <p>php는 서버사이드 스크립트 언어입니다. 자바스크립트는 웹 브라우저에서 내장된 인터프린트에 의해 해석되는 언어입니다. 즉, 웹브라우저에서 이용할 수 있는 프로그램입니다. 반면에 php는 서버에 설치된 php에 의해 해석됩니다. 이러한 처리를 가능하게 해주는 프로그램은 PHP, JSP, ASP 등이 있으며, wordpress, 줌라, XE, cafe24, 티스토리 등의 플랫폼 역시 php를 기반으로 하고 있습니다.</p>
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">PHP 기초</h2>
+                 
+                    <h3>PHP 출력</h3>
+                    <div class="bs-callout bs-callout-info">
+                        &lt;?php <br>
+                            &nbsp; &nbsp; &nbsp; //실행코드 <br>
+                        ?&gt;
+                    </div>
+                    <h3>PHP 주석</h3>
+                    <div class="bs-callout bs-callout-info">//한줄 <br> /*여러줄*/</div>
+                    
+                    <h3>PHP 출력 예제</h3>
+                    <h5>PHP 사용방법 <a href="php01.html" target="_blank">View</a></h5>
+                    <pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php01&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;?php
+        echo "hello, php"
+   ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">변수 선언</h2>
+                    
+                    <h3>변수</h3>
+                    <div class="bs-callout bs-callout-info">
+                        $변수명 = 값;
+                    </div>
+                    <h5>변수 사용방법 <a href="php02.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;php02&lt;/title&gt;
+&lt;script&gt;
+    let x = "javascript"  //자바스크립트 변수
+    document.write(x ,"&lt;br&gt;");
+    document.write("나는 "+x+"를 배우고 있습니다. &lt;br&gt;");  //자바스크립트 출력
+    document.write(`나는 ${x}를 배우고 있습니다. &lt;br&gt;&lt;br&gt;`);  //탬플릿 리터럴
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+    $php = "php"; //변수
+    echo $php;
+    echo "&lt;br&gt;";
+    echo "나는 ".$php."를 배우고 있습니다. &lt;br&gt;";
+    echo "나는 {$php}를 배우고 있습니다. &lt;br&gt;&lt;br&gt;";
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">배열</h2>
+                    
+                    <h3>배열</h3>
+                    <div class="bs-callout bs-callout-info">
+                        $변수명 = array();
+                    </div>
+                    <h5>배열 사용방법 <a href="php03.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php03&lt;/title&gt;
+    &lt;script&gt;
+        let arr1 = new Array();
+        arr1 [0] =100;
+        arr1 [1] =200;
+        document.write(arr1[0],"&lt;br&gt;");
+        document.write(arr1[1],"&lt;br&gt;&lt;br&gt;");
+
+        let arr2 = [];
+        arr2 [0] =300;
+        arr2 [1] =400;
+        document.write(arr2[0],"&lt;br&gt;");
+        document.write(arr2[1],"&lt;br&gt;&lt;br&gt;");
+
+        let arr3 = new Array(500,600);
+        document.write(arr3[0],"&lt;br&gt;");
+        document.write(arr3[1],"&lt;br&gt;&lt;br&gt;");
+
+        let arr4 = [700,800];
+        document.write(arr4[0],"&lt;br&gt;");
+        document.write(arr4[1],"&lt;br&gt;&lt;br&gt;");
+
+        let arr5 = [900,1000];
+        document.write(arr5.length,"&lt;br&gt;&lt;br&gt;");
+
+        let arr6 = [1000,1100,1200];
+        for(let i=0; i&lt;arr6.length; i++){
+            document.write(arr6[i],"&lt;br&gt;" )
+        }
+        document.write("&lt;br&gt;");
+
+        let arr7 = [1300,1400,1500,1600];
+        let map7 = arr7.map(x =&gt; x);
+        document.write(map7,"&lt;br&gt;");
+
+        let arr8 = [1300,1400,1500,1600];
+        let map8 = arr8.map(x =&gt; x*2);
+        document.write(map8,"&lt;br&gt;&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        $array1 = array();
+        $array1[0] =100;
+        $array1[1] =200;
+        echo $array1[0],"&lt;br&gt;";
+        echo $array1[1],"&lt;br&gt;&lt;br&gt;";
+
+        $array2 = array();
+        $array2["숫자1"] =300;
+        $array2["숫자2"] =400;
+        echo $array2["숫자1"],"&lt;br&gt;";
+        echo $array2["숫자2"],"&lt;br&gt;&lt;br&gt;";
+
+        $array3 = array();
+        array_push($array3, 500,600,700,800);                                         
+        echo $array3[0],"&lt;br&gt;";
+        echo $array3[1],"&lt;br&gt;";
+        echo $array3[2],"&lt;br&gt;";
+        echo $array3[3],"&lt;br&gt;&lt;br&gt;";
+
+        $array4 = array();
+        $array4["숫자"][0] = 900;
+        $array4["숫자"][2] = 1000;
+        $array4["숫자"][3] = 1100;
+        $array4["숫자"][4] = 1200;
+        $array4["문자"][0] = "천";
+        $array4["문자"][2] = "이천";
+        $array4["문자"][3] = "삼천";
+        $array4["문자"][4] = "사천";
+        var_dump($array4);  //배열의 내용을 보여줌
+        echo "&lt;br&gt;&lt;br&gt;";
+
+        $array5 = array();
+        $array5 = [1000, 2000, 3000, 4000, 5000];
+        echo $array5[0],"&lt;br&gt;";
+        echo $array5[1],"&lt;br&gt;";
+        echo $array5[2],"&lt;br&gt;";
+        echo $array5[3],"&lt;br&gt;";
+        echo $array5[4],"&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">데이터형</h2>
+                    
+                    <h3>데이터형</h3>
+                    <div class="bs-callout bs-callout-info">
+                       변수에 사용되는 값이 숫자인지, 문자인지, 논리값인지 구분하는 것을 데이터형이라고 합니다. <br>
+                       데이터형의 유형을 변경하는 것을 형변환이라고 합니다.
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>데이터형</th>
+                                    <th>값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>int</td>
+                                    <td>숫자</td>
+                                </tr>
+                                <tr>
+                                    <td>interger</td>
+                                    <td>숫자(정수)</td>
+                                </tr>
+                                <tr>
+                                    <td>double</td>
+                                    <td>숫자(소수 포함)</td>
+                                </tr>
+                                <tr>
+                                    <td>string</td>
+                                    <td>문자열</td>
+                                </tr>
+                                <tr>
+                                    <td>boolen</td>
+                                    <td>논리값 (true, false)</td>
+                                </tr>
+                                <tr>
+                                    <td>null</td>
+                                    <td>없는 값</td>
+                                </tr>
+                                <tr>
+                                    <td>array</td>
+                                    <td>배열</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>데이터형 <a href="php04.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php04&lt;/title&gt;
+    &lt;script&gt;
+        const data1 =100;
+        document.write(data1, "&lt;br&gt;");
+        document.write(typeof(data1) , "&lt;br&gt;&lt;br&gt;");
+
+        const data2 ="100";
+        document.write(data2, "&lt;br&gt;");
+        document.write(typeof(data2) , "&lt;br&gt;&lt;br&gt;");
+
+        const data3 =""+100;                //숫자를 문자로 형변환
+        document.write(data3, "&lt;br&gt;");
+        document.write(typeof(data3) , "&lt;br&gt;&lt;br&gt;");
+
+        const data4 = Number("100");               //숫자로 인식함 (number-내장객체를 이용한 형변환)
+        document.write(data4, "&lt;br&gt;");
+        document.write(typeof(data4) , "&lt;br&gt;&lt;br&gt;");
+
+        const data5 = String(100);             
+        document.write(data5, "&lt;br&gt;");
+        document.write(typeof(data5) , "&lt;br&gt;&lt;br&gt;");
+
+        const data6 = [100,200,300];             
+        document.write(data6, "&lt;br&gt;");
+        document.write(typeof(data6) , "&lt;br&gt;&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        $dat1 = 100;
+        echo $dat1,"&lt;br&gt;";
+        echo gettype($dat1) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat2 = "100";
+        echo $dat2,"&lt;br&gt;";
+        echo gettype($dat2) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat3 = "PHP";
+        echo $dat3,"&lt;br&gt;";
+        echo gettype($dat3) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat4 = array();
+        echo $dat4,"&lt;br&gt;";
+        echo gettype($dat4) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat5 = null;
+        echo $dat5,"&lt;br&gt;";
+        echo gettype($dat5) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat6 = true;
+        echo $dat6,"&lt;br&gt;";
+        echo gettype($dat6) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat7 = false;
+        echo $dat7,"&lt;br&gt;";
+        echo gettype($dat7) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat8 = "100";
+        echo $dat8,"&lt;br&gt;";
+        echo gettype($dat8) ,"&lt;br&gt;";   //문자열
+        $dat8 = (int)$dat8;                     //숫자로 바꿈
+        echo gettype($dat8) ,"&lt;br&gt;&lt;br&gt;";
+
+        $dat9 = 100;
+        echo $dat9,"&lt;br&gt;";
+        echo gettype($dat9) ,"&lt;br&gt;";   //숫자
+        $dat9 = (string)$dat9;                 //문자로 바꿈
+        echo gettype($dat9) ,"&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">조건문</h2>
+                    
+                    <h3>if 문</h3>
+                    <h5>if 문<a href="php05.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php05&lt;/title&gt;
+    &lt;script&gt;
+         let num =100 ;
+         if(num % 2 == 0 ){
+             document.write("이 숫자는 짝수 입니다. &lt;br&gt;&lt;br&gt;")
+         }else {
+            document.write("이 숫자는 홀수 입니다. &lt;br&gt;&lt;br&gt;")
+         }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+       $num = 100;
+       if($num % 2 == 0 ){
+            echo ("이 숫자는 짝수 입니다. &lt;br&gt;&lt;br&gt;");
+        }else {
+            echo ("이 숫자는 홀수 입니다. &lt;br&gt;&lt;br&gt;");
+        }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <h3>for 문</h3>
+                    <h5>for 문<a href="php06.html" target="_blank">View</a></h5>
+                    <pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php06&lt;/title&gt;
+    &lt;script&gt;
+        for(let i=1; i&lt;=5; i++){
+            document.write(i +". for 문이 실행되었습니다. &lt;br&gt;");
+        }
+        document.write("&lt;br&gt;");
+
+        const for1 = [1,2,3,4,5];
+        for(let i=0; i&lt;for1.length; i++){
+            document.write(for1[i] +". for 문이 실행되었습니다. &lt;br&gt;");
+        }
+        document.write("&lt;br&gt;");
+
+        const for2 = [1,2,3,4,5,6];
+        const for2_new = [];
+        for(let i=0; i&lt;for2.length; i++){
+            if(for2[i]%2 ==0){
+                for2_new.push(for2[i]);
+            }           
+        }
+        document.write(for2 ,"&lt;br&gt;");
+        document.write(for2_new,"&lt;br&gt;&lt;br&gt;");
+
+        const for3 = [1,2,3,4,5,6];
+        for3.forEach(function(i){
+            document.write(i +". for 문이 실행되었습니다. &lt;br&gt;");
+        });
+        document.write("&lt;br&gt;");
+
+        const for4 = [1,2,3,4,5];
+        const for4_new = [];
+        for4.forEach(function(i){
+            if(i % 2 ==0){
+                for4_new.push(i);
+            }           
+        });
+        document.write(for4 ,"&lt;br&gt;");
+        document.write(for4_new ,"&lt;br&gt;");
+        document.write("&lt;br&gt;");
+
+        const for5 = [1,2,3,4,5];
+        const for5_new = [];
+        for5.forEach( (num) =&gt; {
+            if(num % 2 ==0){
+                for5_new.push(num);
+            }
+        });
+        document.write(for5 ,"&lt;br&gt;");
+        document.write(for5_new ,"&lt;br&gt;");
+        document.write("&lt;br&gt;");
+
+        //for in  -- 객체
+        const for6 = {a: 100, b:200, c:300};
+        for (let prop in for6 ){
+            document.write(prop, for6[prop] ,"&lt;br&gt;");
+        }
+        document.write("&lt;br&gt;");
+
+        //for of  -- 배열
+        const for7 = [1,2,3];
+        for(let value7 of for7){
+            document.write(value7,"&lt;br&gt;");
+        }
+        document.write("&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        for($num=1; $num &lt;=5; $num++){
+            echo "{$num}. for 문이 실행되었습니다. &lt;br&gt;" ;
+        }
+        echo "&lt;br&gt;";
+
+        //forEach
+        $for2 = array();
+        $for2[0] = array();
+        $for2[0]['name'] = "이아람";
+        $for2[0]['userID'] = "aramz";
+        $for2[0]['userPW'] = "1234";
+
+        $for2[1] = array();
+        $for2[1]['name'] = "메롱";
+        $for2[1]['userID'] = "merrong";
+        $for2[1]['userPW'] = "123456";
+
+        $for2[2] = array();
+        $for2[2]['name'] = "냠냠";
+        $for2[2]['userID'] = "naw";
+        $for2[2]['userPW'] = "123";
+
+        $for2[3] = array();
+        $for2[3]['name'] = "소";
+        $for2[3]['userID'] = "Cow";
+        $for2[3]['userPW'] = "123312";
+
+        foreach($for2 as $data){
+            echo "이름 : ".$data ['name']. "&lt;br&gt;";
+            echo "아이디 : ".$data ['userID']. "&lt;br&gt;";
+            echo "비밀번호 : ".$data ['userPW']. "&lt;br&gt;";
+        }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <h3>select 메뉴</h3>
+                    <h5>select 메뉴<a href="php07.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php07&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;select name="birthMonth" id="birthMonth"&gt;
+        &lt;!-- &lt;?php
+            for ($i = 1; $i &lt;=12; $i++){ ?&gt;
+                &lt;option value="&lt;?=$i?&gt;"&gt; &lt;?=$i?&gt; 월&lt;/option&gt;
+        &lt;?php }
+        ?&gt;         --&gt;
+
+        &lt;?php
+        $selectMonth = 4;
+            for ($i = 1; $i &lt;=12; $i++){ 
+                $selected = "";
+                if($i == $selectMonth){
+                    $selected = "selected";
+                }
+                ?&gt;
+                &lt;option value="&lt;?=$i?&gt;" &lt;?=$selected?&gt;&gt; &lt;?=$i?&gt; 월&lt;/option&gt;
+        &lt;?php }
+        ?&gt;   
+    &lt;/select&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //Intro6 -->
+
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">함수</h2>
+                    <h3 id="intro7_1">함수</h3>
+                    <div class="bs-callout bs-callout-info">
+                        function 함수명(){ <br>
+                            &nbsp; &nbsp; &nbsp; //실행함수 <br>
+                        }<br>
+                        함수명(); <br><br>
+
+                        function 함수명(파라미터){<br>
+                            &nbsp; &nbsp; &nbsp; //실행함수<br>
+                        }<br>
+                        함수명(아규먼트); 
+                    </div>                    
+                    <h5>자바스크립트 함수 <a href="php08.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php08&lt;/title&gt;
+
+    &lt;script&gt;
+        //01. 선언 함수
+        function fun1 (){
+            document.write("01. 함수가 실행되었습니다. &lt;br&gt;")
+        };
+        fun1 ();
+
+        //02. 익명 함수
+        const fun2 = function(){
+            document.write("02. 함수가 실행되었습니다. &lt;br&gt;")
+        };
+        fun2();
+
+        //03. 매개변수 함수
+        function fun3(name){
+            document.write("03. "+ name +" 실행되었습니다. &lt;br&gt;")
+        };
+        fun3("함수가");
+
+        //04. 리턴값이 있는 함수
+        function fun4(){
+            const str = "04. 함수가 실행되었습니다. &lt;br&gt;"
+            return str;
+        }
+        let vaule4 = fun4();
+        document.write(vaule4);
+
+        //05. 재귀 함수 : 함수 정의문 내에 함수를 다시 호출하여 실행하는 함수
+        function fun5(num){
+            //fun5() --&gt; 무한으로 빠짐
+            if(num == 0){
+                document.write("05. 함수가 실행되었습니다. &lt;br&gt;");
+            }else {
+                document.write("05. 함수가 실행되었습니다. &lt;br&gt;");
+                fun5(num-1);
+            }
+        }
+        fun5(3);
+
+        //07. 콜백 함수 : 함수를 변수에 저장하고 변수를 함수에 인수로 사용하여 매개변수에 전달함
+        function callback(num){
+            for(let i =0; i&lt;=10; i++){
+                num(i)
+            }
+        }
+        const fun7 = function(i){
+            document.write("07. 함수가 실행되었습니다. &lt;br&gt;");
+        }
+        callback(fun7);
+
+        //08. 내부 함수 
+        function fun8out(){
+            function fun8in(){
+                const str = "08. 함수가 실행되었습니다. &lt;br&gt;"
+                document.write(str);
+            }
+            fun8in()
+        }
+        fun8out()
+
+         //09. 내부 함수 
+         function fun9out(){
+            const str = "09. 함수가 실행되었습니다. &lt;br&gt;"
+            function fun9in(){
+                document.write(str);
+            }
+            fun9in()
+        }
+        fun9out()
+
+        //10. 화살표 함수 
+        fun10 = () =&gt; {
+            document.write("10. 함수가 실행되었습니다. &lt;br&gt;");
+        }
+        fun10();
+        
+        //11. 화살표 함수 -익명
+        const fun11 = () =&gt; {
+            document.write("11. 함수가 실행되었습니다. &lt;br&gt;");
+        }
+        fun11();
+
+        //11. 화살표 함수 - 리턴
+        const fun12 = () =&gt; {
+            const str = "12. 함수가 실행되었습니다. &lt;br&gt;"
+            return str ;
+        }
+        const value12 = fun12();
+        document.write(value12);
+
+        //11. 화살표 함수 - 매개변수
+        const fun13 = (str) =&gt; {
+            return str ;
+        }
+        const value13 = fun13("13. 함수가 실행되었습니다. &lt;br&gt;");
+        document.write(value13);
+    &lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <h3 id="intro7_2" class="pt50">날짜와 시간함수</h3>
+                    <p>시간 함수는 리눅스 시간을 출력해주는 함수입니다. 리눅스 시간이란 1970년 1월 1일 0시 0분 0초 부터 세기 시작한 시간입니다. 시간 함수는 1970년 1월 1일 0시 0분 0초부터 몇초가 지났는지에 대해 반환합니다. 이 리눅스 시간을 '타임스탬프' 라고도 합니다.</p>
+                    <div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>종류</th>
+									<th>설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>checkdate</code></td>
+									<td>주어진 날짜가 실제 존재하는 날짜인지 판단합니다.</td>
+								</tr>
+								<tr>
+									<td><code>date</code></td>
+									<td>날짜와 시간을 지정한 형식에 맞추어 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>getdate</code></td>
+									<td>날짜와 시간을 배열로 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>microtime</code></td>
+									<td>유닉스 형식의 시간으로 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>mktime</code></td>
+									<td>주어진 시간을 유닉스 형식의 시간으로 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>time</code></td>
+									<td>현재의 시간을 유닉스 형식의 시간으로 반환합니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h5>date 함수</h5>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>인자</th>
+									<th>자료형</th>
+									<th>설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>format</code></td>
+									<td>string</td>
+									<td>시간과 날짜의 반환 형식을 지정합니다.</td>
+								</tr>
+								<tr>
+									<td><code>timestamp</code></td>
+									<td>int</td>
+									<td>특정 시간을 지정합니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<h5>date 함수에서 사용되는 형식 문자</h5>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>분류</th>
+									<th>문자</th>
+									<th>설명</th>
+									<th>예</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center" rowspan="7" style="vertical-align: middle">일</td>
+									<td class="text-center"><code>d</code></td>
+									<td>일자를 두 자리로 반환합니다.</td>
+									<td>01~31</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>D</code></td>
+									<td>요일을 3글자로 반환합니다.</td>
+									<td>Mon~Sun</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>j</code></td>
+									<td>일자를 0이 붙지 않는 형식으로 반환합니다.</td>
+									<td>1~31</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>I</code></td>
+									<td>요일을 영문 단어로 반환합니다.</td>
+									<td>Sunday~Saturday</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>S</code></td>
+									<td>영문 서수 접미사를 반환합니다.</td>
+									<td>st, nd, rd, th</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>w</code></td>
+									<td>요일을 순자로 반환합니다.</td>
+									<td>0(일)~6(토)</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>Z</code></td>
+									<td>해당 연도의 몇 번째 날인지 반환합니다.</td>
+									<td>0~364</td>
+								</tr>
+								<tr>
+									<td class="text-center">주</td>
+									<td class="text-center"><code>W</code></td>
+									<td>해당 연도의 몇 번째 주인지 반환합니다.</td>
+									<td>12(연도의 12번째 주)</td>
+								</tr>
+					 			<tr>
+									<td class="text-center" rowspan="5" style="vertical-align: middle">월</td>
+									<td class="text-center"><code>F</code></td>
+									<td>월을 영문 단어로 반환합니다.</td>
+									<td>January~December</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>m</code></td>
+									<td>월을 두자리 숫자로 반환합니다.</td>
+									<td>01~12</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>M</code></td>
+									<td>월을 영문 3글자로 반환합니다.</td>
+									<td>Jan~Dec</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>n</code></td>
+									<td>월을 0이 붙지 않는 숫자로 반환합니다.</td>
+									<td>1~12</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>t</code></td>
+									<td>해당 월의 날짜 수를 반환합니다.</td>
+									<td>28~31</td>
+								</tr>
+								<tr>
+									<td class="text-center" rowspan="3" style="vertical-align: middle">년도</td>
+									<td class="text-center"><code>L</code></td>
+									<td>윤년인지 여부를 반환합니다.</td>
+									<td>윤년이면1, 아니면0</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>Y</code></td>
+									<td>연도를 4자리 수로 반환합니다.</td>
+									<td>2018</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>y</code></td>
+									<td>연도를 2자리 수로 반환합니다.</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td class="text-center" rowspan="8" style="vertical-align: middle">년도</td>
+									<td class="text-center"><code>a</code></td>
+									<td>오전과 오후를 영문 소문자로 반환합니다.</td>
+									<td>am, pm</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>A</code></td>
+									<td>오전과 오후를 영문 대문자로 반환합니다.</td>
+									<td>AM, PM</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>g</code></td>
+									<td>시간을 12시간 형식으로 반환하며, 0이 붙지 않습니다.</td>
+									<td>1~12</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>G</code></td>
+									<td>시간을 24시간 형식으로 반환하며, 0이 붙지 않습니다.</td>
+									<td>0~24</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>h</code></td>
+									<td>시간을 12시간 두 자리 형식으로 반환합니다.</td>
+									<td>01~12</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>H</code></td>
+									<td>시간을 24시간 두 자리 형식으로 반환합니다.</td>
+									<td>00~23</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>i</code></td>
+									<td>분을 두자리 형식으로 반환합니다.</td>
+									<td>00~59</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>s</code></td>
+									<td>초를 두자리 형식으로 반환합니다.</td>
+									<td>00~59</td>
+								</tr>
+								<tr>
+									<td class="text-center" rowspan="3" style="vertical-align: middle">날짜/시간</td>
+									<td class="text-center"><code>c</code></td>
+									<td>ISO 8601 형식의 날짜로 반환합니다.</td>
+									<td>2017-01-01T12:00:00+09:00</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>r</code></td>
+									<td>RFC 2822 형식의 날짜로 반환합니다.</td>
+									<td>Sun, 09, Jan 2019 12:00:00+09:00</td>
+								</tr>
+								<tr>
+									<td class="text-center"><code>U</code></td>
+									<td>유닉스 형식 시간을 반환합니다.</td>
+									<td>1136041200</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                    <h5>날짜와 시간함수<a href="php09.html" target="_blank">View</a></h5>
+                    <pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php09&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+      ini_set('data.timezone','Asia/Seoul');
+      echo '1970년 1월 1일 0시 0분 0초로 부터'.time(). '초가 지났습니다.&lt;br&gt;';
+      echo '현재 시간은 '.date('Y년 m월 d일 H시 i분 s초', time()). '입니다.&lt;br&gt;';
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h5>mktime()<a href="php10.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php10&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        ini_set('data.timezone','Asia/Seoul');
+        echo '2020년 2월 20일 11시 38분 38초의 타임 스탬프는?&lt;br&gt;';
+        echo mktime(11,38,38,2,20,2020)."&lt;br&gt;";
+
+        $startTime = mktime(11,38,38,2,20,2020);
+        $endTime = mktime(11,45,00,2,20,2020);
+        if($startTime &lt;= time() && $endTime&gt; time()){
+            echo '이벤트에 당첨되었습니다.';
+        }else {
+            echo '이벤트가 종료되었습니다.';
+        }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <h3 id="intro7_3" class="pt50">파일 시스템 함수</h3>
+                    <div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>함수</th>
+									<th>기능</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>basename</code></td>
+									<td>경로에서 파일 이름만을 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>chmod</code></td>
+									<td>파일의 모드를 변겨합니다.</td>
+								</tr>
+								<tr>
+									<td><code>copy</code></td>
+									<td>파일을 복사합니다.</td>
+								</tr>
+								<tr>
+									<td><code>dirnmae</code></td>
+									<td>경로에서 디렉토리 이름만 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>dirnmae</code></td>
+									<td>경로에서 디렉토리 이름만 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>fclose</code></td>
+									<td>열려 있는 파일 포인터를 종료합니다.</td>
+								</tr>
+								<tr>
+									<td><code>feof</code></td>
+									<td>파일 포인터가 파일의 끝에 있는지 검사합니다.</td>
+								</tr>
+								<tr>
+									<td><code>fgetc</code></td>
+									<td>파일로부터 하나의 문자를 가져옵니다.</td>
+								</tr>
+								<tr>
+									<td><code>fgets</code></td>
+									<td>파일로부터 한줄의 문자를 가져옵니다.</td>
+								</tr>
+								<tr>
+									<td><code>file_exists</code></td>
+									<td>파일이 존재하는지 여부를 확인합니다.</td>
+								</tr>
+								<tr>
+									<td><code>file</code></td>
+									<td>파일 전체를 배열로 읽어들입니다.</td>
+								</tr>
+								<tr>
+									<td><code>filesize</code></td>
+									<td>파일의 크기를 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>filetype</code></td>
+									<td>파일의 형식을 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>fopen</code></td>
+									<td>파일의 URL을 엽니다.</td>
+								</tr>
+								<tr>
+									<td><code>fpassthru</code></td>
+									<td>파일 포인터로부터 파일의 끝까지의 모든 데이터를 출력합니다.</td>
+								</tr>
+								<tr>
+									<td><code>fputs, fwrite</code></td>
+									<td>파일 포인터에 지정한 크기의 문자열을 씁니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+                    <h3 id="intro7_4" class="pt50">문자열 처리 함수</h3>
+                    <div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>함수</th>
+									<th>기능</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>crypt</code></td>
+									<td>단방향으로 문자열을 암호합니다.</td>
+								</tr>
+								<tr>
+									<td><code>echo</code></td>
+									<td>문자열을 출력합니다.</td>
+								</tr>
+								<tr>
+									<td><code>explode</code></td>
+									<td>문자열을 특정 문자열을 기준으로 분리합니다.</td>
+								</tr>
+								<tr>
+									<td><code>htmlentities</code></td>
+									<td>해당하는 모든 문자를 HTML 엔티티로 변환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>implode/join</code></td>
+									<td>배열의 원소를 문자열로 연결합니다.</td>
+								</tr>
+								<tr>
+									<td><code>ltrim</code></td>
+									<td>문자열 왼쪽의 공백을 제거합니다.</td>
+								</tr>
+								<tr>
+									<td><code>md5</code></td>
+									<td>문자열의 MD5 해시값을 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>nl2br</code></td>
+									<td>문자열의 모든 줄 바꿈 앞에 &lt;br/&gt;태그를 삽입합니다.</td>
+								</tr>
+								<tr>
+									<td><code>print</code></td>
+									<td>문자열을 출력합니다.</td>
+								</tr>
+								<tr>
+									<td><code>printf</code></td>
+									<td>형식화된 문자열을 출력합니다.</td>
+								</tr>
+								<tr>
+									<td><code>rtrim/chop</code></td>
+									<td>문자열 오른쪽의 공백을 제거합니다.</td>
+								</tr>
+								<tr>
+									<td><code>sprintf</code></td>
+									<td>형식화된 문자열로 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>sscanf</code></td>
+									<td>문자열을 형식에 따라 처리합니다.</td>
+								</tr>
+								<tr>
+									<td><code>str_replace</code></td>
+									<td>문자열을 찾아서 치환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>strip_tags</code></td>
+									<td>문자열에서 HTML과 PHP 태그를 제거합니다.</td>
+								</tr>
+								<tr>
+									<td><code>strlen</code></td>
+									<td>문자열의 길이를 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>strpos</code></td>
+									<td>문자열이 처음 나타나는 위치를 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>strstr/strchr</code></td>
+									<td>문자열이 처음으로 나타나는 위치를 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>substr</code></td>
+									<td>문자열의 일부를 반환합니다.</td>
+								</tr>
+								<tr>
+									<td><code>trim</code></td>
+									<td>문자열의 처음과 끝에 있는 공백을 제거합니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                    <h5>문자열 <a href="php11.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php11&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        $str = " php ";
+        echo $str.'&lt;br&gt;';
+        echo "|".$str."|".'&lt;br&gt;';
+        echo "|".trim($str)."|".'&lt;br&gt;';
+        echo "|".ltrim($str)."|".'&lt;br&gt;';
+        echo "|".rtrim($str)."|".'&lt;br&gt;';
+        echo "|".strtoupper($str)."|".'&lt;br&gt;';
+        echo "|".strtolower($str)."|".'&lt;br&gt;';
+        echo strlen($str).'&lt;br&gt;';
+
+        $change = str_replace('php', 'javascript', $str);
+        echo $change.'&lt;br&gt;';
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h5>substr() <a href="php12.html" target="_blank">View</a></h5>
+<div class="bs-callout bs-callout-info">
+    substr('대상문자열', 자르기 시작할 위치, 자를 문자열 수);
+</div>                  
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php12&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        $fileName = 'background.jpg';
+        $execute = substr($fileName, -3 , 4);
+        if($execute == "jpg" || $execute== "png" || $execute =="gif"){
+            echo '업로드한 파일은 이미지 파일입니다.';
+        }else {
+            echo '업로드한 파일은 이미지 파일이 아닙니다.';
+        } 
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+<h5>explode() <a href="php13.html" target="_blank">View</a></h5>
+<div class="bs-callout bs-callout-info">
+    explode('나눌 문자', '대상 문자열');
+</div>                  
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php12&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php
+        $email = "dldkfka331@naver.com";
+        $emailArray = explode('@', $email);
+        echo "&lt;pre&gt;";
+        var_dump($emailArray);
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <h3 id="intro7_5" class="pt50">기타</h3>
+                    <div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>함수</th>
+									<th>기능</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>mail</code></td>
+									<td>메일을 보냅니다.</td>
+								</tr>
+								<tr>
+									<td><code>abs</code></td>
+									<td>절대값을 나타냅니다.</td>
+								</tr>
+								<tr>
+									<td><code>ceil</code></td>
+									<td>소수점 이하를 올림합니다.</td>
+								</tr>
+								<tr>
+									<td><code>floor</code></td>
+									<td>소수점 이하를 내림합니다.</td>
+								</tr>
+								<tr>
+									<td><code>pow</code></td>
+									<td>수를 거듭제곱합니다.</td>
+								</tr>
+								<tr>
+									<td><code>rand</code></td>
+									<td>정수형 난수를 생성합니다.</td>
+								</tr>
+								<tr>
+									<td><code>mt_rand</code></td>
+									<td>향상된 정수형 난수를 생성합니다.</td>
+								</tr>
+								<tr>
+									<td><code>round</code></td>
+									<td>실수를 반올림합니다.</td>
+								</tr>
+								<tr>
+									<td><code>base64_encode</code></td>
+									<td>MIME 규약에 따라 데이터를 base64로 인코딩합니다.</td>
+								</tr>
+								<tr>
+									<td><code>base64_decode</code></td>
+									<td>MIME 규약에 따라 인코딩된 데이터를 디코딩합니다.</td>
+								</tr>
+								<tr>
+									<td><code>urlencode</code></td>
+									<td>문자열을 URL 인코딩합니다.</td>
+								</tr>
+								<tr>
+									<td><code>urldecode</code></td>
+									<td>문자열을 URL 디코딩합니다.</td>
+								</tr>
+								<tr>
+									<td><code>empty</code></td>
+									<td>변수가 비어 있는지 확인합니다.</td>
+								</tr>
+								<tr>
+									<td><code>isset</code></td>
+									<td>변수가 설정되 있는지 확인합니다.</td>
+								</tr>
+								<tr>
+									<td><code>unset</code></td>
+									<td>주어진 변수를 제거합니다.</td>
+								</tr>
+								<tr>
+									<td><code>is_array</code></td>
+									<td>주어진 변수가 배열인지 확인합니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+                <!-- //Intro7 -->
+
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Post / Get</h2>
+                    <div class="bs-callout bs-callout-info">
+                       Post는 http 프로토콜 통신 시에 전달되는 방식이고, get은 데이터에 url을 붙여서 전달하는 방식입니다.
+                    </div>
+                    <h3>Get 데이터 전달 방식</h3>
+                    <div class="bs-callout bs-callout-info">
+                        http://dldkfka331.dothome.co.kr?type=first&mobile=ok
+                    </div>
+                    <p>처음 Get 변수를 사용할 때에는 ?로 선언하고, 2개 이상 사용시에는 2번째부터 &를 사용하여 변수와 값을 입력합니다.</p>
+                    <h5>Get <a href="php14.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php14&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+    //http://dldkfka331.dothome.co.kr/php/php14.html?type=first&class=ok 
+    echo $_GET['type'].'&lt;br&gt;';
+    echo $_GET['class'];
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <h5>입력폼 <a href="php15.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;php15&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;회원가입&lt;/h1&gt;
+    &lt;form action="php15_post.php" id="login_form" name="login_form" method="post"&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;로그인&lt;/legend&gt;  
+            &lt;div class="lc_text"&gt;
+                &lt;label for="uid"&gt;아이디&lt;/label&gt;
+                &lt;input type="text" id="uid" name="uid" maxlength="20" &gt;
+                &lt;label for="upw"&gt;비밀번호&lt;/label&gt;
+                &lt;input type="password" id="upw" name="upw"  maxlength="20" &gt;
+                
+                &lt;button  type="submit"&gt;로그인&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<pre class="line-numbers language-php"><code>//php15_post.php
+&lt;?php
+    echo $_POST['uid'].'&lt;br&gt;';
+    echo $_POST['upw'].'&lt;br&gt;';
+?&gt;</code></pre>
+                </div>
+                <!-- //Intro8 -->
+
+
+
+
+
+
+
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header"></h2>
+                    
+                    <h3>배열</h3>
+                    <div class="bs-callout bs-callout-info">
+                        $변수명 = array();
+                    </div>
+                    <h5>배열 사용방법 <a href="php03.html" target="_blank">View</a></h5>
+<pre class="line-numbers language-php"><code></code></pre>
+                </div>
+                <!-- //Intro6 -->
+
+
+
+
+
+                
+            </div>
+            <!-- //col-md-9 -->
+            
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">PHP</a></li>                        
+                        <li><a href="#intro2">PHP 기초</a></li>                        
+                        <li><a href="#intro3">변수 선언</a></li>                        
+                        <li><a href="#intro4">배열</a></li>                        
+                        <li><a href="#intro5">데이터형</a></li>                        
+                        <li><a href="#intro6">조건문</a></li>                        
+                        <li><a href="#intro7">함수</a>
+                            <ul class="nav">
+                                <li><a href="#intro7_1">함수</a></li>
+                                <li><a href="#intro7_2">날짜와 시간함수</a></li>
+                                <li><a href="#intro7_3">파일 시스템 함수</a></li>
+                                <li><a href="#intro7_4">문자열 처리 함수</a></li>
+                                <li><a href="#intro7_5">기타</a></li>
+                            </ul>
+                        </li>    
+                        <li><a href="#intro8">Post / Get</a></li>                        
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+
+</body></html>

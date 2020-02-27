@@ -1,0 +1,199 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+a,p,h1,h2,h3,h4,h5,span,strong,em {font-style: normal; font-family: 'Roboto', sans-serif; font-weight: normal;  text-decoration: none; color: #000;}
+li{list-style: none;}
+button {box-shadow: none; border: none; background: none; cursor: pointer;}
+
+/* wrap */
+#wrap {width: 100%;}
+.container {width: 1000px; margin: 0 auto;}
+.row {padding: 0 20px;}
+
+/*전체*/
+#header { }
+#nav {}
+#nav.on {position: fixed; left: 0; top: 0; width: 100%; background: #fff; z-index: 1000;}
+#mBanner {}
+#update {}
+
+
+/* header */
+.header { padding: 20px 0; position: relative;} 
+.header .logo {text-align: center;}
+.header .alert {width: 30px; position: absolute; top:50%; right: 20px; transform: translatey(-50%);}
+.header .alert img {width: 100%;}
+
+/* nav */
+.nav {padding: 10px 0 0 0;}
+.nav ul {display: flex; justify-content: space-around;}
+.nav ul li {padding: 0 5%; width: 100%; text-align: center;}
+.nav ul li.active {border-bottom: 2px solid #A451F7;}
+.nav ul li.active a{color: #A451F7; font-weight: bold;}
+.nav ul li a{font-size: 14px; display: block;  margin-bottom: 20px;}
+
+
+/* mBanner */ 
+.mBanner {position: relative;}
+.banner_img {}
+.banner_img img {width: 100%;}
+.banner_link {position: absolute; bottom: 20px; right: 20px; background: #747474; border-radius: 50px; padding: 10px  10px 10px 20px;}
+.banner_link  a{color: #fff; display: inline-block;}
+.banner_link img {width: 20px; vertical-align: -5px;  }
+
+/* update */
+.update {padding: 30px 0;} 
+.update h2 {font-size: 20px; font-weight: bold; margin: 0 0 10px 20px; }
+.list {padding:10px 0 10px 20px;}
+.list ul li.select button {background:  linear-gradient(90deg, #C080C8 0%, #C080C8 0%, #ECCB7E 92.65%, #ECCB7E 129.4%); color: #fff; border: none;}
+.list button {width: 100px; padding: 9px 15px 10px 15px; background: #fff; border: 1px solid #DFDFDF; border-radius: 50px; color:#555;}
+.updateBook {background: #FDFAF3; padding: 20px 0; position: relative;}
+.updateBook:before {content: ''; position: absolute; top: 0; left: 0; width: 48px; height: 48px; background:url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 48V0H48L0 48Z' fill='%23FFEB60'/%3E%3Cpath d='M11.987 29.076L12.9119 28.1511L8.52498 23.7642L8.55043 23.7388L15.4914 25.5716L16.5266 24.5364L10.7057 18.7155L9.7808 19.6404L13.8877 23.7473L13.8622 23.7727L7.33704 22.0842L6.16607 23.2551L11.987 29.076ZM17.8952 23.1678L21.5778 19.4852L20.7547 18.6621L18.1158 21.3011L16.3509 19.5361L18.3619 17.5251L17.5473 16.7105L15.5363 18.7215L13.941 17.1263L16.5291 14.5383L15.706 13.7152L12.0743 17.3469L17.8952 23.1678ZM23.7349 17.3281L24.7616 16.3014L21.69 10.9217L21.7154 10.8963L27.0781 13.9849L28.1133 12.9497L23.7179 5.70326L22.7761 6.64513L26.0853 11.9569L26.0599 11.9824L20.5784 8.84282L19.7299 9.69134L22.8524 15.1898L22.827 15.2153L17.5237 11.8975L16.463 12.9582L23.7349 17.3281Z' fill='%23333333'/%3E%3C/svg%3E%0A") no-repeat; }
+.best3 { padding-bottom: 20px; border-bottom: 1px solid #DDDDDD;}
+.best3 h3 { padding-left: 30px; margin-bottom: 20px; color: #747474; font-size: 16px;}
+.best3_book  {display: flex; justify-content: space-around;}
+.best3_book >div {width: 31%;}
+.best3_book >div img {width: 100%;}
+.best3_book >div strong {display: block; font-size: 14px;}
+.best3_book >div span {font-size: 14px; color: #747474;}
+.common {padding-bottom: 20px; border-bottom: 1px solid #DDDDDD;}
+.common h3 {margin: 20px 0; color: #747474; font-size: 16px;}
+.common_book {display: flex; justify-content: space-around;}
+.common_book >div {width: 31%;}
+.common_book >div img {width: 100%;}
+.common_book >div strong {display: block; font-size: 14px;}
+.common_book >div span {font-size: 14px; color: #747474;}
+.updateBook .more a{display: block; padding-top: 20px; text-align: center; color: #747474;}
+.updateBook .more img {margin-right: 10px; vertical-align: -3px;}
+
+/* reading */
+.reading {padding: 20px 0;}
+.readingText {position: relative; margin-bottom: 20px;}
+.readingText h2{font-size: 20px; font-weight: bold; }
+.readingText span {color: #999; font-size: 14px;}
+.readingText .more { position: absolute; top: 3px; right: 0;width: 25px;}
+.readingText .more img {width: 100%;}
+.swiper-container2 >div >div {height: 450px; padding-left: 20px !important;}
+.swiper-container2 >div >div .readingBox_img {width: 100%; height: 320px; background: url(../img/reading@3x.png) no-repeat center top; background-size: cover; position: relative;}
+.swiper-container2 >div >div:nth-child(2) .readingBox_img {background: url(https://d2j6uvfek9vas1.cloudfront.net/leader_image/5de62ada92d0f.jpg) center top no-repeat; background-size: cover;}
+.swiper-container2 >div >div .readingBox_img:after{content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,.2);}
+.swiper-container2 >div >div .readingBox_thum {position: absolute; bottom: 30px; left: 20px; z-index: 3;}
+.swiper-container2 >div >div .readingBox_thum strong {display: block; color: #fff; font-weight: bold; }
+.swiper-container2 >div >div .readingBox_thum p {color: #fff;}
+.swiper-container2 >div >div .readingBox_thum p img {width: 20px; vertical-align: -5px;}
+.swiper-container2 >div >div .readingBox_txt {margin: 20px 0 0 0px;}
+
+/* bestSeller */
+.bestSeller {padding: 20px 0; position: relative;}
+.bestSeller h2 {font-size: 20px; font-weight: bold; margin: 0 0 10px 20px; }
+.bestSeller .more { position: absolute; top: 20px; right: 20px; width: 25px;}
+.bestSeller .more img {width: 100%;}
+.bestSellerBook {background: #FCF3FE; padding: 20px 0 50px 0;}
+.bestSellerBook h3 {font-size: 16px; font-weight: bold; padding-bottom: 10px; margin-bottom: 20px; border-bottom: 1px solid #DDDDDD;}
+.bestSellerBook h3 img{width: 35px;  vertical-align: -12px; margin-right: 10px;}
+.bsBookSwiper > div {padding-left: 20px; width: 30%;}
+.bsBookSwiper > div img {width: 100%;}
+.bsBookSwiper > div >div > strong {display: block; font-size: 14px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.bsBookSwiper > div >div > span {display: block;  font-size: 14px; color: #747474;overflow: hidden; white-space: nowrap; }
+.sBanner {width: 100%;}
+.sBanner img {width: 100%;}
+
+/* years */
+.years {padding: 20px 0; position: relative;}
+.years h2 {font-size: 20px; font-weight: bold; margin: 0 0 20px 0;}
+.years .more { position: absolute; top: 23px; right: 20px; width: 25px;}
+.years .more img {width: 100%;}
+
+.ybSwiper {height: 300px;}
+.ybSwiper > div {padding-left: 20px; width: 30%; }
+
+.ybSwiper > div img {width: 100%; border-radius: 0 5px 5px 0px; box-shadow: 2px 2px 4px rgba(0,0,0,.4);}
+.ybSwiper > div strong {display: block; padding-top: 10px; font-weight: bold;}
+.ybSwiper > div span {display: block; color: #747474; font-size: 14px; padding-top: 5px;}
+.ybSwiper > div span  strong.color {display: inline; color: #A451F7;}
+
+/* new */
+.new {padding: 20px 0; position: relative;}
+.new h2 {font-size: 20px; font-weight: bold; margin: 0 0 20px 0;}
+.new .more { position: absolute; top: 23px; right: 20px; width: 25px;}
+.new .more img {width: 100%;}
+
+.newSwiper {height: 300px;}
+.newSwiper > div {padding-left: 20px; width: 30%; }
+
+.newSwiper > div img {width: 100%; border-radius: 0 5px 5px 0px; box-shadow: 2px 2px 4px rgba(0,0,0,.4);}
+.newSwiper > div strong {display: block; padding-top: 10px; font-weight: bold;}
+.newSwiper > div span {display: block; color: #747474; font-size: 14px; padding-top: 5px;}
+
+/*commingSoon */
+.comming_soon {padding: 20px 0; position: relative;}
+.comming_soon h2 {font-size: 20px; font-weight: bold; margin: 0 0 20px 0;}
+.comming_soon .more { position: absolute; top: 23px; right: 20px; width: 25px;}
+.comming_soon .more img {width: 100%;}
+.cmBookSwiper > div {padding-left: 20px; width: 30%;}
+.cmBookSwiper > div picture {position: relative;display: block;}
+.cmBookSwiper > div img {width: 100%; position: relative;}
+.cmBookSwiper > div picture:after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,.05); backdrop-filter: saturate(130%) blur(5px);}
+.cmBookSwiper > div > div {position: relative;}
+.cmBookSwiper > div > div strong {display: block; padding-top: 10px; font-weight: bold;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.cmBookSwiper > div > div span {display: block; color: #747474; font-size: 14px; padding-top: 5px;}
+.cmBookSwiper > div > div > div {border: 1px solid #A451F7; border-radius: 5px; text-align: center; margin-top: 30px; padding: 5px 0;}
+.cmBookSwiper > div > div > div a {color: #A451F7; }
+.cmBookSwiper > div > div > div img {width: 20px; vertical-align: -3px; margin-right: 5px;}
+.cmBookSwiper > div > div .calender {position: absolute; top: 6%; left: 50%; transform: translatex(-50%); background: #fff; width: 60px; height: 60px; border: none;}
+.cmBookSwiper > div > div .calender::after {content: '1월'; position: absolute; top: 0; left: 0; text-align: center; width: 100%; background: #FEEB60; border-radius: 5px 5px 0 0; padding: 1px 0; color: #000;}
+.cmBookSwiper > div > div .calender span {font-weight: bold; color: #000; font-size: 16px; line-height: 60px;}
+
+
+/* quote */
+.quote {padding: 20px 0; position: relative; }
+.quote h2{font-size: 20px; font-weight: bold; margin: 0 0 20px 0;}
+.time {position: absolute; top: 24px; right: 20px; width: 100px;}
+.time span {color: #747474; font-weight: bold;}
+.quoteSwiper > div {margin-bottom: 10px; }
+
+
+.quoteSwiper > div  > div {width: 90%; margin-left: 20px !important; box-shadow: 2px 4px 5px #ccc; border-radius: 5px; position: relative;}
+.quote_q {position: absolute; top: 10%; left: 3%; z-index: 100; padding-right: 10%;}
+.quote_q p {color: #fff; line-height: 2; font-family: 'Noto Serif KR', serif; font-size: 3vw}
+.quoteSwiper > div:nth-child(1) .qu_img {width: 100%; height: 350px; background: url(../img/Rectangle88.png); background-size: cover; position: relative;}
+.quoteSwiper > div:nth-child(2) .qu_img {width: 100%; height: 350px; background: url(../img/Rectangle126.png); background-size: cover; position: relative;}
+.quoteSwiper > div:nth-child(3) .qu_img {width: 100%; height: 350px; background: url(../img/Rectangle88.png); background-size: cover; position: relative;}
+.quoteSwiper > div  > div .more {position: absolute; right: 10px; bottom: 20px;}
+.quoteSwiper > div  > div .more img{width: 30px;}
+.qu_txt {padding: 20px 10px; position: relative;}
+.quoteSwiper > div  > div .qu_txt  strong {display: block; font-weight: bold; font-size: 16px; margin-bottom: 5px;}
+.quoteSwiper > div  > div .qu_txt  em {display: block; color: #999;}
+
+/* footer */
+.footer {height: 490px;}
+.footer .notice {background: #F7F8FA;}
+.footer .notice ul {display: flex; justify-content: space-around; padding: 15px 0; }
+.footer .notice ul li {font-size: 14px; position: relative;}
+.footer .notice ul li::after {content: ''; width: 1px; height: 15px; position: absolute; top: 2px; right: -30%; background: #999; color: #999;}
+.footer .notice ul li:last-child::after{width: 0;}
+.footer_b {background: #F0F1F5; padding: 20px 0;}
+.center {padding-bottom: 20px; border-bottom: 1px solid #999;}
+.center strong {display: block; color: #555; margin-bottom: 5px;}
+.center em {display: block; font-size: 14px; color: #999; margin-bottom: 3px;}
+.question {padding: 20px 0;}
+.millie strong { display: block; font-weight: bold; margin-bottom: 25px;}
+.millie em {color: #999;}
+.millie p {color: #999;}
+.sos > ul {display: flex; flex-wrap: wrap;}
+.sos > ul li {width: 50%; margin-bottom: 10px; color: #999;}
+.sos > ul li img {width: 15px; vertical-align: -2px; margin-left: 10px;}
+.icon ul {display: flex;}
+.icon ul li {display: block; width: 30px; height: 30px;background: #C4C4C4; border-radius: 50%; padding: 5px; margin: 10px 10px 10px 0;}
+.icon ul li img{width: 100%;}
+
+
+/*home*/
+.home {position: fixed; bottom: 0; left: 0; width: 100%; display: flex;  align-items: center; justify-content: space-around; background: #fff; padding: 10px 0; z-index: 1000; box-shadow: -2px 0 3px 3px rgba(0,0,0,.3);}
+.home  >div img {width: 40px;}
+.home  >div strong {display: block; text-align: center; font-weight: bold; font-size: 12px;}
+.home  >div:first-child strong {color: #FEEB60;}
+
+
+/* 미디어쿼리 */
+@media (max-width:1000px){
+    .container {width: 100%;}
+}

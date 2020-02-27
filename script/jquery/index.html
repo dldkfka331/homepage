@@ -1127,6 +1127,124 @@
                                 </tbody>                        
                             </table>
                         </div>
+                        <h5>속성 예제 <a href="jQuery11.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery11&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;속성&lt;/h1&gt;
+    &lt;div class="list"&gt;
+        &lt;img src="img/01.jpg" alt="이미지"&gt;
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;&lt;/p&gt;
+    &lt;button class="btn1"&gt;이미지 주소 알아내기&lt;/button&gt;
+    &lt;button class="btn2"&gt;alt값 알아내기&lt;/button&gt;
+    &lt;button class="btn3"&gt;이미지 바꾸기&lt;/button&gt;
+    &lt;button class="btn4"&gt;alt속성 바꾸기&lt;/button&gt;
+    &lt;button class="btn5"&gt;이미지 크기 변경하기&lt;/button&gt;
+    
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //버튼 클릭 -&gt;이미지 찾음 -&gt;주소값 가져오기
+        let img = $(".list img").attr("src");
+        let alt = $(".list img").attr("alt");
+        
+        $(".btn1").click(function(){
+           $(".desc").text(img);
+        });
+        $(".btn2").click(function(){
+           $(".desc").text(alt);
+        });
+        //버튼3클릭 -&gt; 이미지 속성값 변경 
+        $(".btn3").click(function(){
+            $(".list img").attr("src", "img/02.jpg");
+        });
+        $(".btn4").click(function(){
+            $(".list img").attr("alt", "이미지2");
+        });
+        //버튼5클릭 -&gt; 이미지 크기변경
+        $(".btn5").click(function(){
+            $(".list img").attr("width","300")
+        })    
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+                        <h5>attr을 이용한 탭메뉴 <a href="jQuery12.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery12&lt;/title&gt;
+    &lt;style&gt;
+    *{margin: 0;padding: 0;}
+    li {list-style: none;}
+    a{text-decoration: none; color: #666;}
+    .tab_menu {width: 350px; margin: 100px auto;}
+    .tab_btn ul{overflow: hidden;}
+    .tab_btn li { float: left; width: 20%; text-align: center;}
+    .tab_btn li a{ background: #1e88e5; padding: 14px 10px 10px 10px; color: #fff; display: block;}
+    .tab_cont img {width: 100%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="tab_menu"&gt;
+        &lt;div class="tab_btn"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="tab_cont"&gt;
+            &lt;img src="img/recentM01@2x.jpg" alt="이미지"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // //글씨를 클릭하면 menu로 변경하기
+        // $(".tab_btn ul li").click(function(){
+        //     $(this).find("a").text("Menu")
+        // })
+        //글씨를 클릭하면 tab3 -&gt; menu3으로 변경
+        //index 메소드
+        // $(".tab_btn ul li").click(function(){
+        //     let target = $(this);
+        //     let index = target.index() +1;
+        //     target.find("a").text("Menu"+index)
+        // })
+        // //버튼을 클릭하면 이미지 변경
+        // $(".tab_btn ul li:eq(0)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM02@2x.jpg" , "alt":"이미지1"})
+        // })
+        // $(".tab_btn ul li:eq(1)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM03@2x.jpg" , "alt":"이미지2"})
+        // })
+        // $(".tab_btn ul li:eq(2)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM04@2x.jpg" , "alt":"이미지3"})
+        // })
+        // $(".tab_btn ul li:eq(3)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM05@2x.jpg" , "alt":"이미지4"})
+        // })
+        // $(".tab_btn ul li:eq(4)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/02.jpg" , "alt":"이미지5"})
+        // })
+
+        //한번에 쓰기
+        $(".tab_btn ul li").click(function(){
+            let target = $(this);
+            let index = target.index()+1;
+            target.find("a").text("Menu"+index);
+            $(".tab_cont img").attr({'src':"img/0"+index+".jpg" , "alt":"이미지"+index})
+        })
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
                     </div>
 
                     <div style="padding-left:20px;" class="pt20">
@@ -1161,10 +1279,284 @@
                                         <td>선택한 요소에 클래스의 추가/제거를 연속하여 사용 할 수 있습니다.</td>
                                     </tr>
                                 </tbody>
-                                              
                             </table>
                         </div>
+                        <h5>addClass 예제 <a href="jQuery13.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery13&lt;/title&gt;
+    &lt;style&gt;
+        .red {font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 0px 6px 2px 6px;}
+        .blue {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #215770; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li class="list1"&gt;list1&lt;/li&gt;
+            &lt;li class="list2"&gt;list2&lt;/li&gt;
+            &lt;li class="list3"&gt;list3&lt;/li&gt;
+            &lt;li class="list4"&gt;list4&lt;/li&gt;
+            &lt;li class="list5"&gt;list5&lt;/li&gt;
+            &lt;li class="list6"&gt;list6&lt;/li&gt;
+            &lt;li class="list7"&gt;list7&lt;/li&gt;
+            &lt;li class="list8"&gt;list8&lt;/li&gt;
+            &lt;li class="list9"&gt;list9&lt;/li&gt;
+            &lt;li class="list10"&gt;list10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button class="btn1"&gt;btn1&lt;/button&gt;
+    &lt;button class="btn2"&gt;btn2&lt;/button&gt;
+    &lt;button class="btn3"&gt;btn3&lt;/button&gt;
+    &lt;button class="btn4"&gt;btn4&lt;/button&gt;
+    &lt;button class="btn5"&gt;btn5&lt;/button&gt;
+    &lt;button class="btn6"&gt;btn6&lt;/button&gt;
+    &lt;button class="btn7"&gt;btn7&lt;/button&gt;
+    &lt;button class="btn8"&gt;btn8&lt;/button&gt;
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //버튼클릭하면 글씨 색 빨간색
+        $(".btn1").click(function(){
+            $(".list li").css("color","red")
+        })
+        //버튼클릭하면 짝수의 글씨 색 빨간색
+        $(".btn2").click(function(){
+            $(".list li:odd()").css("color","red")
+        })
+        //버튼을 클릭하면 3번째 li에  .red 추가 
+        $(".btn3").click(function(){
+            $(".list li:eq(2)").addClass("red")
+            $(".list li").eq(3).addClass("blue")
+        })
+        //li 에게 active클래스 추가하기
+        $(".btn4").click(function(){
+            $(".list li").addClass("active")
+        })
+        //모든 클래스 제거
+        $(".btn5").click(function(){
+            $(".list li").removeClass()
+        })
+        //원하는 클래스 제거
+        $(".btn6").click(function(){
+            $(".list li").removeClass("list4")
+        })
+        //active번호를 매겨서 추가
+        $(".btn7").click(function(){
+            $(".list li").addClass(function(index){
+                return "active" +( index+1);
+            });
+        })
+        //원하는 클래스 찾아서 클래스 추가하기
+        $(".btn8").click(function(){
+            $(".list li").addClass(function(index, currentClass){
+                let addClass;
+                if(currentClass ==="list5"){
+                    addClass = "blue"
+                }
+                return addClass;
+            })
+        })
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+                        <h5>addClass를 이용해 탭메뉴 만들기 <a href="jQuery14.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery14&lt;/title&gt;
+    &lt;style&gt;
+        *{margin: 0;padding: 0;}
+        li {list-style: none;}
+        a{text-decoration: none; color: #666;}
+        .tab_menu {width: 350px; margin: 100px auto;}
+        .tab_btn ul{overflow: hidden;}
+        .tab_btn li { float: left; width: 20%; text-align: center;}
+        .tab_btn li a{ background: #1e88e5; padding: 14px 10px 10px 10px; color: #fff; display: block;}
+        #tab_cont {width: 350px; height: 350px;}
+        #tab_cont.img1{background: url(img/01.jpg); background-size: 350px;}
+        #tab_cont.img2{background: url(img/02.jpg); background-size: 350px;}
+        #tab_cont.img3{background: url(img/03.jpg); background-size: 350px;}
+        #tab_cont.img4{background: url(img/04.jpg); background-size: 350px;}
+        #tab_cont.img5{background: url(img/05.jpg); background-size: 350px;}
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="tab_menu"&gt;
+        &lt;div class="tab_btn"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div id="tab_cont"&gt;    
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // //글씨를 클릭하면 menu로  모두변경하기
+        // $(".tab_btn li").click(function(){
+        //     $(".tab_btn li").find("a").text("menu")
+        // })
+
+        //글씨 클릭하면 클릭한것 만 변경
+        // $(".tab_btn li").click(function(){
+        //     $(this).find("a").text("menu")
+        // })
+
+        //글씨 클릭하면  숫자넣어서 변경
+        // $(".tab_btn li").click(function(){
+        //     let target = $(this);
+        //     let index = target.index() +1;
+        //     target.find("a").text("menu"+index)
+        // })
+        //해당버튼 클릭하면 클래스 추가하기
+        $(".tab_btn li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index()+1;
+            target.find("a").text("menu"+index);
+            $("#tab_cont").removeClass().addClass("img"+index);
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+                        <h5>tab메뉴 <a href="jQuery16.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery16&lt;/title&gt;
+    &lt;style&gt;
+        *{margin: 0;padding: 0;}
+        li {list-style: none;}
+        a{text-decoration: none; color: #666;}
+        #tab_menu {width: 350px; margin: 100px auto;}
+        #tab_btn ul{overflow: hidden;}
+        #tab_btn li { float: left; width: 20%; text-align: center;}
+        #tab_btn li a{ background: #1e88e5; padding: 14px 10px 10px 10px; color: #fff; display: block;}
+        #tab_cont {overflow: hidden; width: 350px; height: 350px;}
+        #tab_cont img {width: 100%; display: block;}
+        #tab_btn li.active a {background: #000; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="tab_menu"&gt;
+        &lt;div id="tab_btn"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div id="tab_cont"&gt;    
+            &lt;div&gt;&lt;img src="img/01.jpg" alt="이미지1"&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;img src="img/02.jpg" alt="이미지2"&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;img src="img/03.jpg" alt="이미지3"&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;img src="img/04.jpg" alt="이미지4"&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;img src="img/05.jpg" alt="이미지5"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        const tBtn = $("#tab_btn &gt; ul &gt; li");
+        const tCont = $("#tab_cont &gt; div")
+        tBtn.click(function(){
+            let target = $(this);
+            let index = target.index();
+            tBtn.removeClass();
+            target.addClass("active");
+            tCont.css("display","none");
+            tCont.eq(index).css("display","block");
+        });   
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+                        <h5>css 예제 <a href="jQuery15.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery15&lt;/title&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li class="list1"&gt;list1&lt;/li&gt;
+            &lt;li class="list2"&gt;list2&lt;/li&gt;
+            &lt;li class="list3"&gt;list3&lt;/li&gt;
+            &lt;li class="list4"&gt;list4&lt;/li&gt;
+            &lt;li class="list5"&gt;list5&lt;/li&gt;
+            &lt;li class="list6"&gt;list6&lt;/li&gt;
+            &lt;li class="list7"&gt;list7&lt;/li&gt;
+            &lt;li class="list8"&gt;list8&lt;/li&gt;
+            &lt;li class="list9"&gt;list9&lt;/li&gt;
+            &lt;li class="list10"&gt;list10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;&lt;/p&gt;
+    &lt;button class="btn1"&gt;클릭하면 글씨 색을 가져옵니다.&lt;/button&gt;
+    &lt;button class="btn2"&gt;클릭하면 폰트 사이즈를 가져옵니다.&lt;/button&gt;
+    &lt;button class="btn3"&gt;클릭하면 속성을 가져옵니다.&lt;/button&gt;
+    &lt;button class="btn4"&gt;글씨 확대하기&lt;/button&gt;
+    &lt;button class="btn5"&gt;글씨 축소하기&lt;/button&gt;
+
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //버튼을 클릭하면 글씨 색을 빨간색으로 변경하기
+        // $(".btn1").click(function(){
+        //     $(".list li").css("color","red")
+        // });
+
+        // //버튼을 클릭하면 글씨 색을 가져와서 저장
+        // $(".btn1").click(function(){
+        //     let vaule =  $(".list li").css("color");
+        //     $(".desc").text("이 글씨의 색은 : "+vaule + " 입니다.");
+        // });
+        // //폰트 사이즈 가져와서 출력하기
+        // $(".btn2").click(function(){
+        //     let vaule =  $(".list li").css("font-size");  //fontSize 라고써두댐
+        //     $(".desc").text("이 글씨의 폰트 사이즈는 : "+vaule+ " 입니다.");
+        // });
+
+        // //여러속성 가져와서 출력하기
+        // $(".btn3").click(function(){
+        //     const html = ["이 글씨의 속성은 : "]
+        //     const vaule = $(".list li").css(["color","fontSize","display","text-align","list-style-type"]);
+        //     $.each(vaule ,function(prop, vaule){
+        //         html.push(prop + " : " +vaule)
+        //     })
+        //     $(".desc").html(html.join("&lt;br&gt; "));
+        // })
+
+        $(".btn4").click(function(){
+            $(".list li").css({'fontSize': function(index, vaule){
+                    return parseFloat(vaule)*1.2
+                }
+            })
+        })
+        $(".btn5").click(function(){
+            $(".list li").css({'fontSize': function(index, vaule){
+                    return parseFloat(vaule)*0.8
+                }
+            })
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>                         
                     </div>
+
                     <div style="padding-left:20px;" class="pt20">
                         <h3 id="intro5_3">Dimensions</h3>
                         <div class="table-responsive">
@@ -1203,7 +1595,126 @@
                                 </tbody>
                             </table>
                         </div>  
+                        <h5>Dimensions 예제 <a href="jQuery17.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery17&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li class="list1"&gt;list1&lt;/li&gt;
+            &lt;li class="list2"&gt;list2&lt;/li&gt;
+            &lt;li class="list3"&gt;list3&lt;/li&gt;
+            &lt;li class="list4"&gt;list4&lt;/li&gt;
+            &lt;li class="list5"&gt;list5&lt;/li&gt;
+            &lt;li class="list6"&gt;list6&lt;/li&gt;
+            &lt;li class="list7"&gt;list7&lt;/li&gt;
+            &lt;li class="list8"&gt;list8&lt;/li&gt;
+            &lt;li class="list9"&gt;list9&lt;/li&gt;
+            &lt;li class="list10"&gt;list10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;&lt;/p&gt;
+    &lt;button class="btn1"&gt;btn1&lt;/button&gt;
+    &lt;button class="btn2"&gt;btn2&lt;/button&gt;
+    &lt;button class="btn3"&gt;btn3&lt;/button&gt;
+    &lt;button class="btn4"&gt;btn4&lt;/button&gt;
+    &lt;button class="btn5"&gt;btn5&lt;/button&gt;
+    &lt;button class="btn6"&gt;btn6&lt;/button&gt;
+    
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //함수화 하기
+        function showHeight(element ,height ){
+            $(".desc").text("현재 "+element+"의 height 값은 : "+height +"px")    
+        }
+        //btn1 클릭시 height 값 가져오기
+        $(".btn1").click(function(){
+            showHeight("li" , $(".list li ").height() );
+        });
+        //btn2 클릭시 height 값 가져오기
+        $(".btn2").click(function(){
+            showHeight("list 집합" , $(".list ").height() ); 
+        });
+        //btn3 클릭시 문서의 height 값 가져오기
+        $(".btn3").click(function(){
+            showHeight("문서" , $(document).height() );      
+        });
+        //btn4 클릭시 브라우저의 height 값 가져오기
+        $(".btn4").click(function(){
+            showHeight("브라우져" , $(window).height() );        
+        });
+        //btn5 
+        $(".btn5").click(function(){
+            $(".list li").height(50).css("border","1px dashed #f00")  //height 변경(단위생략가능)
+        });
+        //btn6
+        $(".btn6").click(function(){
+            $(".list li").height(function(index){  //번호 자동으로 가져오기
+                return (index+1)*20;
+            }).css("border","1px dashed #f00") 
+        });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>    
+                        <h5>innerHeight()/innerWidth() <a href="jQuery18.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery18&lt;/title&gt;
+    &lt;style&gt;
+        .red &gt; li{font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 10px; margin: 10px;}
+        .blue {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #215770; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="list"&gt;
+        &lt;ul class="red"&gt;
+            &lt;li class="list1"&gt;list1&lt;/li&gt;
+            &lt;li class="list2"&gt;list2&lt;/li&gt;
+            &lt;li class="list3"&gt;list3&lt;/li&gt;
+            &lt;li class="list4"&gt;list4&lt;/li&gt;
+            &lt;li class="list5"&gt;list5&lt;/li&gt;
+            &lt;li class="list6"&gt;list6&lt;/li&gt;
+            &lt;li class="list7"&gt;list7&lt;/li&gt;
+            &lt;li class="list8"&gt;list8&lt;/li&gt;
+            &lt;li class="list9"&gt;list9&lt;/li&gt;
+            &lt;li class="list10"&gt;list10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;&lt;/p&gt;
+    &lt;button class="btn1"&gt;btn1&lt;/button&gt;
+    &lt;button class="btn2"&gt;btn2&lt;/button&gt;
+    &lt;button class="btn3"&gt;btn3&lt;/button&gt;
+
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        function he(element, height){
+            $(".desc ").text(element + "은 " + height + "px")
+        }
+        $(".btn1").click(function(){
+            let h=$(".list li").height();
+            he("리스트의 height 값" , h)
+        });
+        $(".btn2").click(function(){
+            let h=$(".list li").innerHeight();
+            he("리스트의 innerHeight 값" , h)        //마진+패딩 포함값
+        });
+        $(".btn3").click(function(){
+            let h=$(".list li").outerHeight();
+            he("리스트의 outerHeight 값" , h)        //마진+패딩+보더 포함값
+        });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>    
                     </div>
+
                     <div style="padding-left:20px;" class="pt20">
                         <h3 id="intro5_4">Offset</h3>
                         <div class="table-responsive">
@@ -1238,21 +1749,635 @@
                                 </tbody>
                             </table>
                         </div>   
+                        <h5>Offset 예제 <a href="jQuery19.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery19&lt;/title&gt;
+    &lt;style&gt;
+        .circle {width: 100px; height: 100px; color: #a51a3d; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; border-radius: 5px; line-height: 100px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Offset    &lt;/h1&gt;
+    &lt;div class="circle"&gt;
+        circle
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;
+        &lt;span&gt;Offset().left&lt;/span&gt; : &lt;span class="ol"&gt;0&lt;/span&gt;px&lt;br&gt;  
+        &lt;span&gt;Offset().top&lt;/span&gt; : &lt;span class="ot"&gt;0&lt;/span&gt;px&lt;br&gt;
+        &lt;span&gt;position().left&lt;/span&gt; : &lt;span class="pl"&gt;0&lt;/span&gt;px&lt;br&gt;
+        &lt;span&gt;position().top&lt;/span&gt; : &lt;span class="pt"&gt;0&lt;/span&gt;px&lt;br&gt;
+    &lt;/p&gt;
+    &lt;button class="btn1"&gt;Click&lt;/button&gt;
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script src="jquery-ui.min.1.12.1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+            $(".circle").draggable({
+                start: function() {
+                    $(".circle").css("border-radius","5px")
+                },
+                drag: function() {
+                    $(".circle").css("border-radius","40px");
+                    $(".desc .ol").text($(".circle").offset().left);  //circle과 브라우저의 왼쪽 사이값
+                    $(".desc .ot").text($(".circle").offset().top);  //circle과 브라우저의 위쪽 사이값
+                    $(".desc .pl").text($(".circle").position().left);  
+                    $(".desc .pt").text($(".circle").position().top);  
+                },
+                stop: function() {
+                    $(".circle").css("border-radius","20px")
+                }
+            });
+            $(".btn1").click(function(){
+                $(".circle").offset({top:'500' , left: '500'})
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>    
+                        <h5>스크롤 값 구하기 <a href="jQuery20.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery20&lt;/title&gt;
+    &lt;style&gt;
+        *{margin: 0; padding: 0;}
+        body{height: 10000px; }
+        .rectangle {width: 100%; height: 400px; color: #a51a3d; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; border-radius: 5px; line-height: 400px; margin-bottom: 100px; position: relative;}
+        .rectangle .circle2 {position: absolute; left: 10px; top: 10px;color: #3d90b7; background: #e7f6fd; border: 1px dashed #215770; width: 80px; height: 80px; border-radius: 50%; text-align: center; line-height: 80px; }
+        .circle {color: #3d90b7; background: #e7f6fd; border: 1px dashed #215770; width: 80px; height: 80px; position: fixed; right: 20px;top: 20px; border-radius: 50%; text-align: center; line-height: 80px; z-index: 1000;}
+        
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Scroll    &lt;/h1&gt;
+    &lt;div class="circle"&gt;&lt;/div&gt;
+    &lt;div class="rectangle"&gt;
+        rectangle
+    &lt;/div&gt;
+    &lt;div class="rectangle r2"&gt;
+        rectangle
+        &lt;div class="circle2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class="desc"&gt;
+        &lt;span&gt;rectangle의 scrollLeft()&lt;/span&gt; : &lt;span class="rl"&gt;0&lt;/span&gt;px&lt;br&gt;  
+        &lt;span&gt;rectangle의 scrollTop()&lt;/span&gt; : &lt;span class="rt"&gt;0&lt;/span&gt;px&lt;br&gt;
+        &lt;span&gt;Window의 scrollLeft()&lt;/span&gt; : &lt;span class="wl"&gt;0&lt;/span&gt;px&lt;br&gt;
+        &lt;span&gt;Window의 scrollTop()&lt;/span&gt; : &lt;span class="wt"&gt;0&lt;/span&gt;px&lt;br&gt;
+    &lt;/p&gt;
+    &lt;button class="btn1"&gt;Click&lt;/button&gt;
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script src="jquery-ui.min.1.12.1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(window).scroll(function(){
+            $(".rl").text($(".rectangle").scrollLeft());
+            $(".rt").text($(".rectangle").scrollTop());
+            $(".wl").text($(window).scrollLeft());
+            $(".wt").text($(window).scrollTop());
+
+            let wScroll = $(window).scrollTop();
+            let wOffset = $(".r2").offset().top;
+            $(".circle").text(wScroll);
+            $(".circle2").text(wOffset);
+            if(wScroll &gt;= wOffset) {
+                $(".r2").css("backgroundColor","black")
+            }else{
+                $(".r2").css("backgroundColor","#f9f2f4")
+            }
+        });
+        
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>  
                     </div>
-
-
                 </div>
                 <!-- //intro5 -->
+
                 <!-- intro6 -->
                 <div class="bs-docs-section">
                     <h2 id="intro6" class="page-header">변경</h2>
-                    <p class="bs-callout bs-callout-info"></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>메서드</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>.wrap()</a></td>
+                                    <td>선택한 요소에 새로운 태그를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.wrapAll()</a></td>
+                                    <td>선택한 모든 요소에 새로운 태그를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.wrapInner()</a></td>
+                                    <td>선택한 각각의 요소에 새로운 태그를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.append()</a></td>
+                                    <td>선택한 요소 마지막 위치에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.appendTo()</a></td>
+                                    <td>선택한 타겟 마지막 위치에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.html()</a></td>
+                                    <td>선택한 요소 내부의 HTML을 읽거나 변경합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.prepend()</a></td>
+                                    <td>선택한 요소 처음 위치에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.prependTo()</a></td>
+                                    <td>선택한 타겟 처음 위치에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.text()</a></td>
+                                    <td>선택한 요소 내부의 텍스트를 읽거나 변경합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.after()</a></td>
+                                    <td>선택한 요소 다음에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.before()</a></td>
+                                    <td>선택한 요소 이전에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.insertAfter()</a></td>
+                                    <td>선택한 타겟 요소 다음에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.insertBefore()</a></td>
+                                    <td>선택한 타겟 요소 이전에 새로운 요소를 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.detach()</a></td>
+                                    <td>선택한 요소를 제거합니다.(데이터 및 이벤트 불포함)</td>
+                                </tr>
+                                <tr>
+                                    <td>.empty()</a></td>
+                                    <td>선택한 요소의 하위 요소를 제거합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.remove()</a></td>
+                                    <td>선택한 요소를 제거합니다.(데이터 및 이벤트 포함)</td>
+                                </tr>
+                                <tr>
+                                    <td>.unwrap()</a></td>
+                                    <td>선택한 요소의 부모 요소를 제거합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.clone()</a></td>
+                                    <td>선택한 요소의 본사본을 만듭니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.replaceAll()</a></td>
+                                    <td>선택한 요소를 새로운 요소로 바꿉니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>.replaceWith()</a></td>
+                                    <td>선택한 요소를 새로운 컨텐츠로 바꿉니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+                    <h5>예제 <a href="jQuery21.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery21&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="list"&gt;
+        &lt;p&gt;.replaceWith() : 선택한 요소를 새로운 컨텐츠로 바꿉니다.&lt;/p&gt;
+        &lt;p&gt;.replaceAll() : 선택한 요소를 새로운 요소로 바꿉니다.&lt;/p&gt;
+        &lt;p&gt;.clone() : 선택한 요소의 본사본을 만듭니다.&lt;/p&gt;
+        &lt;p&gt;.unwrap() : 선택한 요소의 부모 요소를 제거합니다.&lt;/p&gt;
+        &lt;p&gt;.remove() : 선택한 요소를 제거합니다.(데이터 및 이벤트 포함)&lt;/p&gt;
+        &lt;p&gt;.empty() : 선택한 요소의 하위 요소를 제거합니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="btn1"&gt;wrap&lt;/button&gt;
+    &lt;button class="btn2"&gt;unwrap&lt;/button&gt;
+    &lt;button class="btn3"&gt;append&lt;/button&gt;
+    &lt;button class="btn4"&gt;prepend&lt;/button&gt;
+    &lt;button class="btn5"&gt;before&lt;/button&gt;
+    &lt;button class="btn6"&gt;after&lt;/button&gt;
+
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".btn1").click(function(){
+            $(".list p ").wrap("&lt;div&gt;&lt;/div&gt;")
+        });
+        $(".btn2").click(function(){
+            $(".list p ").unwrap()
+        });
+        $(".btn3").click(function(){
+            $(".list").append("&lt;p&gt;.append() : 선택한 요소 마지막 위치에 새로운 요소를 추가합니다.&lt;/p&gt;")
+        });
+        $(".btn4").click(function(){
+            $(".list").prepend("&lt;p&gt;.prepend() : 선택한 요소 처음 위치에 새로운 요소를 추가합니다.&lt;/p&gt;")
+        });
+        $(".btn5").click(function(){
+            $(".list p:nth-child(2)").before("&lt;p&gt;before&lt;/p&gt;")
+        });
+        $(".btn6").click(function(){
+            $(".list p:nth-child(2)").after("&lt;p&gt;after&lt;/p&gt;")
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>  
+                        <h5>이미지 <a href="jQuery22.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery22&lt;/title&gt;
+    &lt;style&gt;
+    .list li{display: inline;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;이미지&lt;/h3&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src="img/01.jpg" alt="이미지"&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/02.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/03.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/04.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/05.jpg" alt="이미지"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button class="btn1"&gt;클릭하면 리스트 뒷쪽에 이미지가 추가됩니다.&lt;/button&gt;
+    &lt;button class="btn2"&gt;클릭하면 리스트 앞쪽에 이미지가 추가됩니다.&lt;/button&gt;
+    &lt;button class="btn3"&gt;클릭하면 리스트 처음 이미지를 삭제합니다.&lt;/button&gt;
+    &lt;button class="btn4"&gt;클릭하면 리스트 마지막 이미지를 삭제합니다.&lt;/button&gt;
+    &lt;button class="btn5"&gt;클릭하면 이미지를 랜덤으로 추가합니다.&lt;/button&gt;
+    
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".btn1").click(function(){
+            $(".list ul").append("&lt;li&gt;&lt;img src='img/05.jpg' alt='이미지'&gt;&lt;/li&gt;")
+        });
+        $(".btn2").click(function(){
+            $(".list ul").prepend("&lt;li&gt;&lt;img src='img/05.jpg' alt='이미지'&gt;&lt;/li&gt;")
+        });
+        $(".btn3").click(function(){
+            $(".list ul li:first").remove();
+        });
+        $(".btn4").click(function(){
+            $(".list ul li:last").remove();
+        });
+        //이미지 랜덤으로 부르는 함수
+        function random(){
+            let imgNum = Math.ceil(Math.random() * 7);
+            let imgPath = "&lt;li&gt;&lt;img src='img/0"+imgNum+".jpg' alt='이미지'&gt;&lt;/li&gt;";
+            return imgPath;
+        }
+        $(".btn5").click(function(){
+            $(".list ul").append(random());
+        });
+        
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>  
+                        <h5>이미지 이동하기 <a href="jQuery23.html">View</a></h5>
+                        <pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt; jQuery23&lt;/title&gt;
+    &lt;style&gt;
+    .list li{display: inline; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;이미지&lt;/h3&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src="img/01.jpg" alt="이미지"&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/02.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/03.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/04.jpg" alt="이미지"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/05.jpg" alt="이미지"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button class="btn1"&gt;클릭하면 2초에 한번씩 이미지를 이동시킵니다.&lt;/button&gt;
+    &lt;button class="btn2"&gt;클릭하면 이미지를 정지시킵니다.&lt;/button&gt;
+    
+    &lt;script src="jquery.min.1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+       let timer;
+        $(".btn1").click(function(){
+            timer =  setInterval(function(){
+                        $(".list li:last").prependTo(".list ul")        //last를 제일처음으로 올림
+                    },2000);
+        })
+        $(".btn2").click(function(){
+             clearInterval(timer);
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
                 </div>
                 <!-- //intro6 -->
+
                 <!-- intro7 -->
                 <div class="bs-docs-section">
                     <h2 id="intro7" class="page-header">애니메이션</h2>
-                    <p class="bs-callout bs-callout-info"></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>유형</th>
+                                <th>메서드</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ce va" rowspan="3">Basic</td>
+                                <td>.hide()</td>
+                                <td>선택한 요소를 숨깁니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.show()</td>
+                                <td>선택한 요소를 보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.toggle() <span style="color:red;">&hearts;</span></td>
+                                <td>선택한 요소를 숨김/보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce va" rowspan="4">Fading</td>
+                                <td>.fadeIn()</td>
+                                <td>선택한 요소를 천천히 보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeOut()</td>
+                                <td>선택한 요소를 천천히 숨김니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeto()</td>
+                                <td>선택한 요소를 투명도를 조절합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeToggle()</td>
+                                <td>선택한 요소를 천천히 숨김/보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce va" rowspan="3">Sliding</td>
+                                <td>.slideDown()</td>
+                                <td>선택한 요소를 슬라이딩으로 보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.slideToggle()</td>
+                                <td>선택한 요소를 슬라이딩으로 숨김/보여줍니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.slideUp()</td>
+                                <td>선택한 요소를 슬라이딩으로 숨김니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce va" rowspan="7">custom</td>
+                                <td>.animate() <span style="color:red;">&hearts;</span></td>
+                                <td>선택한 요소에 애니메이션을 적용합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.clearQueue()</td>
+                                <td>선택한 요소에 첫 번째 큐만 실행하고 대기 중인 큐는 모두 삭제합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.delay()</td>
+                                <td>선택한 요소의 애니메이션 효과를 지연합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.dequeue()</td>
+                                <td>선택한 요소 스택에 쌓인 큐를 모두 제거합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.finish()</td>
+                                <td>선택한 요소의 진행중인 애니메이션을 강제로 종료합니다.</td>
+                            </tr>
+                             <tr>
+                                <td>.queue()</td>
+                                <td>선택한 요소 스택에 대기 중인 큐를 반환하거나 추가할 수 있습니다.</td>
+                            </tr>
+                             <tr>
+                                <td>.stop()</td>
+                                <td>선택한 요소의 실행중인 애니메이션을 정지합니다.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <p class="bs-callout bs-callout-info">$("선택자").animate(properties);<br>$("선택자").animate(properties,duration);<br>$("선택자").animate(properties,duration,easing);<br>$("선택자").animate(properties,duration,easing,callback);</p>
+                    <p class="bs-callout bs-callout-warning">properties 에 올 수 있는 값 : border , margin, padding, height, width, font-size, bottom, left, top, right, line-height <br>properties 에 올 수 없는 값 : background-color , transform</p>
+                    <p class="bs-callout bs-callout-warning"><strong>폰트 사이즈를 현재 크기에서 20px로 2초동안 애니메이션 하고싶을 때?</strong> <br>$("selector").animate({"font-size":"20px"},2000);<br>$("selector").animate({fontSize:"20px"},2000);<br> <strong> 선택한 요소의 왼쪽 오른쪽 마진값을 100px로 600ms동안 애니메이션 하고싶을 때?</strong><br>$("selector").animate({"margin-left" : "100px", "margin-right" : "100px" },600)<br>$("selector").animate({margin-left :100, margin-right : 100}, slow)<br> <strong> 선택한 요소의 현재 위치를 기준으로 오른쪽으로 2초마다 20px 이동한 후 콜백함수를 호출하고 싶을 때?</strong><br>$("selector").animate({left :"+=20"},2000,function(){})</p>
+
+                    <style>
+                    .box {min-height: 200px; position: relative;}
+                    .btn {color: #3d90b7; background: #e7f6fd; border: 1px dashed #215770;}
+                    .circle {width: 70px; height: 70px; border-radius: 50%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; line-height: 70px;position: absolute;}
+                    </style>
+
+                    <h3 id="intro7_1"  class="pt30">.animate()</h3>
+                    <p>기본적인 애니메이션 입니다. <a href="#" class="btn btn1">Start</a></p>
+                    <div class="well">
+                        <div class="box box1">
+                            <div class="circle circle1">circle1</div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn1").click(function(){
+$(".circle1").animate({"left" :"80%"},1000)
+            .animate({"top" :"50%"},1000)
+            .animate({"left" :"0%"},1000)
+            .animate({"top" :"0%"},1000)
+})</code></pre>
+
+                    <h3 id="intro7_2" class="pt30">easing</h3>
+                    <p>움직임 효과 입니다. </p>
+                    <p>easings 효과 모음 <a href="https://api.jqueryui.com/easings/">View</a></p>
+                    <div class="btn-wrap">
+                        <span class="btn" data-easing="linear">linear</span>
+                        <span class="btn" data-easing="swing">swing</span>
+                        <span class="btn" data-easing="easeInQuad">easeInQuad</span>
+                        <span class="btn" data-easing="easeOutQuad">easeOutQuad</span>
+                        <span class="btn" data-easing="easeInOutQuad">easeInOutQuad</span>
+                        <span class="btn" data-easing="easeInCubic">easeInCubic</span>
+                        <span class="btn" data-easing="easeOutCubic">easeOutCubic</span>
+                        <span class="btn" data-easing="easeInOutCubic">easeInOutCubic</span>
+                        <span class="btn" data-easing="easeInQuart">easeInQuart</span>
+                        <span class="btn" data-easing="easeOutQuart">easeOutQuart</span>
+                        <span class="btn" data-easing="easeInOutQuart">easeInOutQuart</span>
+                        <span class="btn" data-easing="easeInQuint">easeInQuint</span>
+                        <span class="btn" data-easing="easeOutQuint">easeOutQuint</span>
+                        <span class="btn" data-easing="easeInOutQuint">easeInOutQuint</span>
+                        <span class="btn" data-easing="easeInSine">easeInSine</span>
+                        <span class="btn" data-easing="easeOutSine">easeOutSine</span>
+                        <span class="btn" data-easing="easeInOutSine">easeInOutSine</span>
+                        <span class="btn" data-easing="easeInExpo">easeInExpo</span>
+                        <span class="btn" data-easing="easeOutExpo">easeOutExpo</span>
+                        <span class="btn" data-easing="easeInOutExpo">easeInOutExpo</span>
+                        <span class="btn" data-easing="easeInCirc">easeInCirc</span>
+                        <span class="btn" data-easing="easeOutCirc">easeOutCirc</span>
+                        <span class="btn" data-easing="easeInOutCirc">easeInOutCirc</span>
+                        <span class="btn" data-easing="easeInElastic">easeInElastic</span>
+                        <span class="btn" data-easing="easeOutElastic">easeOutElastic</span>
+                        <span class="btn" data-easing="easeInOutElastic">easeInOutElastic</span>
+                        <span class="btn" data-easing="easeInBack">easeInBack</span>
+                        <span class="btn" data-easing="easeOutBack">easeOutBack</span>
+                        <span class="btn" data-easing="easeInOutBack">easeInOutBack</span>
+                        <span class="btn" data-easing="easeInBounce">easeInBounce</span>
+                        <span class="btn" data-easing="easeOutBounce">easeOutBounce</span>
+                        <span class="btn" data-easing="easeInOutBounce">easeInOutBounce</span>
+                    </div><br>
+                    <div class="well">
+                        <div class="box box2">
+                            <div class="circle circle2">circle2</div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code> $(".btn-wrap > span").click(function(){
+let easing = $(this).text();
+let easing2 = $(this).attr("data-easing");
+$(".circle2")
+    .animate({"left" :"80%"},1000,easing2)
+    .animate({"top" :"50%"},1000,easing2)
+    .animate({"left" :"0%"},1000,easing2)
+    .animate({"top" :"0%"},1000,easing2)
+})</code></pre>
+                    
+                    <style>
+                        .circle3 {position: relative; margin-bottom: 10px;}
+                    </style>
+                    <h3 id="intro7_3" class="pt30">.delay()</h3>
+                    <p>딜레이 효과 입니다.  <a href="#" class="btn btn3">Start</a></p>                    
+                    <div class="well">
+                        <div class="box box3">
+                            <div class="circle circle3">circle3</div>
+                            <div class="circle circle3">circle3</div>
+                            <div class="circle circle3">circle3</div>
+                            <div class="circle circle3">circle3</div>
+                        </div>
+                    </div>
+        <pre class="line-numbers language-js"><code>$(".btn3").click(function(){
+    $(".circle3").eq(0).delay(100).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+    $(".circle3").eq(1).delay(200).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+    $(".circle3").eq(2).delay(300).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+    $(".circle3").eq(3).delay(400).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+})</code></pre>
+
+                <h3 id="intro7_4" class="pt30">.stop()</h3>
+                <p>정지 효과 입니다.  <a href="#" class="btn btn4_1">Start</a> <a href="#" class="btn btn4_2">Stop</a></p>       
+                <div class="well">
+                    <div class="box box4">
+                        <div class="circle circle4">circle4</div>
+                    </div>
+                </div>
+<pre class="line-numbers language-js"><code> $(".btn4_1").click(function(){
+    $(".circle4")
+    .animate({"left" :"80%"},1000)
+    .animate({"top" :"50%"},1000)
+    .animate({"left" :"0%"},1000)
+    .animate({"top" :"0%"},1000)
+})
+$(".btn4_2").click(function(){
+    $(".circle4").stop();
+})</code></pre>        <br>     
+                <p class="bs-callout bs-callout-warning">$("selector").stop(clearQueue, goToEnd)<br>clearQueue : 큐에 대기중인 효과들을 삭제할 것인지의 여부를 설정<br>goToEnd : 진행중인 애니메이션을 완료할 것인지의 여부를 설정</p>
+                <p class="bs-callout bs-callout-warning">$("selector").stop(true,true) : 현재 진행중인 효과가 정지되면서 효과의 맨 마지막으로 이동한 후 큐에 남아있는 효과도 모두지움<br>$("selector").stop(true,false) : 현재 진행중인 효과는 즉시 정지되고 큐에 남아있는 효과도 모두지움<br>$("selector").stop(false,true) : 현재 진행중인 효과가 정지되면서 효과의 맨 마지막으로 이동한 후 큐에 남아있는 효과를 수행함<br>$("selector").stop(false,false) : 현재 진행중인 효과는 즉시 정지되고 큐에 남아있는 효과를 수행함</p>
+                <p>정지 효과 입니다.  <a href="#" class="btn btn5_1">Start</a> <a href="#" class="btn btn5_2">Stop(true,true)</a> <a href="#" class="btn btn5_3">Stop(true,false)</a> <a href="#" class="btn btn5_4">Stop(false,true) </a> <a href="#" class="btn btn5_5">Stop(false,false)</a></p>       
+                <div class="well">
+                    <div class="box box5">
+                        <div class="circle circle5_1">circle5</div>
+                        <div class="circle circle5_2">circle5</div>
+                        <div class="circle circle5_3">circle5</div>
+                        <div class="circle circle5_4s">circle5</div>
+                    </div>
+                </div>
+<pre class="line-numbers language-js"><code>$(".box5 > div").css({"position":"relative" , "margin-bottom":"10px"})
+$(".btn5_1").click(function(){
+    $(".box5 > div ").animate({"left":"90%"},2000 ,"easeInBounce").animate({"left":"0%"},2000)
+})
+$(".btn5_2").click(function(){
+    $(".circle5_1").stop(true,true)
+})
+$(".btn5_3").click(function(){
+    $(".circle5_2").stop(true,false)
+})
+$(".btn5_4").click(function(){
+    $(".circle5_3").stop(false,true)
+})
+$(".btn5_5").click(function(){
+    $(".circle5_4").stop(false,false)
+})</code></pre>     
+                <h3 id="intro7_5" class="pt30">.animation() - width </h3>
+                <p>width 효과 입니다.  <a href="#" class="btn btn6">Start</a></p>       
+                <div class="well">
+                    <div class="box box6">
+                        <div class="circle circle6">circle6</div>
+                    </div>
+                </div>
+<pre class="line-numbers language-js"><code>$(".btn6").click(function(){
+$(".circle6")
+    .animate({"left":"80%","width":"150px"},1000,"easeInBounce")
+    .slideUp().slideDown()
+    .animate({top:"50%" , "border-radius":"0%"},1000).animate({"left":"0%","width":"70px"},1000,"easeInBounce")
+    .animate({top:"0%" ,"border-radius":"50%"},1000)
+})</code></pre> 
+
+                <h3 id="intro7_6" class="pt30">무한 애니메이션</h3>
+                <p>무한 반복 애니메이션 효과입니다. <a href="#" class="btn btn7">Start</a></p>       
+                <div class="well" style="height: 120px;">
+                    <div class="box box7">
+                        <div class="circle circle7">circle7</div>
+                    </div>
+                </div>
+<pre class="line-numbers language-js"><code>$(".btn7").click(function(){
+    loop();
+});
+function loop(){
+    $(".circle7").animate({left : "85%" },1000,"easeOutQuint").animate({left : "0%" },1000,"easeOutQuint",loop);
+}</code></pre> 
+
+                <h3 id="intro7_7" class="pt30">일정한 시간</h3>
+                    <p>일정한 시간동안만 움직이는 애니메이션 효과입니다. <a href="#" class="btn btn8">Start</a></p>       
+                    <div class="well" style="height: 120px;">
+                        <div class="box box8">
+                            <div class="circle circle8">circle8</div>
+                        </div>
+                    </div>
+    <pre class="line-numbers language-js"><code>$(".btn8").click(function(){
+    setInterval(time,4000)
+});
+function time(){
+    $(".circle8").animate({left : "+=100px" },500,"easeOutQuint").animate({left : "-=50px" },500,"easeOutQuint");
+}</code></pre> 
+
+                    <h3 id="intro7_8" class="pt30">사라지는 애니메이션</h3>
+                    <p>일정한 시간이 지나면 사라지는 애니메이션 효과입니다. <a href="#" class="btn btn9">Start</a></p>       
+                    <div class="well" style="height: 120px;">
+                        <div class="box box9">
+                            <div class="circle circle9">circle9</div>
+                        </div>
+                    </div>
+    <pre class="line-numbers language-js"><code>$(".btn9").click(function(){
+    $(".circle9").animate({left : "85%" },1000,"easeOutQuint").animate({left : "0%" },1000,"easeOutQuint");
+    setTimeout(out, 2000);
+});
+function out(){
+    $(".circle9").clearQueue().hide()
+}</code></pre> 
+
+
                 </div>
                 <!-- //intro7 -->
                 <!-- intro8 -->
@@ -1305,7 +2430,18 @@
                             </ul>
                         </li>
                         <li><a href="#intro6">변경</a></li>
-                        <li><a href="#intro7">애니메이션</a></li>
+                        <li><a href="#intro7">애니메이션</a>
+                            <ul class="nav">
+                                <li><a href="#intro7_1">.animate()</a></li>
+                                <li><a href="#intro7_2">easing</a></li>
+                                <li><a href="#intro7_3">.delay()</a></li>
+                                <li><a href="#intro7_4">.stop()</a></li>
+                                <li><a href="#intro7_5">.animation() - width</a></li>
+                                <li><a href="#intro7_6">무한 애니메이션</a></li>
+                                <li><a href="#intro7_7">일정한 시간</a></li>
+                                <li><a href="#intro7_8">사라지는 애니메이션</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#intro8">이벤트</a></li>
                         <li><a href="#intro9">Ajax</a></li>
     
@@ -1338,9 +2474,88 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
+    <script>
+        $("a[class='btn']").click(function(e){
+            e.preventDefault();
+        })
+        $(".btn1").click(function(){
+            $(".circle1").animate({"left" :"80%"},1000)
+            .animate({"top" :"50%"},1000)
+            .animate({"left" :"0%"},1000)
+            .animate({"top" :"0%"},1000)
+        })
+        $(".btn-wrap > span").click(function(){
+            let name = $(this).text();
+           let easing2 = $(this).attr("data-easing");
+            $(".circle2")
+            .animate({"left" :"80%"},1000,easing2)
+            .animate({"top" :"50%"},1000,easing2)
+            .animate({"left" :"0%"},1000,easing2)
+            .animate({"top" :"0%"},1000,easing2)
+        })
+        $(".btn3").click(function(){
+            $(".circle3").eq(0).delay(100).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+            $(".circle3").eq(1).delay(200).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+            $(".circle3").eq(2).delay(300).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+            $(".circle3").eq(3).delay(400).animate({"left" : "90%"},1000,"easeInBounce").animate({"left" : "0%"},1000)
+        })
+        $(".btn4_1").click(function(){
+            $(".circle4")
+            .animate({"left" :"80%"},1000)
+            .animate({"top" :"50%"},1000)
+            .animate({"left" :"0%"},1000)
+            .animate({"top" :"0%"},1000)
+        })
+        $(".btn4_2").click(function(){
+            $(".circle4").stop();
+        })
+        $(".box5 > div").css({"position":"relative" , "margin-bottom":"10px"})
+        $(".btn5_1").click(function(){
+            $(".box5 > div ").animate({"left":"90%"},2000 ,"easeInBounce").animate({"left":"0%"},2000)
+        })
+        $(".btn5_2").click(function(){
+            $(".circle5_1").stop(true,true)
+        })
+        $(".btn5_3").click(function(){
+            $(".circle5_2").stop(true,false)
+        })
+        $(".btn5_4").click(function(){
+            $(".circle5_3").stop(false,true)
+        })
+        $(".btn5_5").click(function(){
+            $(".circle5_4").stop(false,false)
+        })
+        $(".btn6").click(function(){
+            $(".circle6")
+            .animate({"left":"80%","width":"150px"},1000,"easeInBounce")
+            .slideUp().slideDown()
+            .animate({top:"50%" , "border-radius":"0%"},1000).animate({"left":"0%","width":"70px"},1000,"easeInBounce")
+            .animate({top:"0%" ,"border-radius":"50%"},1000)
+        });
+        $(".btn7").click(function(){
+            loop();
+        });
+        function loop(){
+            $(".circle7").animate({left : "85%" },1000,"easeOutQuint").animate({left : "0%" },1000,"easeOutQuint",loop);
+        }
+        $(".btn8").click(function(){
+            setInterval(time,4000)
+        });
+        function time(){
+            $(".circle8").animate({left : "+=100px" },500,"easeOutQuint").animate({left : "-=50px" },500,"easeOutQuint");
+        }
+        $(".btn9").click(function(){
+            $(".circle9").animate({left : "85%" },1000,"easeOutQuint").animate({left : "0%" },1000,"easeOutQuint");
+            setTimeout(out, 2000);
+        });
+        function out(){
+            $(".circle9").clearQueue().hide()
+        }
+    </script>
 </body>
 
 </html>

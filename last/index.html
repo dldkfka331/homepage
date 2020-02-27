@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="aram">
+    <meta format-detection="telephone=no">
+    <meta name="description" content="포트폴리오 사이트 입니다.">
+    <meta name="keyword" content="웹표준, 웹접근성, 사이트제작, 포트폴리오, 이아람, aram">
+
+    <meta property="og:title" content="포트폴리오">
+    <meta property="og:url" content="http://dldkfka331.dothome.co.kr/">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="포트폴리오 사이트 입니다."/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="포트폴리오">
+    <meta name="twitter:url" content="http://dldkfka331.dothome.co.kr/">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="포트폴리오 사이트 입니다."/>
+    <title>Portfolio</title>
+
+    <!--스타일-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ani.css">
+   
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon"  type="image/x-icon" href="assets/icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed"  type="image/x-icon" href="assets/icon/favicon-152.png">
+    <link rel="icon"  type="image/x-icon" href="assets/icon/favicon-152.png">
+
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    
+     <!--스크립트-->
+     <script src="assets/js/jquery-1.9.1.min.js"></script>
+     <script src="assets/js/jquery-ui.min.js"></script>
+     <script src="assets/js/easypiechart.min.js"></script> 
+     <script src="assets/js/skrollr.min.js"></script>   
+     <script src="assets/js/custom.js"></script>    
+         
+
+    <!--[if lt IE 9]> 
+       <script type="text/javascript">
+          alert("현재 포트폴리오 사이트는 크롬 브라우저를 기준으로 제작되었습니다. 크롬브라우저를 이용해주세요.")
+       </script>
+    <![endif]-->
+
+</head>
+<body>
+    <!-- 스킵 내비게이션 -->
+	<div class="skip">
+		<a href="#about">소개</a>
+		<a href="#project">작업</a>
+		<a href="#animation">애니메이션</a>
+		<a href="#contact">연락처</a>
+	</div>
+    <!-- //스킵 내비게이션 -->
+
+    <!--배경 svg-->
+    <div class="svg-bg">
+        <div class="bg1">
+            <svg viewBox="0 0 1450 350">
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle" >PORT</text>
+            </svg>
+        </div>
+        <div class="bg2">
+            <svg viewBox="0 0 1450 350">
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle" >FOLIO</text>
+            </svg>
+        </div>
+    </div>
+    <!--//배경 svg-->
+
+    <!-- 내비게이션 -->
+	<div class="nav">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#animation">animation</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+	</div>
+    <!-- //내비게이션 -->
+
+
+    <!-- 햄버거 메뉴 -->
+	<nav id="mnav">
+        <div class="ham">
+            <span></span>
+        </div>
+    </nav>
+    <!-- //햄버거 메뉴 -->
+    <!-- 햄버거 메뉴의 메뉴 -->
+    <div class="ham_menu">
+        <div class="bg_wrap">
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#animation">animation</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //햄버거 메뉴의 메뉴 -->
+
+    <main>
+        <div id="contents">
+            <section id="home">
+                <div class="container">
+                    <div class="main_txt">
+                        <h1>Welcome to My Port-folio Site!</h1>
+                    </div>
+                </div>
+            </section> 
+            <!--//home-->
+            <section id="about">
+                <div class="container">
+                    
+                <h2 class="title">
+                    <span class="outer">
+                        <span class="inner">
+                            <strong class="text">About</strong>
+                        </span>
+                    </span>
+                </h2>
+                <article class="about">
+                    <figure class="about_img">
+                        <img src="assets/img/about_bg.jpg" alt="소개이미지">
+                    </figure>
+                    <div class="about_intro">
+                        <h3 class="tit_ani">꿈을 설계하고 디자인하다.</h3>
+                        <p>안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.</p><p>안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다.  생각합니다. 생각합니다. 생각합니다.모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.</p><p>안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.</p><p>안녕하세요 웹퍼블리셔를 꿈꾸는 이아람입니다. 저는 웹사이트가 변하는 것이 마법같다고 생각합니다. 모두가 즐길 수 있는 마법으로 웹을 채우는것이 저의 목표입니다.</p>
+                    </div>  
+                    <div class="skill">
+                        <ul>
+                            <li class="pie" data-percent="90"><strong class="count">90</strong><span>HTML</span></li>
+                            <li class="pie" data-percent="92"><strong class="count">92</strong><span>CSS</span></li>
+                            <li class="pie" data-percent="90"><strong class="count">90</strong><span>JAVASCRIPT</span></li>
+                            <li class="pie" data-percent="90"><strong class="count">90</strong><span>JQUERY</span></li>
+                        </ul>
+                    </div>       
+                </article>
+                </div>
+            </section> 
+            <!--//about-->
+            <section id="project">
+                <h2 class="title ">
+                    <span class="outer">
+                        <span class="inner">
+                            <strong class="text">Project</strong>
+                        </span>
+                    </span>
+                </h2>
+                <div class="project_wrap clearfix">
+                    <article class="pr_item">
+                        <span class="pr_num">01. </span>
+                        <h3 class="pri_tit tit_ani white">Webstandard</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                    <article  class="pr_item">
+                        <span class="pr_num">02. </span>
+                        <h3 class="pri_tit tit_ani white">Responsive</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                    <article  class="pr_item">
+                        <span class="pr_num">03. </span>
+                        <h3 class="pri_tit tit_ani white">Megabox</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                    <article  class="pr_item">
+                        <span class="pr_num">04. </span>
+                        <h3 class="pri_tit tit_ani white">Nugu</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                    <article  class="pr_item">
+                        <span class="pr_num">05. </span>
+                        <h3 class="pri_tit tit_ani white">AppleMusic</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                    <article  class="pr_item">
+                        <span class="pr_num">06. </span>
+                        <h3 class="pri_tit tit_ani white">Millie's library</h3>
+                        <div class="pri_img_wrap">
+                            <div class="pri_img"></div> 
+                        </div>
+                        <div class="pri_desc">웹표준을 준수한 사이트입니다.</div>
+                    </article>
+                </div>
+            </section> 
+            <!--//project-->
+            <section id="animation">
+                <h2 class="title">
+                    <span class="outer">
+                        <span class="inner">
+                            <strong class="text">Animation</strong>
+                        </span>
+                    </span>
+                </h2>
+                <div class="animation_wrap clearfix">
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Tail Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m1">
+<!--codepen-->
+<div class="circle_wrap">
+    <div class="circle"><div></div></div>
+    <div class="circle"><div></div></div>
+    <div class="circle"><div></div></div>
+    <div class="circle"><div></div></div>
+    <div class="circle"><div></div></div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Circle Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m2">
+<!--codepen-->
+<div class="circle_wrap02">
+    <div class="circle02_wrap">
+        <div class="circle02"></div>
+      </div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Bar Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m3">
+<!--codepen-->
+<div class="bar_wrap">
+    <div class="bar"></div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Box Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m4">
+<!--codepen-->
+<div class="cube_wrap">
+    <div class="cube">
+        <div>Aram</div>
+        <div>bottom</div>
+        <div>left</div>
+        <div>right</div>
+        <div>front</div>
+        <div>back</div>
+      </div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Ring Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m5">
+<!--codepen-->
+<div class="ring_wrap">
+    <div class="svg">
+        <svg id="svg" viewBox="0 0 300 150">
+          <circle id="ring1" cx="170" cy="75" r="34"></circle>
+          <circle id="ring2" cx="170" cy="75" r="34"></circle>
+        </svg>
+      </div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                    <div class="animation_item">
+                        <h3 class="ani_item_title">Title Animation</h3>
+                        <a href="#" class="ani_item_view">Code View</a>
+                        <div class="ani_item_move m6">
+<!--codepen-->
+<div class="ani_text_wrap">
+    <div class="ani_text_container">
+        <h1 class="ani_text_titles">
+          <span class="titles">This is</span>
+          <span class="titles">Aramz</span>
+          <span class="titles">World</span>
+        </h1>
+    </div>
+</div>
+<!--//  codepen-->
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <!--//animation-->
+            <section id="contact">
+                <div class="container">
+                    <h2 class="title">
+                        <span class="outer">
+                            <span class="inner">
+                                <strong class="text">Contact</strong>
+                            </span>
+                        </span>
+                    </h2>
+                    <div class="contact">
+                        <figure class="contact_img">
+                            <img src="assets/img/contact_bg.jpg" alt="컨텍트이미지">
+                        </figure>
+                        <div class="contact_form">
+                            <h3>Thank you for watching!</h3>
+                            <p>웹 퍼블리셔가 되고싶은 신입 이아람입니다. 언제든 연락주세요!</p>
+                            <form method="POST" action="https://formspree.io/dldkfka331@naver.com">
+                               <label for="email">메일</label>
+                                <input id="email" type="email" name="email" placeholder="이메일을 적어주세요." >
+                                <label for="message">내용 쓰기</label>
+                                <textarea id="message" name="message" placeholder="메세지를 적어주세요." rows="12"></textarea>
+                                <button type="submit">보내기</button>
+                            </form>
+                               
+                        </div>
+                        <div class="contact_sns">
+                            <div class="sns_tel">
+                                <span class="tit_ani white">010-8413-2142</span>
+                            </div>
+                            <div class="sns_kakao">
+                                <span class="tit_ani white">LAR2142</span>
+                                <img src="assets/img/sns.png" alt="qr코드">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section> 
+            <!--//contact-->
+            <section id="last">
+                <div class="last">
+                    <span class="outer">
+                        <span class="inner">
+                            <a class="text" href="#home">Back to top</a>
+                        </span>
+                    </span>
+                </div>
+            </section>
+            <!--//last-->
+        </div>
+        <!--//contents-->
+    </main>
+
+
+    <!--animation 스트립트-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+
+    <script>
+        //m5
+    const ring1 = document.getElementById("ring1");
+    const ring2 = document.getElementById("ring2");
+    const svg = document.getElementById("svg");
+
+    new TimelineMax({repeat: -1 })
+    .fromTo(ring1 , 1, {x:0, y:0}, {x:-70, y:10 , ease: "power4.out" , scale: ".3"}) //무한으로 {}->{}이동 
+    .fromTo(ring1 , 1, {x:-70, y:10}, {x:0, y:0, ease: "power4.out", scale: "1"});
+    new TimelineMax({repeat: -1 })
+    .fromTo(ring2 , 1, {x:0, y:0}, {x:70, y:10, ease: "power4.out", scale: ".3"})
+    .fromTo(ring2 , 1, {x:70, y:10}, {x:0, y:0, ease: "power4.out", scale: "1"});
+    TweenMax.to (svg, 2, {rotation: "700deg", repeat: -1});
+
+
+//m6
+    $(document).ready(function(){
+  $(".titles").lettering();
+  animation();
+})
+
+function animation(){
+  let tl = new TimelineMax();
+  tl.staggerFromTo(".titles span", .5 , 
+            {opacity: 0,bottom: -80,ease: Back.easeOut.config(1.7)}, 
+            {opacity: 1, bottom: 0, ease: Back.easeOut.config(1.7), repeat:-1, yoyo:true }, 0.15)
+  }
+
+    </script>
+    
+</body>
+</html>

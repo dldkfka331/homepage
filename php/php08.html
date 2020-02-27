@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php08</title>
+
+    <script>
+        //01. 선언 함수
+        function fun1 (){
+            document.write("01. 함수가 실행되었습니다. <br>")
+        };
+        fun1 ();
+
+        //02. 익명 함수
+        const fun2 = function(){
+            document.write("02. 함수가 실행되었습니다. <br>")
+        };
+        fun2();
+
+        //03. 매개변수 함수
+        function fun3(name){
+            document.write("03. "+ name +" 실행되었습니다. <br>")
+        };
+        fun3("함수가");
+
+        //04. 리턴값이 있는 함수
+        function fun4(){
+            const str = "04. 함수가 실행되었습니다. <br>"
+            return str;
+        }
+        let vaule4 = fun4();
+        document.write(vaule4);
+
+        //05. 재귀 함수 : 함수 정의문 내에 함수를 다시 호출하여 실행하는 함수
+        function fun5(num){
+            //fun5() --> 무한으로 빠짐
+            if(num == 0){
+                document.write("05. 함수가 실행되었습니다. <br>");
+            }else {
+                document.write("05. 함수가 실행되었습니다. <br>");
+                fun5(num-1);
+            }
+        }
+        fun5(3);
+
+        //07. 콜백 함수 : 함수를 변수에 저장하고 변수를 함수에 인수로 사용하여 매개변수에 전달함
+        function callback(num){
+            for(let i =0; i<=10; i++){
+                num(i)
+            }
+        }
+        const fun7 = function(i){
+            document.write("07. 함수가 실행되었습니다. <br>");
+        }
+        callback(fun7);
+
+        //08. 내부 함수 
+        function fun8out(){
+            function fun8in(){
+                const str = "08. 함수가 실행되었습니다. <br>"
+                document.write(str);
+            }
+            fun8in()
+        }
+        fun8out()
+
+         //09. 내부 함수 
+         function fun9out(){
+            const str = "09. 함수가 실행되었습니다. <br>"
+            function fun9in(){
+                document.write(str);
+            }
+            fun9in()
+        }
+        fun9out()
+
+        //10. 화살표 함수 
+        fun10 = () => {
+            document.write("10. 함수가 실행되었습니다. <br>");
+        }
+        fun10();
+        
+        //11. 화살표 함수 -익명
+        const fun11 = () => {
+            document.write("11. 함수가 실행되었습니다. <br>");
+        }
+        fun11();
+
+        //11. 화살표 함수 - 리턴
+        const fun12 = () => {
+            const str = "12. 함수가 실행되었습니다. <br>"
+            return str ;
+        }
+        const value12 = fun12();
+        document.write(value12);
+
+        //11. 화살표 함수 - 매개변수
+        const fun13 = (str) => {
+            return str ;
+        }
+        const value13 = fun13("13. 함수가 실행되었습니다. <br>");
+        document.write(value13);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

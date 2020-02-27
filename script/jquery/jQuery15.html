@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery15</title>
+    
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <p class="desc"></p>
+    <button class="btn1">클릭하면 글씨 색을 가져옵니다.</button>
+    <button class="btn2">클릭하면 폰트 사이즈를 가져옵니다.</button>
+    <button class="btn3">클릭하면 속성을 가져옵니다.</button>
+    <button class="btn4">글씨 확대하기</button>
+    <button class="btn5">글씨 축소하기</button>
+
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        //버튼을 클릭하면 글씨 색을 빨간색으로 변경하기
+        // $(".btn1").click(function(){
+        //     $(".list li").css("color","red")
+        // });
+
+        // //버튼을 클릭하면 글씨 색을 가져와서 저장
+        // $(".btn1").click(function(){
+        //     let vaule =  $(".list li").css("color");
+        //     $(".desc").text("이 글씨의 색은 : "+vaule + " 입니다.");
+        // });
+        // //폰트 사이즈 가져와서 출력하기
+        // $(".btn2").click(function(){
+        //     let vaule =  $(".list li").css("font-size");  //fontSize 라고써두댐
+        //     $(".desc").text("이 글씨의 폰트 사이즈는 : "+vaule+ " 입니다.");
+        // });
+
+        // //여러속성 가져와서 출력하기
+        // $(".btn3").click(function(){
+        //     const html = ["이 글씨의 속성은 : "]
+        //     const vaule = $(".list li").css(["color","fontSize","display","text-align","list-style-type"]);
+        //     $.each(vaule ,function(prop, vaule){
+        //         html.push(prop + " : " +vaule)
+        //     })
+        //     $(".desc").html(html.join("<br> "));
+        // })
+
+        $(".btn4").click(function(){
+            $(".list li").css({'fontSize': function(index, vaule){
+                    return parseFloat(vaule)*1.2
+                }
+            })
+        })
+        $(".btn5").click(function(){
+            $(".list li").css({'fontSize': function(index, vaule){
+                    return parseFloat(vaule)*0.8
+                }
+            })
+        })
+    </script>
+</body>
+</html>

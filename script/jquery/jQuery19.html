@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery19</title>
+    <style>
+        .circle {width: 100px; height: 100px; color: #a51a3d; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; border-radius: 5px; line-height: 100px;}
+    </style>
+</head>
+<body>
+    <h1>Offset    </h1>
+    <div class="circle">
+        circle
+    </div>
+    <p class="desc">
+        <span>Offset().left</span> : <span class="ol">0</span>px<br>  
+        <span>Offset().top</span> : <span class="ot">0</span>px<br>
+        <span>position().left</span> : <span class="pl">0</span>px<br>
+        <span>position().top</span> : <span class="pt">0</span>px<br>
+    </p>
+    <button class="btn1">Click</button>
+    <script src="jquery.min.1.12.4.js"></script>
+    <script src="jquery-ui.min.1.12.1.js"></script>
+    <script>
+            $(".circle").draggable({
+                start: function() {
+                    $(".circle").css("border-radius","5px")
+                },
+                drag: function() {
+                    $(".circle").css("border-radius","40px");
+                    $(".desc .ol").text($(".circle").offset().left);  //circle과 브라우저의 왼쪽 사이값
+                    $(".desc .ot").text($(".circle").offset().top);  //circle과 브라우저의 위쪽 사이값
+                    $(".desc .pl").text($(".circle").position().left);  
+                    $(".desc .pt").text($(".circle").position().top);  
+                },
+                stop: function() {
+                    $(".circle").css("border-radius","20px")
+                }
+            });
+            $(".btn1").click(function(){
+                $(".circle").offset({top:'500' , left: '500'})
+            });
+
+    </script>
+</body>
+</html>

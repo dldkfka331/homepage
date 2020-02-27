@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery17</title>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <p class="desc"></p>
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+    <button class="btn5">btn5</button>
+    <button class="btn6">btn6</button>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        //함수화 하기
+        function showHeight(element ,height ){
+            $(".desc").text("현재 "+element+"의 height 값은 : "+height +"px")    
+        }
+        //btn1 클릭시 height 값 가져오기
+        $(".btn1").click(function(){
+            showHeight("li" , $(".list li ").height() );
+        });
+        //btn2 클릭시 height 값 가져오기
+        $(".btn2").click(function(){
+            showHeight("list 집합" , $(".list ").height() ); 
+        });
+        //btn3 클릭시 문서의 height 값 가져오기
+        $(".btn3").click(function(){
+            showHeight("문서" , $(document).height() );      
+        });
+        //btn4 클릭시 브라우저의 height 값 가져오기
+        $(".btn4").click(function(){
+            showHeight("브라우져" , $(window).height() );        
+        });
+        //btn5 
+        $(".btn5").click(function(){
+            $(".list li").height(50).css("border","1px dashed #f00")  //height 변경(단위생략가능)
+        });
+        //btn6
+        $(".btn6").click(function(){
+            $(".list li").height(function(index){  //번호 자동으로 가져오기
+                return (index+1)*20;
+            }).css("border","1px dashed #f00") 
+        });
+
+    </script>
+</body>
+</html>

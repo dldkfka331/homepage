@@ -147,10 +147,10 @@
     width: 20px;
     height: 20px;
     padding: 5px;
+    background: #000;
+    color: #000;
 
     cursor: pointer;
-
-    color: transparent;
     border: 0;
     outline: none;
     background: transparent;
@@ -175,12 +175,13 @@
     top: 0;
     left: 0;
 
-    width: 20px;
-    height: 20px;
-
-    content: '•';
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 50%;
+  
     text-align: center;
-
+ content: '';
     opacity: .25;
     color: black;
 

@@ -1,4 +1,4 @@
-@charset "UTF-8"; /*CSS언어설정, 한글이깨지지않는다*/
+@charset 'UTF-8'; /*CSS언어설정, 한글이깨지지않는다*/
 
 /**{margin: 0;padding: 0;} 이건 명확하지않음*/
 

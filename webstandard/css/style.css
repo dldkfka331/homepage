@@ -1,4 +1,5 @@
 
+@font-face { font-family: 'SDKukdetopokki-Lt'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 /*스킵 네비게이션*/
 #skip a {position: absolute; border: 1px solid #fff; color:#fff; text-align: center; line-height: 30px; top: -35px; left: 0px; width: 140px; background: #000; }
@@ -17,7 +18,7 @@ body #skip a { color: green;}*/
     background-image: url(../img/header_bg.jpg);
     background-repeat: repeat-x;
     background-repeat: center; */
-    background: url(../img/header_bg.jpg) repeat-x center;}
+    background: url(../img/header_bg02.jpg) no-repeat center; background-size: cover;}
 
 #contents { }
 #footer {border-top: 1px solid #eee;}
@@ -66,24 +67,33 @@ body #skip a { color: green;}*/
 
 /*타이틀*/
 .tit {position: relative;}
-.tit h2 {text-align: center; font-size: 40px; color: #3c94c4; padding: 5px 0; letter-spacing: 2px; font-family: 'East Sea Dokdo', cursive; }
+.tit h2 {text-align: center; font-size: 40px; color: #3c94c4; padding: 5px 0; letter-spacing: 2px; font-family: 'SDKukdetopokki-Lt';}
 .tit .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px;}
 .tit .btn:hover {background-position: -60px -600px;}
+.tit .btn.on {background-position: 0 -660px;}
+.tit .btn.on:hover {background-position: -60px -660px;}
 
-/*배너*/
-.ban {position: relative; padding: 24px 0 20px;}
+/* 배너
+.ban {position: relative; padding: 24px 0 20px; margin: 0 auto;}
 .ban > a {position: absolute;  top: 60px; width: 43px; height: 43px; background: url(../img/icon.png)}
 .ban a.prev {left: -70px; background-position: -150px 0;}
 .ban a.next {right: -70px; background-position: -150px -43px;}
-.ban ul {overflow: hidden;}
-.ban ul li {float: left; width: 330px;}
-.ban ul li:last-child {text-align: right;} /*ie9 부터 적용*/
-.ban ul li:nth-child(2) {text-align: center;} /*ie9 부터 적용*/
+.ban ul {overflow: hidden; padding-top: 20px;}
+.ban ul li {float: left; }
+.ban ul li:last-child {text-align: right;} //ie9 부터 적용
+.ban ul li:nth-child(2) {text-align: center;} //ie9 부터 적용
 .ban ul li.ban_img1 {text-align: left;}
 .ban ul li.ban_img2 {text-align: center;}
-.ban ul li.ban_img3 {text-align: right;} /*모든 버전에서 가능*/
+.ban ul li.ban_img3 {text-align: right;} //모든 버전에서 가능
 .ban ul li img {border: 4px solid #dcdcdc;}
-.ban ul li img:hover {border-color: #98dcdc;}
+.ban ul li img:hover {border-color: #98dcdc;} */
+
+/* 슬릭 */
+.ban { position:relative;  padding: 24px 0 20px; }
+.ban .slick-prev {width: 43px; height: 43px; background: url(../img/icon.png); background-position: -150px 0; text-indent: -999px;}
+.ban .slick-next {width: 43px; height: 43px; background: url(../img/icon.png); background-position: -150px -43px; text-indent: -999px; }
+.ban img {border: 4px solid #98dcdc;}
+.ban img:hover {border-color: #0D71A3;}
 
 
 /* 컨텐츠 */
@@ -189,7 +199,7 @@ body #skip a { color: green;}*/
 .notice4 .more {position: absolute; top: 9px; right: 9px; }
 
 /* 갤러리 */
-.gallery {border: 1px solid #ccc; height: 254px; overflow: hidden; position: relative;}
+.gallery {border: 1px solid #ccc; height: 254px; position: relative; overflow: hidden;}
 .gallery h4 {font-size: 14px; color: #0093bd; font-weight: bold; border-bottom: solid #ccc 1px; padding: 10px 0 8px 11px; }
 .gallery .gallery_btn {position: absolute; right: 5px; top: 9px;}
 .gallery .gallery_btn ul {overflow: hidden; }
@@ -204,6 +214,7 @@ body #skip a { color: green;}*/
 .gallery .gallery_btn ul li.gb_icon3 a:hover {background-position: -173px -166px;}
 .gallery .gallery_btn ul li.gb_icon4 a:hover {background-position: -173px -189px;}
 .gallery .gallery_img img{width: 100%;}
+.gallery .slick-slider {padding: 0 !important;}
 
 
 /* 로그인 */

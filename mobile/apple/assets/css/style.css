@@ -36,16 +36,40 @@
 .bestM .bestM_img img{border-radius: 5px;}
 
 /* recentM */
-.recentM {padding: 10px 0 ; margin-top: 10px;}
-.recentM .row {margin-top: 20px; border-top: 1px solid #ebebeb; }
+.recentM {padding: 10px 0 ; margin-top: 10px;border-top: 1px solid #ebebeb;}
+.recentM .row {margin-top: 20px;  }
 .recentM .recent_tit {font-size: 22px; padding: 10px 0; font-weight: bold;}
 .recentM .st_tit2 {font-size: 15px; padding: 6px 0;}
 .recentM .st_desc2 {font-size: 14px; color: #8E8E90; padding-bottom: 5px; font-weight: 100;} 
 
 /* nextM */
-.nextM { }
+.nextM {height: 720px; overflow: hidden; margin-top: 10px; padding: 10px 0 ;}
+.nextM .next_tit{font-size: 22px; padding: 10px 0; font-weight: bold;}
+.nextM .row {margin-top: 20px; border-top: 1px solid #ebebeb; }
+.nextBox {display: flex; align-items: center; margin-bottom: 16px; flex-wrap: nowrap; position: relative;}
+.nextBox .nextBox_img {width: 102px; margin-right: 12px; flex-shrink: 0;}
+.nextBox .nextBox_img picture {display: block;}
+.nextBox .nextBox_img picture img {border-radius: 5px;}
+.nextBox .nextBox_tit {display: flex; flex-direction: column; justify-content: center; }
+.nextBox .nextBox_tit .nb_stit {color: #da5e7c; font-size: 12px;}
+.nextBox .nextBox_tit .nb_tit {color: #000; font-size: 16px; 
+    overflow: hidden;  text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical;}
+.nextBox .nextBox_tit .nb_desc {color: #a1a1a3; font-size: 13px; font-weight: 100; 
+    overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical;}
+.nextBox:after{content: ''; position: absolute; right: 0; bottom: -8px; width: calc(100% - 114px); height: 1px; background: #ebebeb;}
 
-
+/*play_btn*/
+.play_btn {
+    position: fixed; bottom: 0; left: 0; z-index: 9000;
+    width: 100%; height: 62px; background-color: rgba(255,255,255,.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    display: flex; align-items: center;
+}
+.play_btn .play_btn_img {width: 48px; padding: 8px 20px;}
+.play_btn .play_btn_img img{border-radius: 5px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+.play_btn .play_btn_tit {font-size: 16px;}
+.play_btn .play_btn_play {margin-left: auto;padding-right: 10px; cursor: pointer;}
+.play_btn .play_btn_next {cursor: pointer; margin-right: 10px;}
 
 /* 미디어 쿼리 */
 @media (max-width:1040px){

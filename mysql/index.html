@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | mysql</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="https://dldkfka331.dothome.co.kr" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!--style-->
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">ARAM'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs12" id="content">
+        <div class="container">
+            <h1>MYSQL</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">MYSQL</h2>
+                    <div class="well">MySQL은 세계에서 가장 많이 쓰이는 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)이다. 다중 스레드, 다중 사용자 형식의 구조질의어
+                        형식의 데이터베이스 관리 시스템으로서 오라클이 관리 및 지원하고 있습니다.</div>
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">MYSQL 설치</h2>
+                    <div class="well"></div>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">MYSQL 데이터베이스 만들기</h2>
+                    <h4>mysql 데이터베이스 만들기</h4>
+                    <p class="bs-callout bs-callout-info">create database 데이터베이스 이름;</p>
+
+                    <h4>mysql 데이터베이스 보기</h4>
+                    <p class="bs-callout bs-callout-info">show databases; (복수)</p>
+
+                    <h4>mysql 데이터베이스 선택</h4>
+                    <p class="bs-callout bs-callout-info">use 데이터베이스 이름;</p>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">테이블 만들기</h2>
+                    <h4>mysql 테이블 만들기</h4>
+                    <p>테이블은 데이터베이스 내에 정보를 담는 역할을 합니다.</p>
+
+                    <h5 class="pt20">숫자형 데이터</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>데이터형</th>
+                                    <th>byte</th>
+                                    <th>저장 가능 수</th>
+                                    <th>양의 정수 전환시 저장 가능 수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tinying</td>
+                                    <td>1byte</td>
+                                    <td>-128 ~ 127</td>
+                                    <td>0 ~ 255</td>
+                                </tr>
+                                <tr>
+                                    <td>smallint</td>
+                                    <td>2byte</td>
+                                    <td>-32768 ~ 32767</td>
+                                    <td>0 ~ 65535</td>
+                                </tr>
+                                <tr>
+                                    <td>mediumunt</td>
+                                    <td>3byte</td>
+                                    <td>-8388608 ~ 8388607</td>
+                                    <td>0 ~ 16777215</td>
+                                </tr>
+                                <tr>
+                                    <td>int 또는 integer</td>
+                                    <td>4byte</td>
+                                    <td>-2147493648 ~ 2147493647</td>
+                                    <td>0 ~ 4294967295</td>
+                                </tr>
+                                <tr>
+                                    <td>bigint</td>
+                                    <td>8byte</td>
+                                    <td>-9223372036854775858 ~ 9223372036854775857</td>
+                                    <td>0 ~ 18446744073709551615</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>문자형 데이터</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>데이터형</th>
+                                    <th>저장 가능 글자 수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>char</td>
+                                    <td>255</td>
+                                </tr>
+                                <tr>
+                                    <td>verchar</td>
+                                    <td>255</td>
+                                </tr>
+                                <tr>
+                                    <td>tinytext</td>
+                                    <td>255</td>
+                                </tr>
+                                <tr>
+                                    <td>text</td>
+                                    <td>65535</td>
+                                </tr>
+                                <tr>
+                                    <td>mediumtext</td>
+                                    <td>16777215</td>
+                                </tr>
+                                <tr>
+                                    <td>longtext</td>
+                                    <td>4294967295</td>
+                                </tr>
+                                <tr>
+                                    <td>enum</td>
+                                    <td>지정된 값 중 한 가지 값만 사용 가능</td>
+                                </tr>
+                                <tr>
+                                    <td>set</td>
+                                    <td>지정된 값 중 여러가지 값을 사용 가능</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>날자형 데이터</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>데이터형</th>
+                                    <th>저장범위</th>
+                                    <th>표시 형식</th>
+                                    <th>크기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>1001-01-01 ~ 9999-12-31</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>3byte</td>
+                                </tr>
+                                <tr>
+                                    <td>datetime</td>
+                                    <td>1001-01-01 00:00:00 ~ 9999-12-31 23:59:59</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                    <td>8byte</td>
+                                </tr>
+                                <tr>
+                                    <td>timestamp</td>
+                                    <td>1970-01-01 00:00:00 ~ 2038-01-19 03:14:07</td>
+                                    <td>YYYYMMDDHHMMSS</td>
+                                    <td>4byte</td>
+                                </tr>
+                                <tr>
+                                    <td>time</td>
+                                    <td>-838:59:59 ~ 838:59:59</td>
+                                    <td>HH:MM:SS</td>
+                                    <td>3byte</td>
+                                </tr>
+                                <tr>
+                                    <td>year</td>
+                                    <td>1901~2155</td>
+                                    <td>YYYY</td>
+                                    <td>1byte</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>테이블 생성</h5>
+                    <p class="bs-callout bs-callout-info">
+                        create database 테이블명(<br>
+                        필드명 데이터형 필드 설명<br>
+                        )인코딩 설정 테이블 설명
+                    </p>
+
+                    <h5>테이블 목록 보기</h5>
+                    <p class="bs-callout bs-callout-info">
+                        show tables;
+                    </p>
+
+                    <h5>테이블 보기</h5>
+                    <p class="bs-callout bs-callout-info">
+                        desc 테이블 명
+                    </p>
+
+                    <h5>테이블 삭제</h5>
+                    <p class="bs-callout bs-callout-info">
+                        drop table 테이블명;
+                    </p>
+
+                    <h5>테이블 초기화하기</h5>
+                    <p class="bs-callout bs-callout-info">
+                        TRUNCATE 테이블 명
+                    </p>
+
+
+                    <p class="well">
+                        회원의 일련번호<br>
+                        회원의 아이디<br>
+                        회원의 이름<br>
+                        회원의 비밀번호<br>
+                        회원의 휴대전화 번호<br>
+                        회원의 이메일 주소<br>
+                        회원의 생일<br>
+                        회원의 성별<br>
+                        회원의 가입시기<br><br>
+
+                        create table myMember(<br>
+                        myMemberID int unsigned auto_increment comment '고객의 고유번호',<br>
+                        useID varchar(15) not null comment '고객 아이디',<br>
+                        uname varchar(10) not null comment '고객명',<br>
+                        upassword varchar(30) not null comment '고객 비밀번호',<br>
+                        email varchar(30) not null comment '고객의 이메일 주소',<br>
+                        birthDay char(10) not null comment '고객의 생일',<br>
+                        gender enum('m','w','x') default 'x' comment '고객 성별 m은 남성 w은 여성 x는 선택하지 않음',<br>
+                        regTime datetime not null comment '회원가입 시간',<br>
+                        primary key(myMemberID))<br>
+                        charset=utf8 comment='고객 정보 테이블';<br><br>
+
+                        ALTER TABLE myMember ADD phone varchar(13) not null comment '고객휴대폰 번호' AFTER upassword;<br><br>
+
+                        create table myMember(<br>
+                        myMemberID int(10) unsigned not null auto_increment comment '고객번호',<br>
+                        userName varchar(60) not null default '' comment '이름',<br>
+                        email varchar(30) not null,<br>
+                        pw varchar(40) not null comment '비밀번호',<br>
+                        birthDay char(10) not null comment '생일',<br>
+                        gender enum('m','w') not null comment '성별',<br>
+                        profilePhoto varchar(80) default null comment '프로필 사진',<br>
+                        coverPhoto varchar(80) default null comment '커버 사진',<br>
+                        regTime int(10) unsigned not null comment '가입시간',<br>
+                        primary key(myMemberID),<br>
+                        unique(email)<br>
+                        ) charset=utf8 comment='회원정보';<br><br>
+
+                        create table contents(<br>
+                        contentsID int(10) unsigned not null auto_increment comment '게시물 번호',<br>
+                        myMemberID int(10) unsigned not null comment '작성한 고객번호',<br>
+                        content longtext not null comment '게시물 내용',<br>
+                        regTime int(10) unsigned not null comment '등록시간',<br>
+                        primary key(contentsID)<br>
+                        ) default charset=utf8 comment='게시물';<br><br>
+
+                        create table comments(<br>
+                        commentsID int(10) unsigned not null auto_increment comment '댓글 번호',<br>
+                        contentsID int(10) unsigned not null comment '게시물 번호',<br>
+                        myMemberID int(10) unsigned not null comment '회원번호',<br>
+                        comment text not null comment '댓글 내용',<br>
+                        regTime int(10) unsigned not null comment '댓글 등록 시간',<br>
+                        primary key(commentsID)<br>
+                        ) charset="utf8" comment='댓글';<br><br>
+                    </p>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">테이블 수정하기</h2>
+                    <h5>필드 추가하기</h5>
+                    <p class="bs-callout bs-callout-info">ALTER TABLE 테이블명 ADD 추가할 필드명 옵션 코멘트 위치 </p>
+                    <h5>필드 삭제하기</h5>
+                    <p class="bs-callout bs-callout-info">ALTER TABLE 테이블명 DROP 삭제할 필드명 </p>
+                    <h5>필드 수정하기</h5>
+                    <p class="bs-callout bs-callout-info">ALTER TABLE 테이블명 MODIFY 변경할 필드명 옵션 코멘트 위치 </p>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">테이블 데이터 입력하기</h2>
+                    <p class="bs-callout bs-callout-info">INSERT INTO 테이블명(입력할 필드명) VALUES (입력할 데이터)</p>
+                    <p class="well">
+                        아이디 : aramz
+                        이름 : 아람
+                        패스워드 : aramzzz
+                        이메일 : dldkfka331@naver.com
+                        생일 : 19930331
+                        성별 : 여자
+
+                        INSERT INTO myMember(useID, uname, upassword, email, birthDay, gender, regTime) VALUES ('aramz',
+                        '아람', 'aramzzz', 'dldkfka331@naver.com', '19930331', 'w', now());
+                    </p>
+
+                </div>
+                <!-- //Intro6 -->
+
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 데이터 불러오기</h2>
+                    <h5>SELECT</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명;
+                    </p>
+
+                    <h5>LIMIT</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 LIMIT 불러올 수
+                    </p>
+
+                    <h5>LIMIT에 값 2개를 적용하는 방법</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 LIMIT 불러올 레코드 순번, 불러올 개수
+                    </p>
+                    <p class="well">
+                        SELECT uname, useID FROM myMember; <br>
+                        SELECT * FROM myMember;<br>
+                        SELECT * FROM myMember WHERE myMemberID = 1;<br>
+                        SELECT * FROM myMember WHERE email LIKE '%web%';<br>
+                        SELECT * FROM myMember WHERE email LIKE 'web%';<br>
+                        SELECT * FROM myMember WHERE email LIKE '%web';<br>
+                        SELECT * FROM myMember WHERE myMemberID >= 1 AND myMemberID <=5;<br>
+                            SELECT * FROM myMember WHERE uname LIKE '김%' OR uname LIKE '이%';<br><br>
+
+                            SELECT * FROM myMember LIMIT 3;<br>
+                            SELECT * FROM myMember LIMIT 3, 3;<br>
+
+                    </p>
+
+                </div>
+                <!-- //Intro7 -->
+
+
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">테이블 데이터 수정하기</h2>
+                    <h5>UPDATE</h5>
+                    <p class="bs-callout bs-callout-info">
+                        UPDATE 테이블명 SET 필드명 값 조건;
+                    </p>
+                </div>
+                <!-- //Intro8 -->
+
+
+                <!-- Intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">테이블 조인(JOIN)</h2>
+                    <h5>JOIN</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 엘리어스 JOIN 연결할 테이블명 엘리어스 ON(두 테이이블의 연결고리 역할을 할 필드 조건문)
+                    </p>
+                    <p class="well">
+                        SELECT m.uname, r.content, r.regTime FROM myMember m JOIN prodReview r ON(m.myMemberID =
+                        r.myMemberID);
+                    </p>
+                </div>
+                <!-- //Intro9 -->
+
+
+                <!-- Intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">집계함수</h2>
+                    <h5 class="pt20">집계함수의 종류</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>count(필드명)</td>
+                                    <td>레코드의 개수를 표시(null인 경우는 포함하지 않음)</td>
+                                </tr>
+                                <tr>
+                                    <td>count(*)</td>
+                                    <td>레코드의 개수를 표시(null을 포함)</td>
+                                </tr>
+                                <tr>
+                                    <td>sum(필드명)</td>
+                                    <td>필드의 값의 합계를 표시</td>
+                                </tr>
+                                <tr>
+                                    <td>avg(필드명)</td>
+                                    <td>필드의 값의 평균을 표시</td>
+                                </tr>
+                                <tr>
+                                    <td>max(필드명)</td>
+                                    <td>필드의 값의 최대값을 표시</td>
+                                </tr>
+                                <tr>
+                                    <td>min(필드명)</td>
+                                    <td>필드의 값의 최소값을 표시</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>그룹별 집계</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 GROUP BY 필드명
+                    </p>
+
+                    <h5>ORDER BY</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 ORDER BY 정렬 기준이 될 필등명 DESC 또는 ASC;
+                    </p>
+                    SELECT count(class) FROM schoolRecord;<br>
+                    SELECT count(*) FROM schoolRecord;<br>
+                    SELECT sum(english) FROM schoolRecord;<br>
+                    SELECT avg(math) FROM schoolRecord WHERE studentID >= 1 AND studentID <= 5;<br>
+                        SELECT max(japanese) FROM schoolRecord;<br>
+                        SELECT min(math) FROM schoolRecord;<br><br>
+
+                        SELECT class, avg(english) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class;<br>
+                        SELECT class, sum(math) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class HAVING
+                        sum(math) >= 150;<br><br>
+
+                        SELECT studentID, english FROM schoolRecord ORDER BY english DESC;<br>
+                        SELECT studentID, english FROM schoolRecord ORDER BY english ASC;<br>
+                        //반별 수학 점수를 높은 순에서 낮은 순으로 표시<br>
+                        SELECT class, sum(math) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class ORDER BY
+                        sum(math) DESC;<br><br>
+
+                </div>
+                <!-- //Intro10 -->
+
+
+                <!-- Intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro11" class="page-header">테이블(UNION)</h2>
+                    <p>JOIN은 일치하는 특정 필드를 기준으로 테이블과 테이블을 연결하고 UNION은 사용하려는 테이블
+                        들을 하나의 테이블인 것처럼 사용해주는 기능입니다.</p>
+
+                    <h5>UNION</h5>
+                    <p class="bs-callout bs-callout-info">
+                        (첫 번째 테이블) UNION (두번째 테이블)
+                    </p>
+
+                    <p class="well">
+                        (SELECT name, email FROM dropOutOld) UNION (SELECT name, email FROM dropOutNew);<br>
+                        (SELECT name, email FROM dropOutOld) UNION ALL (SELECT name, email FROM dropOutNew);<br>
+                        <br>
+                        create table dropOutOld(<br>
+                        dropOutOldID int unsigned not null auto_increment comment '예전 탈퇴회원 번호',<br>
+                        name varchar(10) not null comment '탈퇴 회원 이름',<br>
+                        email varchar(30) not null comment '탈퇴 회원 이메일',<br>
+                        primary key(dropOutOldID))<br>
+                        charset=utf8 comment '2016년 탈퇴 회원';<br>
+                        <br>
+                        create table dropOutNew(<br>
+                        dropOutNewID int unsigned not null auto_increment comment '예전 탈퇴회원 번호',<br>
+                        name varchar(10) not null comment '탈퇴 회원 이름',<br>
+                        email varchar(30) not null comment '탈퇴 회원 이메일',<br>
+                        primary key(dropOutNewID))<br>
+                        charset=utf8 comment '2017년 탈퇴 회원';<br>
+                        <br>
+                        INSERT INTO dropOutOld(name,email) VALUES('김태영', 'ever@everdevel.com');<br>
+                        INSERT INTO dropOutOld(name,email) VALUES('김태헌', 'jake@everdevel.com');<br>
+                        INSERT INTO dropOutOld(name,email) VALUES('이지형', 'tigger@everdevel.com');<br>
+                        INSERT INTO dropOutOld(name,email) VALUES('전윤동', 'nelly@everdevel.com');<br>
+                        INSERT INTO dropOutOld(name,email) VALUES('노진우', 'cooper@everdevel.com');<br>
+                        INSERT INTO dropOutOld(name,email) VALUES('최기욱', 'btm@everdevel.com');<br>
+                        INSERT INTO dropOutNew(name,email) VALUES('최기욱', 'btm@everdevel.com');<br>
+                        INSERT INTO dropOutNew(name,email) VALUES('한정은', 'hanje@everdevel.com');<br>
+                        INSERT INTO dropOutNew(name,email) VALUES('이정미', 'stella@everdevel.com');
+                    </p>
+
+                </div>
+                <!-- //Intro11 -->
+
+
+
+
+
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">MYSQL</a></li>
+                        <li><a href="#intro2">MYSQL 설치</a></li>
+                        <li><a href="#intro3">데이터베이스 만들기</a></li>
+                        <li><a href="#intro4">테이블 만들기</a></li>
+                        <li><a href="#intro5">테이블 수정하기</a></li>
+                        <li><a href="#intro6">테이블 데이터 입력하기</a></li>
+                        <li><a href="#intro7">테이블 데이터 불러오기</a></li>
+                        <li><a href="#intro8">테이블 데이터 수정하기</a></li>
+                        <li><a href="#intro9">테이블 데이터 조인(JOIN)</a></li>
+                        <li><a href="#intro10">집계함수</a></li>
+                        <li><a href="#intro11">테이블(UNION)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+
+</body>
+
+</html>

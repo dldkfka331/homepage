@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery23</title>
+    <style>
+    .list li{display: inline; }
+    </style>
+</head>
+<body>
+    <h3>이미지</h3>
+    <div class="list">
+        <ul>
+            <li><img src="img/01.jpg" alt="이미지"> </li>
+            <li><img src="img/02.jpg" alt="이미지"></li>
+            <li><img src="img/03.jpg" alt="이미지"></li>
+            <li><img src="img/04.jpg" alt="이미지"></li>
+            <li><img src="img/05.jpg" alt="이미지"></li>
+        </ul>
+    </div>
+    <button class="btn1">클릭하면 2초에 한번씩 이미지를 이동시킵니다.</button>
+    <button class="btn2">클릭하면 이미지를 정지시킵니다.</button>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+       let timer;
+        $(".btn1").click(function(){
+            timer =  setInterval(function(){
+                                    $(".list li:last").prependTo(".list ul")        //last를 제일처음으로 올림
+                                },2000);
+        })
+        $(".btn2").click(function(){
+             clearInterval(timer);
+        })
+    </script>
+</body>
+</html>

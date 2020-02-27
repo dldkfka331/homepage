@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>밀리의 서재</title>
+
+    <!--링크-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header">
+                        <div class="logo">
+                            <svg width="46" height="18" viewBox="0 0 46 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.9018 6.70808C16.8925 6.89176 17.6434 13.2564 14.8092 13.504C14.8092 13.504 14.8092 13.504 14.8011 13.504C14.785 13.504 14.7769 13.504 14.7607 13.504C14.7284 13.504 14.6881 13.512 14.6477 13.512H14.6396H14.6315C11.555 13.512 12.411 6.73204 11.329 6.7001C10.2469 6.74003 11.1029 13.512 8.02636 13.512H8.01828H8.01021H8.00213C4.91756 13.512 5.78964 6.7001 4.69146 6.7001C3.59329 6.7001 4.46537 13.512 1.38079 13.512C1.31619 13.512 1.26775 13.512 1.22737 13.504C2.80196 16.1952 5.74119 18 9.10838 18C14.1309 18 18.2087 13.9672 18.2087 9.00001C18.2006 8.20941 18.0956 7.43479 17.9018 6.70808Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M1.70378 11.4437C1.71186 11.4197 1.72801 11.3957 1.73608 11.3718C2.30939 9.89441 2.03485 4.61579 4.69146 4.61579C4.69954 4.61579 4.69954 4.61579 4.70761 4.61579H4.71569C4.71569 4.61579 4.71569 4.61579 4.72376 4.61579H4.73183C4.74798 4.61579 4.76413 4.61579 4.78028 4.61579C4.81258 4.61579 4.84488 4.61579 4.86911 4.62378C4.90141 4.62378 4.92563 4.63177 4.94985 4.63177C4.98215 4.63177 5.01445 4.63975 5.03868 4.64774C5.04675 4.64774 5.05483 4.64774 5.05483 4.64774C7.71951 5.16681 6.96856 11.6673 8.01021 11.7072C9.09223 11.6673 8.2363 4.61579 11.3128 4.61579H11.3209H11.3289C14.0502 4.61579 13.6949 10.1819 14.3328 11.4836C14.4135 11.6273 14.5104 11.7072 14.6235 11.7072C15.6167 11.7072 15.003 5.93345 17.1428 4.80745C15.6247 1.94854 12.5886 0 9.1003 0C4.07778 0 0 4.03283 0 9C0 9.95031 0.153421 10.8607 0.427965 11.7152L0.532937 12.0745C0.532937 12.0745 0.896303 12.1943 1.42117 11.8429C1.50191 11.7711 1.60689 11.6593 1.70378 11.4437Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M21.7682 2.83497C21.5179 2.83497 21.308 2.92282 21.1384 3.09052C20.9688 3.25822 20.88 3.46585 20.88 3.69744C20.88 3.945 20.9688 4.15263 21.1384 4.32033C21.308 4.48803 21.5179 4.57588 21.7682 4.57588C22.0105 4.57588 22.2123 4.48803 22.3819 4.32033C22.5515 4.15263 22.6403 3.945 22.6403 3.69744C22.6403 3.45786 22.5515 3.25822 22.3819 3.09052C22.2204 2.92282 22.0105 2.83497 21.7682 2.83497Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M21.7602 5.90151C21.5421 5.90151 21.3483 5.98137 21.1949 6.1331C21.0415 6.28483 20.9608 6.47649 20.9608 6.70808V15.0772C20.9608 15.3008 21.0415 15.5005 21.1949 15.6522C21.3483 15.8039 21.5421 15.8838 21.7602 15.8838C21.9863 15.8838 22.1881 15.8039 22.3415 15.6522C22.495 15.5005 22.5757 15.3088 22.5757 15.0772V6.70808C22.5757 6.48448 22.495 6.29282 22.3415 6.1331C22.1801 5.98137 21.9863 5.90151 21.7602 5.90151Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M34.2761 2.83497C34.0258 2.83497 33.8158 2.92282 33.6462 3.09052C33.4767 3.25822 33.3878 3.46585 33.3878 3.69744C33.3878 3.945 33.4767 4.15263 33.6462 4.32033C33.8158 4.48803 34.0258 4.57588 34.2761 4.57588C34.5183 4.57588 34.7202 4.48803 34.8898 4.32033C35.0593 4.15263 35.1482 3.945 35.1482 3.69744C35.1482 3.45786 35.0593 3.25822 34.8898 3.09052C34.7202 2.92282 34.5183 2.83497 34.2761 2.83497Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M34.2599 5.90151C34.0419 5.90151 33.8481 5.98137 33.6947 6.1331C33.5413 6.28483 33.4605 6.47649 33.4605 6.70808V15.0772C33.4605 15.3008 33.5413 15.5005 33.6947 15.6522C33.8481 15.8039 34.0419 15.8838 34.2599 15.8838C34.486 15.8838 34.6879 15.8039 34.8413 15.6522C34.9947 15.5005 35.0755 15.3088 35.0755 15.0772V6.70808C35.0755 6.48448 34.9947 6.29282 34.8413 6.1331C34.6879 5.98137 34.4941 5.90151 34.2599 5.90151Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M25.951 1.77285C25.7329 1.77285 25.5391 1.85271 25.3857 2.00444C25.2323 2.15617 25.1516 2.34783 25.1516 2.57942V15.0772C25.1516 15.3008 25.2323 15.5004 25.3857 15.6522C25.5391 15.8039 25.7329 15.8838 25.951 15.8838C26.1771 15.8838 26.3789 15.8039 26.5323 15.6522C26.6858 15.5004 26.7665 15.3088 26.7665 15.0772V2.57942C26.7665 2.35581 26.6858 2.16415 26.5323 2.00444C26.3789 1.85271 26.1851 1.77285 25.951 1.77285Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M30.158 1.77285C29.9399 1.77285 29.7461 1.85271 29.5927 2.00444C29.4393 2.15617 29.3586 2.34783 29.3586 2.57942V15.0772C29.3586 15.3008 29.4393 15.5004 29.5927 15.6522C29.7461 15.8039 29.9399 15.8838 30.158 15.8838C30.3841 15.8838 30.5859 15.8039 30.7393 15.6522C30.8928 15.5004 30.9735 15.3088 30.9735 15.0772V2.57942C30.9735 2.35581 30.8928 2.16415 30.7393 2.00444C30.5859 1.85271 30.3841 1.77285 30.158 1.77285Z"
+                                    fill="#A451F7" />
+                                <path
+                                    d="M39.1371 11.7791H45.2094C45.4355 11.7791 45.6293 11.7072 45.7746 11.5634C45.9119 11.4277 45.9846 11.268 46.0007 11.0763C45.9523 8.61669 44.0789 6.63621 41.7453 6.60426C41.7211 6.60426 41.7049 6.60426 41.6888 6.60426C41.1558 6.60426 40.639 6.70808 40.1626 6.89974C39.9446 6.9796 39.7427 7.07543 39.5409 7.18723C38.8626 7.57853 38.3216 8.12157 37.9421 8.81633C37.6271 9.39131 37.4414 10.0302 37.393 10.7249C37.3849 10.7808 37.3849 10.8447 37.3768 10.9006C37.3768 10.9805 37.3687 11.0683 37.3687 11.1482C37.3687 11.1562 37.3687 11.1562 37.3687 11.1642C37.3687 11.1642 37.3687 11.1642 37.3687 11.1721C37.3687 12.0426 37.5706 12.8332 37.9744 13.52C38.0874 13.7116 38.2166 13.8953 38.3539 14.063C39.1452 15.0772 40.3403 15.7241 41.6888 15.7241C41.7534 15.7241 41.8099 15.7241 41.8745 15.7161C41.9552 15.7161 42.0279 15.7241 42.1087 15.7241C42.6174 15.7241 43.1584 15.6282 43.7075 15.4445C44.2646 15.2609 44.733 15.0133 45.1044 14.7258C45.2094 14.646 45.2901 14.5581 45.3305 14.4543C45.387 14.3505 45.4112 14.2387 45.4112 14.1109C45.4112 13.6877 45.064 13.3443 44.6361 13.3443C44.418 13.3443 44.2243 13.4321 44.087 13.5679C44.0547 13.5839 44.0224 13.6078 43.9901 13.6318C43.764 13.8075 43.4652 13.9512 43.118 14.071C42.7627 14.1908 42.4236 14.2467 42.1006 14.2467C41.2769 14.2467 40.5744 14.0151 40.0011 13.5519C39.4924 13.1446 39.1613 12.6096 39.0079 11.9627L38.9918 11.9068C38.9756 11.795 39.1371 11.7791 39.1371 11.7791ZM41.6888 8.08164C43.013 8.08164 44.1112 8.96008 44.3131 10.0461C44.3131 10.0541 44.305 10.3256 44.0143 10.3895C44.0062 10.3895 43.9982 10.3895 43.9901 10.3975C43.9174 10.3975 43.8447 10.3975 43.7882 10.3975C43.336 10.3975 42.8354 10.3975 41.7291 10.3975C40.962 10.3975 40.4775 10.3736 39.3551 10.3895C39.1048 10.3336 39.0645 10.118 39.0645 10.0621C39.2502 8.96806 40.3564 8.08164 41.6888 8.08164Z"
+                                    fill="#A451F7" />
+                            </svg>
+                        </div>
+                        <div class="alert"><img src="assets/img/bell_g10px.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <nav id="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav">
+                        <ul>
+                            <li class="active"><a href="#">투데이</a></li>
+                            <li><a href="#">독서당</a></li>
+                            <li><a href="#">스토리</a></li>
+                            <li><a href="#">북클럽</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- //nav -->
+        <div id="contents">
+            <div id="mBanner">
+                <div class="container">
+                    <div class="row">
+                        <div class="mBanner">
+                            <div class="banner_img">
+                                <picture>
+                                    <source srcset="assets/img/banner@3x.png" media="(min-width: 800px)">
+                                    <source srcset="assets/img/banner@2x.png" media="(min-width: 600px)">
+                                    <img src="assets/img/banner.png"
+                                        srcset="assets/img/banner@2x.png 2x, assets/img/banner@3x.png 3x" alt="김영하이미지">
+                                </picture>
+                            </div>
+                            <div class="banner_link">
+                                <span><a href="#">전체보기 <img src="assets/img/w_arr.png" alt="화살표"></a> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //mBanner -->
+            <div id="update">
+                <div class="update">
+                    <h2>취향별 엄선도서 업데이트</h2>
+                    <div class="list">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide select"><button>종합</button></li>
+                                <li class="swiper-slide"><button>트렌드</button></li>
+                                <li class="swiper-slide"><button>라이프</button></li>
+                                <li class="swiper-slide"><button>힐링</button></li>
+                                <li class="swiper-slide"><button>지적교양</button></li>
+                                <li class="swiper-slide"><button>소설</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="updateBook">
+                        <div class="container">
+                            <div class="row">
+                                <div class="best3">
+                                    <h3>1월 3주 업데이트 지적교양 BEST 3 </h3>
+                                    <div class="best3_book">
+                                        <div class="best3_1">
+                                            <picture>
+                                                <source srcset="assets/img/best3_1@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/best3_1@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/best3_1.png"
+                                                    srcset="assets/img/best3_1@2x.png 2x, assets/img/best3_1@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>미래학교</strong>
+                                            <span>EBS 미래학교 제작진</span>
+                                        </div>
+                                        <div class="best3_2">
+                                            <picture>
+                                                <source srcset="assets/img/best3_2@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/best3_2@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/best3_2.png"
+                                                    srcset="assets/img/best3_2@2x.png 2x, assets/img/best3_2@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>단어의 배신</strong>
+                                            <span>박산호</span>
+                                        </div>
+                                        <div class="best3_3">
+                                            <picture>
+                                                <source srcset="assets/img/best3_3@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/best3_3@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/best3_3.png"
+                                                    srcset="assets/img/best3_3@2x.png 2x, assets/img/best3_3@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>명상 인문학</strong>
+                                            <span>김승호</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common">
+                                    <h3>상식은 진실이 아니다 - 상식의 이면</h3>
+                                    <div class="common_book">
+                                        <div class="common_1">
+                                            <picture>
+                                                <source srcset="assets/img/common_1@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/common_1@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/common_1.png"
+                                                    srcset="assets/img/common_1@2x.png 2x, assets/img/common_1@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>비관하는 힘</strong>
+                                            <span>모리 히로시 (지은이)</span>
+                                        </div>
+                                        <div class="common_2">
+                                            <picture>
+                                                <source srcset="assets/img/common_2@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/common_2@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/common_2.png"
+                                                    srcset="assets/img/common_2@2x.png 2x, assets/img/common_2@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>거짓에 관한 진실</strong>
+                                            <span>볼프 슈나이더</span>
+                                        </div>
+                                        <div class="common_3">
+                                            <picture>
+                                                <source srcset="assets/img/common_3@3x.png" media="(min-width: 800px)">
+                                                <source srcset="assets/img/common_3@2x.png" media="(min-width: 600px)">
+                                                <img src="assets/img/common_3.png"
+                                                    srcset="assets/img/common_3@2x.png 2x, assets/img/common_3@3x.png 3x"
+                                                    alt="best">
+                                            </picture>
+                                            <strong>포르노 판타지</strong>
+                                            <span>매트 프래드</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="more"><a href="#"><img src="assets/img/Shape.png" alt="더보기">더보기</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //update -->
+            <div id="reading">
+                <div class="reading">
+                    <div class="container">
+                        <div class="row">
+                            <div class="readingText">
+                                <h2>오늘의 리딩북</h2>
+                                <span>1월 21일 화요일 업데이트</span>
+                                <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container2 ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide readingBox1">
+                                <div class="readingBox_img">
+                                    <div class="readingBox_thum">
+                                        <img src="assets/img/Rectangle42.png" alt="아임낫파인 책 이미지">
+                                        <strong>아임 낫 파인</strong>
+                                        <p><img src="assets/img/hw2.png" alt="헤드셋"> 책읽찌라</p>
+                                    </div>
+                                </div>
+                                <div class="readingBox_txt">
+                                    <p>괜찮다고 말하지만 괜찮지 않은 너와 나에게.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide readingBox2">
+                                <div class="readingBox_img">
+                                    <div class="readingBox_thum">
+                                        <img src="assets/img/Rectangle43.png" alt="아임낫파인 책 이미지">
+                                        <strong>그리스인 조르바</strong>
+                                        <p><img src="assets/img/hw2.png" alt="헤드셋"> 이동진</p>
+                                    </div>
+                                </div>
+                                <div class="readingBox_txt">
+                                    <p>이동진 평론가와 만나는 자유의 아이콘, 조르바</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide readingBox3">
+                                <div class="readingBox_img">
+                                    <div class="readingBox_thum">
+                                        <img src="assets/img/Rectangle42.png" alt="아임낫파인 책 이미지">
+                                        <strong>아임 낫 파인</strong>
+                                        <p><img src="assets/img/hw2.png" alt="헤드셋"> 책읽찌라</p>
+                                    </div>
+                                </div>
+                                <div class="readingBox_txt">
+                                    <p>괜찮다고 말하지만 괜찮지 않은 너와 나에게.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //reading -->
+            <div id="bestSeller">
+                <div class="bestSeller">
+                    <h2>최신 베스트셀러 업데이트</h2>
+                    <div class="list">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide select"><button>종합</button></li>
+                                <li class="swiper-slide"><button>트렌드</button></li>
+                                <li class="swiper-slide"><button>라이프</button></li>
+                                <li class="swiper-slide"><button>힐링</button></li>
+                                <li class="swiper-slide"><button>지적교양</button></li>
+                                <li class="swiper-slide"><button>소설</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                    <div class="bestSellerBook">
+                        <div class="container">
+                            <div class="row">
+                                <h3><img src="assets/img/cal.png" alt="달력"> 1월 베스트셀러</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-container3">
+                            <div class="swiper-wrapper bsBookSwiper">
+                                <div class="swiper-slide">
+                                    <div class="bsBook01">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook01@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook01@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook01.png"
+                                                srcset="assets/img/bsBook01@2x.png 2x, assets/img/bsBook01@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>트렌드 코리아 2020</strong>
+                                        <span>김난도, 전미영, 최지혜, 김난도</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bsBook02">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook02@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook02@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook02.png"
+                                                srcset="assets/img/bsBook02@2x.png 2x, assets/img/bsBook02@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>지쳤거나 좋아하는 게 없거나</strong>
+                                        <span>글배우</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bsBook03">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook03@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook03@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook03.png"
+                                                srcset="assets/img/bsBook03@2x.png 2x, assets/img/bsBook03@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>팩스풀니스</strong>
+                                        <span>한스 로슬링, 올라 로슬</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bsBook01">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook01@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook01@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook01.png"
+                                                srcset="assets/img/bsBook01@2x.png 2x, assets/img/bsBook01@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>여행의 이유</strong>
+                                        <span>김난도, 전미영, 최지혜</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bsBook02">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook02@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook02@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook02.png"
+                                                srcset="assets/img/bsBook02@2x.png 2x, assets/img/bsBook02@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>지쳤거나 좋아하는 게 없거나</strong>
+                                        <span>글배우</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bsBook03">
+                                        <picture>
+                                            <source srcset="assets/img/bsBook03@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/bsBook03@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/bsBook03.png"
+                                                srcset="assets/img/bsBook03@2x.png 2x, assets/img/bsBook03@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>팩스풀니스</strong>
+                                        <span>한스 로슬링, 올라 로슬</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBanner">
+                    <a href="#">
+                        <img src="assets/img/banner01.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- //bestSeller -->
+            <div id="years">
+                <div class="years">
+                    <div class="container">
+                        <div class="row">
+                            <h2>밀리 주민 선정 2019년 올해의 책 </h2>
+                            <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                        </div>
+                    </div>
+                    <div class="yearsBook">
+                        <div class="swiper-container4">
+                            <div class="swiper-wrapper ybSwiper">
+                                <div class="swiper-slide">
+                                    <div class="new_1">
+                                        <picture>
+                                            <source srcset="assets/img/years_1@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/years_1@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/years_1.png"
+                                                srcset="assets/img/years_1@2x.png 2x, assets/img/years_1@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>방구석 미술관</strong>
+                                        <span>조원재</span>
+                                        <span><strong class="color">47,984</strong> 명이 읽는 중</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="years_2">
+                                        <picture>
+                                            <source srcset="assets/img/years_2@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/years_2@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/years_2.png"
+                                                srcset="assets/img/years_2@2x.png 2x, assets/img/years_2@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>여행의 이유</strong>
+                                        <span>김영하</span>
+                                        <span><strong class="color">24,283</strong> 명이 읽는 중</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="years_3">
+                                        <picture>
+                                            <source srcset="assets/img/years_3@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/years_3@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/years_3.png"
+                                                srcset="assets/img/years_3@2x.png 2x, assets/img/years_3@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>언어의 온도</strong>
+                                        <span>이기주</span>
+                                        <span><strong class="color">37,718</strong> 명이 읽는 중</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="years_1">
+                                        <picture>
+                                            <source srcset="assets/img/years_1@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/years_1@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/years_1.png"
+                                                srcset="assets/img/years_1@2x.png 2x, assets/img/years_1@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>방구석 미술관</strong>
+                                        <span>조원재</span>
+                                        <span><strong class="color">47,984</strong> 명이 읽는 중</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="years_2">
+                                        <picture>
+                                            <source srcset="assets/img/years_2@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/years_2@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/years_2.png"
+                                                srcset="assets/img/years_2@2x.png 2x, assets/img/years_2@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>여행의 이유</strong>
+                                        <span>김영하</span>
+                                        <span><strong class="color">24,283</strong> 명이 읽는 중</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //years -->
+            <div id="new">
+                <div class="new">
+                    <div class="container">
+                        <div class="row">
+                            <h2>1월 3주차 NEW 추천도서</h2>
+                            <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                        </div>
+                    </div>
+                    <div class="newBook">
+                        <div class="swiper-container4">
+                            <div class="swiper-wrapper newSwiper">
+                                <div class="swiper-slide">
+                                    <div class="new_1">
+                                        <picture>
+                                            <source srcset="assets/img/new_1@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_1@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_1.png"
+                                                srcset="assets/img/new_1@2x.png 2x, assets/img/new_1@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>부동산 투자 사이클</strong>
+                                        <span>김영기</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new_2">
+                                        <picture>
+                                            <source srcset="assets/img/new_2@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_2@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_2.png"
+                                                srcset="assets/img/new_2@2x.png 2x, assets/img/new_2@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>너의 이야기</strong>
+                                        <span>미야기 스가루</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new_3">
+                                        <picture>
+                                            <source srcset="assets/img/new_3@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_3@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_3.png"
+                                                srcset="assets/img/new_3@2x.png 2x, assets/img/new_3@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>내일은 초인간</strong>
+                                        <span>김중혁</span>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new_1">
+                                        <picture>
+                                            <source srcset="assets/img/new_1@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_1@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_1.png"
+                                                srcset="assets/img/new_1@2x.png 2x, assets/img/new_1@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>부동산 투자 사이클</strong>
+                                        <span>김영기</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new_2">
+                                        <picture>
+                                            <source srcset="assets/img/new_2@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_2@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_2.png"
+                                                srcset="assets/img/new_2@2x.png 2x, assets/img/new_2@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>너의 이야기</strong>
+                                        <span>미야기 스가루</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new_3">
+                                        <picture>
+                                            <source srcset="assets/img/new_3@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/new_3@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/new_3.png"
+                                                srcset="assets/img/new_3@2x.png 2x, assets/img/new_3@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>내일은 초인간</strong>
+                                        <span>김중혁</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //new -->
+            <div id="comming">
+                <div class="comming_soon">
+                    <div class="container">
+                        <div class="row">
+                            <h2>Comming Soon! 놓쳐선 안될 책</h2>
+                            <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                        </div>
+                    </div>
+                    <div class="comming">
+                        <div class="swiper-container3">
+                            <div class="swiper-wrapper cmBookSwiper">
+                                <div class="swiper-slide">
+                                    <div class="cmBook01">
+                                        <picture>
+                                            <source srcset="assets/img/cmBook01@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/cmBook01@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/cmBook01.png"
+                                                srcset="assets/img/cmBook01@2x.png 2x, assets/img/cmBook01@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>닥치는 대로 끌리는 대로 오직 재미있게</strong>
+                                        <span>이동진</span>
+                                        <div><img src="assets/img/bell_p10px.png" alt=""><a href="#">알림받기</a> </div>
+                                        <div class="calender"><span>D-1</span></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cmBook02">
+                                        <picture>
+                                            <source srcset="assets/img/cmBook02@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/cmBook02@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/cmBook02.png"
+                                                srcset="assets/img/cmBook02@2x.png 2x, assets/img/cmBook02@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>밤은 책이다</strong>
+                                        <span>이동진</span>
+                                        <div><img src="assets/img/bell_p10px.png" alt=""><a href="#">알림받기</a> </div>
+                                        <div class="calender"><span>23</span></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cmBook03">
+                                        <picture>
+                                            <source srcset="assets/img/cmBook03@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/cmBook03@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/cmBook03.png"
+                                                srcset="assets/img/cmBook03@2x.png 2x, assets/img/cmBook03@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>셈을 할줄 아는 까막눈 여자</strong>
+                                        <span>요나스 요나손</span>
+                                        <div><img src="assets/img/bell_p10px.png" alt=""><a href="#">알림받기</a> </div>
+                                        <div class="calender"><span>26</span></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cmBook04">
+                                        <picture>
+                                            <source srcset="assets/img/cmBook04@3x.png" media="(min-width: 800px)">
+                                            <source srcset="assets/img/cmBook04@2x.png" media="(min-width: 600px)">
+                                            <img src="assets/img/cmBook04.png"
+                                                srcset="assets/img/cmBook04@2x.png 2x, assets/img/cmBook04@3x.png 3x"
+                                                alt="best">
+                                        </picture>
+                                        <strong>파리에서 도시락먹기</strong>
+                                        <span>켈리 최</span>
+                                        <div><img src="assets/img/bell_p10px.png" alt=""><a href="#">알림받기</a> </div>
+                                        <div class="calender"><span>31</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sBanner">
+                    <a href="#">
+                        <img src="assets/img/banner02.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- //comming -->
+            <div id="quote">
+                <div class="quote">
+                    <div class="container">
+                        <div class="row">
+                            <h2>실시간 인용문</h2>
+                            <div class="time"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-container5">
+                        <div class="swiper-wrapper quoteSwiper">
+                            <div class="swiper-slide">
+                                <div class="quote01">
+                                    <div class="quote_q">
+                                        <p>“
+                                            당당하게 진실을 말해야 한다. 생각을
+                                            분명히 밝히고, 당신의 삶이 옳다는 것을
+                                            증명해야 한다. 적어도 당신의 삶이 틀리지
+                                            않았다는 것을 확인해야 한다.
+                                            “</p>
+                                    </div>
+                                    <div class="qu_img">
+
+                                    </div>
+                                    <div class="qu_txt">
+                                        <strong>with om 의 서재</strong>
+                                        <em>by. with om</em>
+                                        <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="quote02">
+                                    <div class="quote_q">
+                                        <p>“
+                                            당당하게 진실을 말해야 한다. 생각을
+                                            분명히 밝히고, 당신의 삶이 옳다는 것을
+                                            증명해야 한다. 적어도 당신의 삶이 틀리지
+                                            않았다는 것을 확인해야 한다.
+                                            “</p>
+                                    </div>
+                                    <div class="qu_img">
+
+                                    </div>
+                                    <div class="qu_txt">
+                                        <strong>with om 의 서재</strong>
+                                        <em>by. with om</em>
+                                        <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="quote02">
+                                    <div class="quote_q">
+                                        <p>“
+                                            당당하게 진실을 말해야 한다. 생각을
+                                            분명히 밝히고, 당신의 삶이 옳다는 것을
+                                            증명해야 한다. 적어도 당신의 삶이 틀리지
+                                            않았다는 것을 확인해야 한다.
+                                            “</p>
+                                    </div>
+                                    <div class="qu_img">
+
+                                    </div>
+                                    <div class="qu_txt">
+                                        <strong>with om 의 서재</strong>
+                                        <em>by. with om</em>
+                                        <a href="#" class="more"><img src="assets/img/g_arr.png" alt="더보기"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //quote -->
+        </div>
+        <!-- //contents -->
+        <footer id="footer ">
+
+            <div class="footer">
+                <div class="notice">
+                    <div class="container">
+                        <div class="row">
+                            <ul>
+                                <li>공지사항</li>
+                                <li>1:1문의</li>
+                                <li>FAQ</li>
+                                <li>이용약관</li>
+                                <li>개인정보처리방침</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_b">
+                    <div class="container">
+                        <div class="row">
+                            <div class="center">
+                                <strong>고객센터 070-7510-2213</strong>
+                                <em>평일 10:00 ~ 18:00 | 점심시간 13:00 ~ 14:00</em>
+                                <em>※ 빠른 상담을 위해서 문의 전에 필명을 확인해주세요.</em>
+                                <em>(‘내 서재' 또는 ‘관리' 메뉴에서 확인)</em>
+                            </div>
+                             <div class="question">
+                                 <div class="millie">
+                                     <strong>(주)밀리의 서재 <em>사업자 정보 ▼</em></strong>
+                                     <div class="sos">
+                                         <ul>
+                                             <li>저작권/도서오류 신고 <img src="assets/img/gw_arr.png" alt=""></li>
+                                             <li>앱/뷰어 다운로드<img src="assets/img/gw_arr.png" alt=""></li>
+                                             <li>콘텐츠 제휴/공급 문의<img src="assets/img/gw_arr.png" alt=""></li>
+                                             <li>B2B관련 문의<img src="assets/img/gw_arr.png" alt=""></li>
+                                         </ul>
+                                     </div>
+                                     <div class="icon">
+                                         <ul>
+                                             <li><img src="assets/img/sns01.png" alt=""> </li>
+                                             <li><img src="assets/img/sns02.png" alt=""> </li>
+                                             <li><img src="assets/img/sns03.png" alt=""> </li>
+                                             <li><img src="assets/img/sns04.png" alt=""> </li>
+                                             <li><img src="assets/img/sns05.png" alt=""> </li>
+                                         </ul>
+                                     </div>
+                                     <p>2019. (주) 밀리의 서재 ALL Rights</p>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </footer>
+    </div>
+    <div class="home">
+        <div class="home01"><a href="#"><img src="assets/img/icon01.png" alt=""><strong>홈</strong></a></div>
+        <div class="home02"><a href="#"><img src="assets/img/icon02.png" alt=""><strong>검색</strong></a></div>
+        <div class="home03"><a href="#"><img src="assets/img/icon03.png" alt=""><strong>피드</strong></a></div>
+        <div class="home04"><a href="#"><img src="assets/img/icon04.png" alt=""><strong>내서재</strong></a></div>
+        <div class="home05"><a href="#"><img src="assets/img/icon05.png" alt=""><strong>관리</strong></a></div>
+    </div>
+
+    <!--script-->
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script>
+        alert ("모바일 환경으로 만든 사이트입니다. 모바일로 봐주시거나, 사이즈를 600px로 맞춰서 봐주세요.")
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3.6
+
+        });
+        var swiper = new Swiper('.swiper-container2', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+        var swiper = new Swiper('.swiper-container3', {
+            slidesPerView: 3.5
+        });
+        var swiper = new Swiper('.swiper-container4', {
+            slidesPerView: 2.5
+        });
+        var swiper = new Swiper('.swiper-container5', {
+            slidesPerView: 1.3
+        });
+
+        window.onload = function () {
+            let clock = $(".time span");
+            setInterval(function () {
+                let time = new Date().toLocaleTimeString();
+                clock.text(time)
+            }, 1000);
+        }; //인용구 시간넣기
+
+        $(window).scroll(function(){
+            let wScroll = $(this).scrollTop();
+            let hTop = $("#header").outerHeight(); 
+            if(wScroll > hTop ){
+                $("#nav").addClass("on");
+            }else{
+                $("#nav").removeClass("on");
+            }
+        });
+    </script>
+</body>
+
+</html>

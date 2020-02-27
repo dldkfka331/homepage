@@ -1,0 +1,70 @@
+/* 리셋 */
+body,img,p,h1,h2,h3,h4,h5,h6,div,ul,li,ol {padding: 0; margin: 0;} 
+h1,h2,h3,h4,h5,h6,p,ul,li,div,a,em,strong{font-size: 16px; font-weight: normal; color: #000; text-decoration: none; font-style: normal; font-family: 'Noto Sans KR', sans-serif;}
+ul,li,ol{list-style: none;}
+.ir_so {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} 
+a {text-decoration: none;}
+
+/* 전체 */
+#header {height: 140px;}
+#banner{}
+#deli {}
+#footer {background: #202020;}
+
+/* container */
+.container {width: 1000px; margin: 0 auto;}
+
+/* header */
+.header {  text-align: center; padding-top: 60px;}
+.header .logo {float: left;}
+.header .logo img {width: 180px; }
+.header .nav {float: right; margin-top: 20px;}
+.header .nav > ul { float: left;}
+.header .nav > ul li { position: relative; display: inline-block; text-align: center; }
+.header .nav > ul li a{ font-weight: bold; font-size: 24px; margin-left: 40px;}
+
+.header .nav  ul li ul {position: absolute; left: 40px;top: 30px; display: none;}
+.header .nav  ul li  ul li a{padding: 10px; background: #fff; display: block; margin-left: 0; font-size: 18px;}
+
+/*banner*/
+.banner {}
+.banner img{width: 1000px;}
+
+/* deli */
+.deli {display: flex; justify-content: space-between; padding: 20px 0;}
+.deli > div {background-color: #F2F2F2; width: 49%; padding: 20px 25px; box-sizing: border-box; position: relative;}
+.deli > div h3 {font-weight: bolder; font-size: 20px;margin-bottom: 8px;}
+.deli > div p {font-size: 14px; margin-bottom: 20px;}
+.deli > div img {width: 80px; position: absolute; top: 35px; right: 25px;}
+.deli > div a {font-weight: bold;}
+
+/* tabs */
+.tabs {padding: 20px 0 60px 0; overflow: hidden;}
+.tit {margin-bottom: 20px; }
+.tit li {display: inline; position: relative; margin-right: 30px;}
+.tit li::after {content: ''; width: 3px; height: 30px; background: #000; position: absolute; top: -5px; right: -20px;}
+.tit li:last-child::after {width: 0;}
+.tit ul li a{font-size: 28px; font-weight: bold; color: #7e7e7e;}
+.tit ul li.active a{color: #000;}
+.tabs .cont > div {display: flex; justify-content: space-between;}
+.tabs .cont > div:nth-child(2) {display: none;}
+.tabs .cont >div > div {width: 32%; position: relative;}
+.tabs .cont >div > div img {width: 100%; margin-bottom: 10px;}
+.tabs .cont >div > div strong {font-weight: bold; }
+.tabs .cont >div > div p  {margin-top: 6px; color: #7e7e7e; }
+.tabs .cont >div > div p em {font-weight: bold;}
+.tabs .cont >div > div i {color: #fff; position: absolute; right: 5px; bottom: 10px; font-size: 18px; background: #7e7e7e; padding: 5px; border-radius: 50%;}
+
+/*footer */
+.footer {overflow: hidden; padding: 30px 0;}
+.footer .logo_foot{ float: left;} 
+.footer .logo_foot img {width: 200px;}
+.footer .list {float: right; width: 50%; }
+.footer .list ul {margin-bottom: 5px;}
+.footer .list li {display: inline; color: #7e7e7e; font-size: 14px; margin-right: 8px; position: relative;}
+.footer .list li::after {content: ''; position: absolute; top: 5px; right: -7px; width: 1px; height: 10px; background: #7e7e7e;}
+.footer .list li:last-child::after {width: 0;}
+.footer .list .white {display: flex; justify-content: space-between; margin-bottom: 20px; }
+.footer .list .white li {color: #fff; position: relative;}
+.footer .list .white li::after {content: ''; position: absolute; top: 3px; right: -27px; width: 1px; height: 15px; background: #7e7e7e;}
+.footer .list .white li:last-child::after{width: 0;}

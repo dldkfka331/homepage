@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery13</title>
+    <style>
+        .red {font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 0px 6px 2px 6px;}
+        .blue {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #215770; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+    <button class="btn5">btn5</button>
+    <button class="btn6">btn6</button>
+    <button class="btn7">btn7</button>
+    <button class="btn8">btn8</button>
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        //버튼클릭하면 글씨 색 빨간색
+        $(".btn1").click(function(){
+            $(".list li").css("color","red")
+        })
+        //버튼클릭하면 짝수의 글씨 색 빨간색
+        $(".btn2").click(function(){
+            $(".list li:odd()").css("color","red")
+        })
+        //버튼을 클릭하면 3번째 li에  .red 추가 
+        $(".btn3").click(function(){
+            $(".list li:eq(2)").addClass("red")
+            $(".list li").eq(3).addClass("blue")
+        })
+        //li 에게 active클래스 추가하기
+        $(".btn4").click(function(){
+            $(".list li").addClass("active")
+        })
+        //모든 클래스 제거
+        $(".btn5").click(function(){
+            $(".list li").removeClass()
+        })
+        //원하는 클래스 제거
+        $(".btn6").click(function(){
+            $(".list li").removeClass("list4")
+        })
+        //active번호를 매겨서 추가
+        $(".btn7").click(function(){
+            $(".list li").addClass(function(index){
+                return "active" +( index+1);
+            });
+        })
+        //원하는 클래스 찾아서 클래스 추가하기
+        $(".btn8").click(function(){
+            $(".list li").addClass(function(index, currentClass){
+                let addClass;
+                if(currentClass ==="list5"){
+                    addClass = "blue"
+                }
+                return addClass;
+            })
+        })
+
+    </script>
+</body>
+</html>

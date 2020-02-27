@@ -1,0 +1,73 @@
+/* 리셋 */
+*, body, div, img,p,li,a {margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;
+   
+}
+a, p ,h1,h2,h3 {color: #000; font-size: 16px; text-decoration: none;  font-weight: 400; }
+li{ list-style:none; }
+
+/* wrap */
+#wrap {width: 1000px; margin: 0 auto; overflow: hidden;}
+
+/* nav */
+#nav {float: left; width: 20%; padding-top: 20px; margin-right: 1%;}
+#nav .logo {width: 140px; margin-bottom: 50px;}
+#nav .logo img{width: 100%}
+#nav .main {}
+#nav .main li {padding: 10px; }
+#nav .main li a {font-weight: 600;  font-size: 18px;  }
+#nav .main li.active a{color: #0366dd;}
+#nav .main ul.sub {display: none; opacity: 0; }
+#nav .main ul.sub.active_sub {display: block; opacity: 1;}
+#nav .main ul.sub li a{color: #000; font-size: 14px;  font-weight: 500; display: block;}
+#nav .main ul.sub li {border-bottom: 1px solid #e3e3e3;}
+
+/* contents */
+#contents {float: right; width: 79%;}
+
+/* banner */
+#banner { width: 100%; padding: 20px 0;}
+#banner img { width: 100%;}
+
+/* service */
+#service { padding: 30px 0 ; width: 100%;}
+#service .name { text-align: center; font-weight: 500; font-size: 28px; margin-bottom: 50px;}
+#service .name a{font-weight: 500; font-size: 28px; position: relative; margin-left: 20px; color: #999;}
+#service .name a:after {content: ''; width: 3px; height: 30px; background: #000; position: absolute; right: -15px; top: 7px;}
+#service .name a:last-child:after {width: 0;}
+#service .name a.active {color: #000;}
+#service .ser_cont > div {display: flex; justify-content: space-between;}
+
+#service .ser_cont > div > div {width: 19%;}
+#service .ser_cont > div img {width: 60%; margin-left: 20%;}
+#service .ser_cont > div span {display: block; text-align: center; font-weight: 500; padding-top: 10px;}
+#service .ser_cont > div:nth-child(2) {display: none;}
+
+/* list */
+#list { background: #f7f7f7; padding: 15px 10px; display: flex; justify-content: space-around; margin: 30px 0;}
+#list > div { background: #fff; width: 30%; padding: 20px; box-sizing: border-box; border: 1px solid #d0d7e1; position: relative;}
+#list > div h2 {text-align: center; font-weight: 500; font-size: 20px; padding-bottom: 10px;}
+#list > div img {width: 60%; margin-left: 20%;}
+#list > div  li { font-size: 14px; position: relative;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 6px 0 0 10px;}
+#list > div  li::before {content: ''; width: 3px; height: 3px; background: #000; position: absolute; top: 15px; left: 0;}
+#list > div .more {position: absolute; width: 45px; height: 45px; top: 10px; right: 5px;}
+
+/* footer */
+#footer {width: 100%; float: left; background-color: #e7f2f6; display: flex; padding: 15px 10px; box-sizing: border-box; align-items: center;}
+#footer .foot_logo {width: 10%;}
+#footer .foot_logo img {width: 100%;}
+#footer .foot_txt {width: 80%; font-size: 14px; font-weight: 400; padding-left: 20px;}
+#footer .foot_social {width: 20%;}
+#footer .foot_social img{width: 100%;}
+
+/* popup */
+.layers {position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #fff; padding: 30px; border: 1px solid #ccc; box-shadow: 0 0 5px 3px #ccc;}
+.layers h2 {font-weight: 500; font-size: 28px; position: relative; margin-left: 50px; margin-bottom: 10px;}
+.layers img {position: absolute; left: -56px; top: -3px; width: 50px; height: 50px;}
+.layers ul li  {overflow: hidden; margin-bottom: 3px;}
+.layers ul li strong {float: left; width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 400;}
+.layers ul li span {float: right;width: 15%;}
+.layers .close {position: absolute; top: 14px; right: 14px; }
+
+#layer_notice {display: none;}
+#layer_data {display: none;}
+#layer_faq {display: none;}

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="#">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="이아람, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, LEEARAM">
+    <title>이아람 | LEEARAM | GSAP-Animation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One&display=swap" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .abox {background: #f4f8fa; padding: 10px;  }
+        .circle {width: 60px; height: 60px; text-align: center; line-height: 60px; border-radius: 50px; margin: 10px; position: relative;
+        background: linear-gradient(78deg, rgba(96, 96, 96, 0.04) 0%, rgba(96, 96, 96, 0.04) 35%,rgba(220, 220, 220, 0.04) 35%, rgba(220, 220, 220, 0.04) 100%),linear-gradient(150deg, rgba(83, 83, 83, 0.04) 0%, rgba(83, 83, 83, 0.04) 71%,rgba(6, 6, 6, 0.04) 71%, rgba(6, 6, 6, 0.04) 100%),linear-gradient(311deg, rgba(203, 203, 203, 0.04) 0%, rgba(203, 203, 203, 0.04) 58%,rgba(3, 3, 3, 0.04) 58%, rgba(3, 3, 3, 0.04) 100%),linear-gradient(137deg, rgba(110, 110, 110, 0.04) 0%, rgba(110, 110, 110, 0.04) 11%,rgba(226, 226, 226, 0.04) 11%, rgba(226, 226, 226, 0.04) 100%),linear-gradient(90deg, rgb(215, 19, 84),rgb(234, 119, 123));}
+        .btn {background: #ff6666; color: #fff; box-shadow: inset 0 0 5px 2px #fa8b8b;}
+    </style>
+
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">ARAM'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://dldkfka331.tistory.com">Tistory</a></li>
+                    <li><a href="https://github.com/dldkfka331">Github</a></li>
+                    <li><a href="#">Tutor</a></li>
+                    <li><a href="#">Edu</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs10" id="content">
+        <div class="container">
+            <h1>GSAP-Animation</h1>
+            <p><a href="http://dldkfka331.dothome.co.kr" target="_blank">dldkfka331.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <!-- col-md-9 -->
+            <div class="col-md-9" role="main">
+
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">GSAP</h2>
+                    <p class="bs-callout bs-callout-info">The GreenSock Animation Platform (GSAP)는 프론트엔드 개발자와 디자이너들이 쉽게 사용할 수 있는 아주 강력한 타임라인기반의 애니메이션 자바스크립트 라이브러리입니다. 이 GSAP는 애니메이션 시퀀스에 관련해서 CSS의 keyframe과 animation 보다 더 정밀한 컨트롤을 할 수 있습니다.</p>
+                    <p>기존의 css 애니메이션과 JavaScript 애니메이션보다 사용성이 편하고, 탁월한 퍼포먼스가 돋보이는 애니메이션 전용 라이브러리입니다.</p>
+                    <ul>
+                        <span>관련사이트</span>
+                        <li>greensock <a href="https://greensock.com/gsap/" target="_blank">View</a></li>
+                        <li>animejs <a href="https://animejs.com/" target="_blank">View </a></li>
+                        <li>CDN <a href="https://cdnjs.com/libraries/gsap" target="_blank">View </a></li>
+                        
+                    </ul>
+                    
+                       <h3>GSAP 구성</h3>
+                       <ul>
+                           <li>Tweenlite : GSAP의 애니메이션 객체와 그 속성을 조절하는 코어 엔진입니다. 이 파일은 필수 객체만 포함하고 있는 경량화 파일이지만. 기본적인 애니메이션을 모두 처리할 수 있으며, 다른 특수한 기능을 추가로 로드해서 사용할 수도 있습니다.
+                        </li>
+                           <li>TweenMax : Tweenlite가 반드시 필요한 기능만 묶은 경량화 코어 파일이라면, TweenMax는 TweenLite 기능은 물론이고, 애니메이션 작업에 필요한 대부분의 기능을 커버하는 다양한 플러그인도 다수 포함하고 있는 풀버전 파일입니다. 유료 기능은 포함하고 있지 않습니다.
+                        </li>
+                           <li>TimelineLite : GSAP의 핵심 기능이라고 할 수 있으며, CSS가 오직 지연시간만을 이용해서 각 애니메이션의 타이밍을 결정한다고 하면, GSAP는 타임라인에 기초한 시퀀싱, 즉 순차재생이 가능하기 때문에 여러 애니메이션을 유기적으로 연결하거나 수정하기가 편리합니다.
+                        </li>
+                           <li>TimelineMax : TimelineLite의 확장된 파일이며, repeat, repeatDelay, yoyo 등의 부가기능이 포함되어 있습니다.</li>
+                       </ul>
+                       <h4>GSAP 사용하기</h4>
+                       <pre class="line-numbers  language-css"><code class=" language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;GSAP_sample01&lt;/title&gt;
+
+    &lt;!--CDN GSAP3--&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"&gt;&lt;/script&gt;
+
+    &lt;!--CDN GSAP 2.1.3ver--&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"&gt;&lt;/script&gt;
+
+    &lt;!--jQuery + GSAP--&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- CSS plugin--&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"&gt;&lt;/script&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <!-- //intro1 -->
+
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">TweenMax. to 
+                        <span class="btn" id="btn1_1">jquery Click</span>
+                        <span class="btn" id="btn1_2">GSAP Click</span>
+                        <span class="btn" id="reset1">Reset</span>
+                    </h2>
+                    <div class="abox box1">
+                        <div class="circle circle1"></div>
+                    </div>
+                <pre class="line-numbers  language-js"><code class=" language-js">//리셋
+$("#reset1").click(function(){
+    $(".circle1").animate({left : "0" }, 0)
+});
+//제이쿼리로 만들기
+$("#btn1_1").click(function(){
+    $(".circle1").animate({left : "80%" }, 1000)
+});  
+//제이쿼리+gsap 로 만들기
+$("#btn1_2").click(function(){
+    TweenMax.to(".circle1",1, {left : "80%"});
+});  
+//자바스크립트 + gsap 로 만들기
+const btn1_2 = document.getElementById("btn1_2");
+btn1_2.addEventListener("click", moveStart1);
+function moveStart1(){
+    TweenMax.to(".circle1",1, {left : "80%"});
+};      </code></pre>
+                </div>
+                <!-- //intro2 -->
+
+                <!-- intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">TweenMax. to - 여러개 움직이기
+                        <span class="btn" id="btn2_1">jquery Click</span>
+                        <span class="btn" id="btn2_2">GSAP Click</span>
+                        <span class="btn" id="reset2">Reset</span>
+                    </h2>
+                    <div class="abox box2">
+                        <div class="circle circle2_1"></div>
+                        <div class="circle circle2_2"></div>
+                        <div class="circle circle2_3"></div>
+                    </div>
+            <pre class="line-numbers  language-js"><code class=" language-js"> $("#reset2").click(function(){
+    $(".circle2_1, .circle2_2, .circle2_3").animate({left : "0" }, 0)
+});
+//제이쿼리로 만들기
+$("#btn2_1").click(function(){
+    $(".circle2_1, .circle2_2, .circle2_3").animate({left : "80%" }, 1000)
+});
+//제이쿼리+gsap 로 만들기
+$("#btn2_2").click(function(){
+    TweenMax.to([".circle2_1, .circle2_2, .circle2_3"], 1, {left : "80%"})
+});
+//자바스크립트 + gsap 로 만들기
+const btn2_2 = document.getElementById("btn2_2");
+btn2_2.addEventListener("click", moveStart2);
+function moveStart2(){
+    TweenMax.to([".circle2_1, .circle2_2, .circle2_3"], 1, {left : "80%"})
+};</code></pre>
+                </div>
+                <!-- //intro3 -->
+
+                <!-- intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">TweenMax. to - 100px씩 움직이기
+                        <span class="btn" id="btn3_1">jquery Click</span>
+                        <span class="btn" id="btn3_2">GSAP Click</span>
+                        <span class="btn" id="reset3">Reset</span>
+                    </h2>
+                    <div class="abox box3">
+                        <div class="circle circle3"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset3").click(function(){
+    $(".circle3").animate({left : "0" }, 0)
+});
+//제이쿼리로 만들기
+$("#btn3_1").click(function(){
+    $(".circle3").animate({left : "+=100px"}, 500);
+});
+//제이쿼리+gsap 로 만들기
+$("#btn3_2").click(function(){
+        TweenMax.to(".circle3",.5, {left : "+=100px"});
+});
+//자바스크립트 + gsap 로 만들기
+const btn3_2 = document.getElementById("btn3_2");
+btn3_2.addEventListener("click", moveStart3);
+function moveStart3(){
+    TweenMax.to(".circle3",.5, {left : "+=100px"});
+}; </code></pre>
+                </div>
+                <!-- //intro4 -->
+
+                <!-- intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">TweenMax. from 
+                        <span class="btn" id="btn4_1">jquery Click</span>
+                        <span class="btn" id="btn4_2">GSAP Click</span>
+                        <span class="btn" id="reset4">Reset</span>
+                    </h2>
+                    <div class="abox box4">
+                        <div class="circle circle4"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset4").click(function(){
+    $(".circle4").animate({left : "0" }, 0)
+});
+$("#btn4_1").click(function(){
+    alert("제이쿼리에는 반대로 가는 기능이 없습니다.")
+});
+$("#btn4_2").click(function(){
+        TweenMax.from(".circle4",1, {left : "80%"});
+});</code></pre>
+                </div>
+                <!-- //intro5 -->
+
+                <!-- intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Transform - scale
+                        <span class="btn" id="btn5_1">jquery Click</span>
+                        <span class="btn" id="btn5_2">GSAP Click</span>
+                        <span class="btn" id="reset5">Reset</span>
+                    </h2>
+                    <div class="abox box5">
+                        <div class="circle circle5"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset5").click(function(){
+    $(".circle5").animate({left : "0" }, 0)
+    $(".circle5").css({transform : "scale(1)"})
+});
+$("#btn5_1").click(function(){
+    $(".circle5").animate({left: "80%" }, 1000);
+    $(".circle5").css({transform : "scale(2)"})
+});
+$("#btn5_2").click(function(){
+    TweenMax.to (".circle5" , 1 , {left : "80%", scale:"2"}  )
+});</code></pre>
+                </div>
+                <!-- //intro6 -->
+
+                <!-- intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Transform - radius
+                        <span class="btn" id="btn6_1">jquery Click</span>
+                        <span class="btn" id="btn6_2">GSAP Click</span>
+                        <span class="btn" id="reset6">Reset</span>
+                    </h2>
+                    <div class="abox box6">
+                        <div class="circle circle6"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset6").click(function(){
+    $(".circle6").animate({left : "0",  borderRadius : "50%" }, 0)
+});
+$("#btn6_1").click(function(){
+    $(".circle6").animate({left: "80%" , borderRadius : "0%"}, 1000);
+});
+$("#btn6_2").click(function(){
+    TweenMax.to (".circle6" , 1 , {left : "80%",  borderRadius : "0%"})
+});</code></pre>
+                </div>
+                <!-- //intro7 -->
+
+                <!-- intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Transform - skewX
+                        <span class="btn" id="btn7_1">jquery Click</span>
+                        <span class="btn" id="btn7_2">GSAP Click</span>
+                        <span class="btn" id="reset7">Reset</span>
+                    </h2>
+                    <div class="abox box7">
+                        <div class="circle circle7_1"></div>
+                        <div class="circle circle7_2"></div>
+                        <div class="circle circle7_3"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset7").click(function(){
+    $(".circle7_1, .circle7_2, .circle7_3").animate({left : "0"}, 0).css({transform: "skewX(0deg)"});
+    TweenMax.to (".circle7_1" , 0 , {left : "0%", skewX : "0deg"});
+    TweenMax.to (".circle7_2" , 0 , {left : "0%", skewX : "0deg"});
+    TweenMax.to (".circle7_3" , 0 , {left : "0%", skewX : "0deg"});
+});
+$("#btn7_1").click(function(){
+    $(".circle7_1").animate({left: "80%" }, 2000).css({transform: "skewX(30deg)"});
+    $(".circle7_2").animate({left: "80%" }, 2000).css({transform: "skewX(330deg)"});
+    $(".circle7_3").animate({left: "80%" }, 2000).css({transform: "skewX(660deg)"});
+});
+$("#btn7_2").click(function(){
+    TweenMax.to (".circle7_1" , 2 , {left : "80%", skewX : "30deg"});
+    TweenMax.to (".circle7_2" , 2 , {left : "80%", skewX : "330deg"});
+    TweenMax.to (".circle7_3" , 2 , {left : "80%", skewX : "660deg"});
+});</code></pre>
+                </div>
+                <!-- //intro8 -->
+
+                <!-- intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">Transform - delay
+                        <span class="btn" id="btn8_1">jquery Click</span>
+                        <span class="btn" id="btn8_2">GSAP Click</span>
+                        <span class="btn" id="reset8">Reset</span>
+                    </h2>
+                    <div class="abox box8">
+                        <div class="circle circle8_1"></div>
+                        <div class="circle circle8_2"></div>
+                        <div class="circle circle8_3"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset8").click(function(){
+    $(".circle8_1, .circle8_2, .circle8_3").delay(0).animate({left : "0"}, 0);
+    TweenMax.to (".circle8_1" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+    TweenMax.to (".circle8_2" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+    TweenMax.to (".circle8_3" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+});
+$("#btn8_1").click(function(){
+    $(".circle8_1").delay(500).animate({left: "80%" }, 1000)
+    $(".circle8_2").delay(1000).animate({left: "80%" }, 1000)
+    $(".circle8_3").delay(1500).animate({left: "80%" }, 1000)
+});
+$("#btn8_2").click(function(){
+    TweenMax.to (".circle8_1" , 2 , {left : "80%",delay:.5, rotationY : "360deg"});
+    TweenMax.to (".circle8_2" , 2 , {left : "80%",delay:1, rotationY : "720deg"});
+    TweenMax.to (".circle8_3" , 2 , {left : "80%",delay:1.5, rotationY : "1080deg"});
+});</code></pre>
+                </div>
+                <!-- //intro9 -->
+
+                <!-- intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">Transform - easing
+                        <span class="btn" id="btn9_1">jquery Click</span>
+                        <span class="btn" id="btn9_2">GSAP Click</span>
+                        <span class="btn" id="reset9">Reset</span>
+                    </h2>
+                    <div class="abox box9">
+                        <div class="circle circle9_1"></div>
+                        <div class="circle circle9_2"></div>
+                        <div class="circle circle9_3"></div>
+                        <div class="circle circle9_4"></div>
+                        <div class="circle circle9_5"></div>
+                        <div class="circle circle9_6"></div>
+                        <div class="circle circle9_7"></div>
+                        <div class="circle circle9_8"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset9").click(function(){
+    $(".box9 > div ").animate({left : "0"}, 0);
+});
+$("#btn9_1").click(function(){
+    $(".circle9_1").animate({left: "80%" }, 2000, "easeInCubic");
+    $(".circle9_2").animate({left: "80%" }, 2000, "easeOutQuad");
+    $(".circle9_3").animate({left: "80%" }, 2000, "easeOutQuint");
+    $(".circle9_4").animate({left: "80%" }, 2000, "easeInOutElastic");
+    $(".circle9_5").animate({left: "80%" }, 2000, "easeInOutExpo");
+    $(".circle9_6").animate({left: "80%" }, 2000, "easeInBack");
+    $(".circle9_7").animate({left: "80%" }, 2000, "easeInOutBack");
+    $(".circle9_8").animate({left: "80%" }, 2000, "easeInSine");
+});
+$("#btn9_2").click(function(){
+    TweenMax.to (".circle9_1" , 2 , {left : "80%", ease: "bounce.out"});
+    TweenMax.to (".circle9_2" , 2 , {left : "80%", ease: "rough({ template: none.out, strength:  1, points: 20, taper: 'none', randomize: true, clamp: false})"});
+    TweenMax.to (".circle9_3" , 2 , {left : "80%", ease: "steps(12)"});
+    TweenMax.to (".circle9_4" , 2 , {left : "80%", ease: "back.out(1.7)"});
+    TweenMax.to (".circle9_5" , 2 , {left : "80%", ease: "slow(0.7, 0.7, false)"});
+    TweenMax.to (".circle9_6" , 2 , {left : "80%", ease: "circ.out"});
+    TweenMax.to (".circle9_7" , 2 , {left : "80%", ease: "power1.out"});
+    TweenMax.to (".circle9_8" , 2 , {left : "80%", ease: "elastic.out(1, 0.3)"});
+});</code></pre>
+                </div>
+                <!-- //intro10 -->
+
+                <!-- intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro11" class="page-header">Callback 함수
+                        <span class="btn" id="btn10_1">jquery Click</span>
+                        <span class="btn" id="btn10_2">GSAP Click</span>
+                        <span class="btn" id="reset10">Reset</span>
+                    </h2>
+                    <ul>
+                        <li>onComplete : 애니메이션이 완료되었을 때</li>
+                        <li>onStart : 애니메이션이 시작할 때</li>
+                        <li>onUpdate : 애니메이션이 업데이트 될 때마다</li>
+                        <li>onRepeat : 애니메이션이 반복될 때</li>
+                        <li>onReverseComplete : 애니메이션이 리버스되고 완료되었을 때</li>
+                    </ul>
+                    <div class="abox box10">
+                        <div class="circle circle10"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset10").click(function(){
+    $(".circle10").animate({left : "0" }, 0)
+});
+$("#btn10_1").click(function(){
+    $(".circle10").animate({left: "80%"}, 1000, "easeInSine" , function(){
+        $(".circle10").animate({left: "0%"}, 1000, "easeInSine");
+    });
+});
+$("#btn10_2").click(function(){
+    TweenMax.to (".circle10" , 1 , {left : "80%", rotationX : "1080deg" , onComplete : complete});
+});
+function complete(){
+    TweenMax.to (".circle10" , 1 , {left : "0%",  rotationX : "0deg"});
+}</code></pre>
+                </div>
+                <!-- //intro11 -->
+                
+                <!-- intro12 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro12" class="page-header">Control <br>
+                        <span class="btn" id="reset11">Reset</span>
+                        <span class="btn" id="btn11_1">Play</span>
+                        <span class="btn" id="btn11_2">Pause</span>
+                        <span class="btn" id="btn11_3">Resume</span>
+                        <span class="btn" id="btn11_4">Reverse</span>
+                        <span class="btn" id="btn11_5">Seek(0.5)</span>
+                        <span class="btn" id="btn11_6">TimeScale(0.5)</span>
+                        <span class="btn" id="btn11_7">TimeScale(2)</span>
+                        <span class="btn" id="btn11_8">Kill()</span>
+                        <span class="btn" id="btn11_9">Restart</span>
+                    </h2>
+                    <div class="abox box11">
+                        <div class="circle circle11"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">const tween = TweenMax.to(".circle11" , 10, {left : "90%", borderRadius: "0%", rotation : "720deg"});
+tween.pause();
+$("#reset11").click(function(){
+    $(".circle11").animate({left : "0%", borderRadius: "50%", rotation : "0deg"}, 0)
+});
+$("#btn11_1").click(function(){ tween.play()});
+$("#btn11_2").click(function(){ tween.pause()});
+$("#btn11_3").click(function(){ tween.resume() });
+$("#btn11_4").click(function(){ tween.reverse() });
+$("#btn11_5").click(function(){ tween.seek(0.5) });
+$("#btn11_6").click(function(){ tween.timeScale(0.5)});
+$("#btn11_7").click(function(){ tween.timeScale(2)});
+$("#btn11_8").click(function(){ tween.kill() });
+$("#btn11_9").click(function(){ tween.restart() });
+</code></pre>
+                </div>
+                <!-- //intro12 -->
+
+                <!-- intro13 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro13" class="page-header">Timeline
+                        <span class="btn" id="reset12">Reset</span>
+                        <span class="btn" id="btn12_1">jquery Click</span>
+                        <span class="btn" id="btn12_2">GSAP Click</span>
+                        <span class="btn" id="btn12_3">GSAP Click2</span>
+                    </h2>
+                    <div class="abox box12">
+                        <div class="circle circle12"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset12").click(function(){
+    $(".circle12").animate({left : "0" , borderRadius: "50%"}, 0);
+});
+$("#btn12_1").click(function(){
+    $(".circle12").animate({left: "80%"}, 500)
+    .animate({height: "300px"}, 500, "easeOutQuint")
+    .animate({opacity: ".5", borderRadius: "20%" }, 500, "easeOutQuint")
+    .animate({height: "60px"}, 500)
+    .animate({opacity: "1" , left: "0%" , borderRadius: "50%" }, 500);
+});
+$("#btn12_2").click(function(){
+    const tl = new TimelineLite();
+    tl.to (".circle12" , 0.5 , {left : "80%"});
+    tl.to (".circle12" , 0.5 , {height: "300px"});
+    tl.to (".circle12" , 0.5 , {opacity: ".5", borderRadius: "20%" });
+    tl.to (".circle12" , 0.5 , {height: "60px" });
+    tl.to (".circle12" , 0.5 , {opacity: "1" , left: "0%" , borderRadius: "50%"});
+});
+$("#btn12_3").click(function(){
+    const tl = new TimelineLite();
+    tl.to(".circle12", 1, {left: "80%",scale: "0.5",rotation:"100deg" });
+    tl.to(".circle12", 2, {left: "0%",opacity: 0.5, skewY: "720deg", rotation:"300deg",scale: "1" });
+    tl.to(".circle12", 1, {left: "90%", rotation:"1000deg" , borderRadius: "0%", scale: "0.5", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+    tl.to(".circle12", 1, {rotation:"-2000deg"});
+    tl.to(".circle12", 1, {opacity:1, left: "0", scale: "1", rotation:"-0deg"});
+});</code></pre>
+                </div>
+                <!-- //intro13 -->
+
+                <!-- intro14 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro14" class="page-header">Repeat
+                        <span class="btn" id="reset13">Reset</span>
+                        <span class="btn" id="btn13_2">repeat</span>
+                        <span class="btn" id="btn13_3">repeatDelay</span>
+                        <span class="btn" id="btn13_4">yoyo</span>
+                        <span class="btn" id="btn13_5">infinify</span>
+                    </h2>
+                    <div class="abox box13">
+                        <div class="circle circle13_1"></div>
+                        <div class="circle circle13_2"></div>
+                        <div class="circle circle13_3"></div>
+                        <div class="circle circle13_4"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset13").click(function(){
+    $(".circle13_1 , .circle13_2 , .circle13_3 , .circle13_4").animate({left : "0" , repeat: 0 }, 0);
+});
+$("#btn13_2").click(function(){
+   TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, ease: "power4.out"});
+   TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :2, ease: "power4.out"});
+   TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :3, ease: "power4.out"});
+   TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :4, ease: "power4.out"});
+});
+$("#btn13_3").click(function(){
+   TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, ease: "power4.out"});
+   TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :1, repeatDelay: 1, ease: "power4.out"});
+   TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :1, repeatDelay: 2, ease: "power4.out"});
+   TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :1, repeatDelay: 3, ease: "power4.out"});
+});
+$("#btn13_4").click(function(){
+   TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :2, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :3, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :4, yoyo:true , ease: "power4.out"});
+});
+$("#btn13_5").click(function(){
+   TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+   TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+});</code></pre>
+                </div>
+                <!-- //intro14 -->
+
+                <!-- intro15 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro15" class="page-header">Stagger
+                        <span class="btn" id="reset14">Reset</span>
+                        <span class="btn" id="btn14_1">Stagger</span>
+                        <span class="btn" id="btn14_2">Stagger-infinify</span>
+                    </h2>
+                    <div class="abox box14">
+                        <div class="circle circle14_1"></div>
+                        <div class="circle circle14_2"></div>
+                        <div class="circle circle14_3"></div>
+                        <div class="circle circle14_4"></div>
+                    </div>
+<pre class="line-numbers  language-js"><code class=" language-js">$("#reset14").click(function(){
+    $(".circle14_1, .circle14_2, .circle14_3, .circle14_4").animate({left : "0" }, 0)
+});
+$("#btn14_1").click(function(){
+    TweenMax.staggerTo ([".circle14_1", ".circle14_2", ".circle14_3", ".circle14_4"], 1 ,{left : "80%" , ease : "power3.out" }, .25)
+});
+$("#btn14_2").click(function(){
+    TweenMax.staggerTo ([".circle14_1", ".circle14_2", ".circle14_3", ".circle14_4"], 1 ,{left : "80%" , ease : "power3.out" , repeat :-1, yoyo:true }, .25)
+});</code></pre>
+                </div>
+                <!-- //intro15 -->
+
+                <!-- intro17 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro17" class="page-header">GreenSock Cheat Sheet for Web Animation</h2>
+                    <p class="codepen" data-height="600" data-theme-id="default" data-default-tab="result" data-user="jasonbaciulis" data-slug-hash="zNRdyM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GreenSock Cheat Sheet for Web Animation">
+                        <span>See the Pen <a href="https://codepen.io/jasonbaciulis/pen/zNRdyM">
+                        GreenSock Cheat Sheet for Web Animation</a> by Jason Baciulis (<a href="https://codepen.io/jasonbaciulis">@jasonbaciulis</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //intro17 -->
+
+                <!-- intro16 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro16" class="page-header">Sample01</h2>
+                        <p class="codepen" data-height="600" data-theme-id="default" data-default-tab="result" data-user="ARAM31" data-slug-hash="jOEvJav" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GASP-Candy heart">
+                            <span>See the Pen <a href="https://codepen.io/ARAM31/pen/jOEvJav">
+                            GASP-Candy heart</a> by leearam (<a href="https://codepen.io/ARAM31">@ARAM31</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                          </p>
+                          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //intro16 -->
+
+                <!-- intro18 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro18" class="page-header">Sample02</h2>
+                    <p class="codepen" data-height="600" data-theme-id="default" data-default-tab="result" data-user="ARAM31" data-slug-hash="LYEJvyj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP- Title">
+                        <span>See the Pen <a href="https://codepen.io/ARAM31/pen/LYEJvyj">
+                        GSAP- Title</a> by leearam (<a href="https://codepen.io/ARAM31">@ARAM31</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //intro18 -->
+
+                <!-- intro19 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro19" class="page-header">Sample03</h2>
+                    <p class="codepen" data-height="600" data-theme-id="default" data-default-tab="result" data-user="ARAM31" data-slug-hash="eYmQxGg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rocket">
+                        <span>See the Pen <a href="https://codepen.io/ARAM31/pen/eYmQxGg">
+                        Rocket</a> by leearam (<a href="https://codepen.io/ARAM31">@ARAM31</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //intro19 -->
+
+                
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">GSAP</a></li>
+                        <li><a href="#intro2">TweenMax. to</a></li>
+                        <li><a href="#intro3">TweenMax. to - 여러개 움직이기</a></li>
+                        <li><a href="#intro4">TweenMax. to - 100px씩 움직이기</a></li>
+                        <li><a href="#intro5">TweenMax. from </a></li>
+                        <li><a href="#intro6">Transform - scale</a></li>
+                        <li><a href="#intro7">Transform - radius</a></li>
+                        <li><a href="#intro8">Transform - skewX</a></li>
+                        <li><a href="#intro9">Transform - delay</a></li>
+                        <li><a href="#intro10">Transform - easing</a></li>
+                        <li><a href="#intro11">Callback 함수</a></li>
+                        <li><a href="#intro12">Control</a></li>
+                        <li><a href="#intro13">Timeline </a></li>
+                        <li><a href="#intro14">Repeat </a></li>
+                        <li><a href="#intro15">Stagger </a></li>
+                        <li><a href="#intro17">GreenSock </a></li>
+                        <li><a href="#intro16">Sample01 </a></li>
+                        <li><a href="#intro18">Sample02 </a></li>
+                        <li><a href="#intro19">Sample03 </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="http://dldkfka331.dothome.co.kr">LEEARAM</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script>
+
+    //box1
+    $("#reset1").click(function(){
+        $(".circle1").animate({left : "0" }, 0)
+    });
+    $("#btn1_1").click(function(){
+        $(".circle1").animate({left : "80%" }, 1000)
+    });  //제이쿼리로 만들기
+    // $("#btn1_2").click(function(){
+    //     TweenMax.to(".circle1",1, {left : "80%"});
+    // }); 제이쿼리+gsap 로 만들기
+
+    const btn1_2 = document.getElementById("btn1_2");
+    btn1_2.addEventListener("click", moveStart1);
+    function moveStart1(){
+        TweenMax.to(".circle1",1, {left : "80%"});
+    };      //자바스크립트 + gsap 로 만들기
+
+    //box2
+    $("#reset2").click(function(){
+        $(".circle2_1, .circle2_2, .circle2_3").animate({left : "0" }, 0)
+    });
+    //제이쿼리로 만들기
+    $("#btn2_1").click(function(){
+        $(".circle2_1, .circle2_2, .circle2_3").animate({left : "80%" }, 1000)
+    });
+    //제이쿼리+gsap 로 만들기
+    // $("#btn2_2").click(function(){
+    //     TweenMax.to([".circle2_1, .circle2_2, .circle2_3"], 1, {left : "80%"})
+    // });
+    //자바스크립트 + gsap 로 만들기
+    const btn2_2 = document.getElementById("btn2_2");
+    btn2_2.addEventListener("click", moveStart2);
+    function moveStart2(){
+        TweenMax.to([".circle2_1, .circle2_2, .circle2_3"], 1, {left : "80%"})
+    };
+    //box3
+    $("#reset3").click(function(){
+        $(".circle3").animate({left : "0" }, 0)
+    });
+    $("#btn3_1").click(function(){
+        $(".circle3").animate({left : "+=100px"}, 500);
+    });
+    $("#btn3_2").click(function(){
+         TweenMax.to(".circle3",.5, {left : "+=100px"});
+    });
+    const btn3_2 = document.getElementById("btn3_2");
+    btn3_2.addEventListener("click", moveStart3);
+    function moveStart3(){
+        TweenMax.to(".circle3",.5, {left : "+=100px"});
+    }; 
+    //box4
+    $("#reset4").click(function(){
+        $(".circle4").animate({left : "0" }, 0)
+    });
+    $("#btn4_1").click(function(){
+        alert("제이쿼리에는 반대로 가는 기능이 없습니다.")
+    });
+    $("#btn4_2").click(function(){
+         TweenMax.from(".circle4",1, {left : "80%"});
+    });
+    //box5 
+    $("#reset5").click(function(){
+        $(".circle5").animate({left : "0" }, 0)
+        $(".circle5").css({transform : "scale(1)"})
+    });
+    $("#btn5_1").click(function(){
+        $(".circle5").animate({left: "80%" }, 1000);
+        $(".circle5").css({transform : "scale(2)"})
+    });
+    $("#btn5_2").click(function(){
+        TweenMax.to (".circle5" , 1 , {left : "80%", scale:"2"}  )
+    });
+    //box6
+    $("#reset6").click(function(){
+        $(".circle6").animate({left : "0",  borderRadius : "50%" }, 0)
+    });
+    $("#btn6_1").click(function(){
+        $(".circle6").animate({left: "80%" , borderRadius : "0%"}, 1000);
+    });
+    $("#btn6_2").click(function(){
+        TweenMax.to (".circle6" , 1 , {left : "80%",  borderRadius : "0%"}  )
+    });
+
+     //box7
+     $("#reset7").click(function(){
+        $(".circle7_1, .circle7_2, .circle7_3").animate({left : "0"}, 0).css({transform: "skewX(0deg)"});
+        TweenMax.to (".circle7_1" , 0 , {left : "0%", skewX : "0deg"});
+        TweenMax.to (".circle7_2" , 0 , {left : "0%", skewX : "0deg"});
+        TweenMax.to (".circle7_3" , 0 , {left : "0%", skewX : "0deg"});
+    });
+    $("#btn7_1").click(function(){
+        $(".circle7_1").animate({left: "80%" }, 2000).css({transform: "skewX(30deg)"});
+        $(".circle7_2").animate({left: "80%" }, 2000).css({transform: "skewX(330deg)"});
+        $(".circle7_3").animate({left: "80%" }, 2000).css({transform: "skewX(660deg)"});
+    });
+    $("#btn7_2").click(function(){
+        TweenMax.to (".circle7_1" , 2 , {left : "80%", skewX : "30deg"});
+        TweenMax.to (".circle7_2" , 2 , {left : "80%", skewX : "330deg"});
+        TweenMax.to (".circle7_3" , 2 , {left : "80%", skewX : "660deg"});
+    });
+
+    //box8
+    $("#reset8").click(function(){
+        $(".circle8_1, .circle8_2, .circle8_3").delay(0).animate({left : "0"}, 0);
+        TweenMax.to (".circle8_1" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+        TweenMax.to (".circle8_2" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+        TweenMax.to (".circle8_3" , 0 , {left : "0%",delay:0, rotationY : "0deg"});
+    });
+    $("#btn8_1").click(function(){
+        $(".circle8_1").delay(500).animate({left: "80%" }, 1000)
+        $(".circle8_2").delay(1000).animate({left: "80%" }, 1000)
+        $(".circle8_3").delay(1500).animate({left: "80%" }, 1000)
+    });
+    $("#btn8_2").click(function(){
+        TweenMax.to (".circle8_1" , 2 , {left : "80%",delay:.5, rotationY : "360deg"});
+        TweenMax.to (".circle8_2" , 2 , {left : "80%",delay:1, rotationY : "720deg"});
+        TweenMax.to (".circle8_3" , 2 , {left : "80%",delay:1.5, rotationY : "1080deg"});
+    });
+
+ //box9
+ $("#reset9").click(function(){
+        $(".box9 > div ").animate({left : "0"}, 0);
+    });
+    $("#btn9_1").click(function(){
+        $(".circle9_1").animate({left: "80%" }, 2000, "easeInCubic");
+        $(".circle9_2").animate({left: "80%" }, 2000, "easeOutQuad");
+        $(".circle9_3").animate({left: "80%" }, 2000, "easeOutQuint");
+        $(".circle9_4").animate({left: "80%" }, 2000, "easeInOutElastic");
+        $(".circle9_5").animate({left: "80%" }, 2000, "easeInOutExpo");
+        $(".circle9_6").animate({left: "80%" }, 2000, "easeInBack");
+        $(".circle9_7").animate({left: "80%" }, 2000, "easeInOutBack");
+        $(".circle9_8").animate({left: "80%" }, 2000, "easeInSine");
+    });
+    $("#btn9_2").click(function(){
+        TweenMax.to (".circle9_1" , 2 , {left : "80%", ease: "bounce.out"});
+        TweenMax.to (".circle9_2" , 2 , {left : "80%", ease: "rough({ template: none.out, strength:  1, points: 20, taper: 'none', randomize: true, clamp: false})"});
+        TweenMax.to (".circle9_3" , 2 , {left : "80%", ease: "steps(12)"});
+        TweenMax.to (".circle9_4" , 2 , {left : "80%", ease: "back.out(1.7)"});
+        TweenMax.to (".circle9_5" , 2 , {left : "80%", ease: "slow(0.7, 0.7, false)"});
+        TweenMax.to (".circle9_6" , 2 , {left : "80%", ease: "circ.out"});
+        TweenMax.to (".circle9_7" , 2 , {left : "80%", ease: "power1.out"});
+        TweenMax.to (".circle9_8" , 2 , {left : "80%", ease: "elastic.out(1, 0.3)"});
+    });
+
+    //box10
+    $("#reset10").click(function(){
+        $(".circle10").animate({left : "0" }, 0)
+    });
+    $("#btn10_1").click(function(){
+        $(".circle10").animate({left: "80%"}, 1000, "easeInSine" , function(){
+            $(".circle10").animate({left: "0%"}, 1000, "easeInSine");
+        });
+    });
+    $("#btn10_2").click(function(){
+        TweenMax.to (".circle10" , 1 , {left : "80%", rotationX : "1080deg" , onComplete : complete});
+    });
+    function complete(){
+        TweenMax.to (".circle10" , 1 , {left : "0%",  rotationX : "0deg"});
+    }
+
+ //box11
+    const tween = TweenMax.to(".circle11" , 10, {left : "90%", borderRadius: "0%", rotation : "720deg"});
+    tween.pause();
+    $("#reset11").click(function(){
+        tween.kill();
+        $(".circle11").animate({left : "0%", borderRadius: "50%", rotation : "0deg"}, 0)
+    });
+    $("#btn11_1").click(function(){ tween.play()});
+    $("#btn11_2").click(function(){ tween.pause()});
+    $("#btn11_3").click(function(){ tween.resume() });
+    $("#btn11_4").click(function(){ tween.reverse() });
+    $("#btn11_5").click(function(){ tween.seek(0.5) });
+    $("#btn11_6").click(function(){ tween.timeScale(0.5)});
+    $("#btn11_7").click(function(){ tween.timeScale(2)});
+    $("#btn11_8").click(function(){ tween.kill() });
+    $("#btn11_9").click(function(){ tween.restart() });
+
+    //box12
+    $("#reset12").click(function(){
+        $(".circle12").animate({left : "0" , borderRadius: "50%"}, 0);
+        $(".circle12").css({"background" : "linear-gradient(78deg, rgba(96, 96, 96, 0.04) 0%, rgba(96, 96, 96, 0.04) 35%,rgba(220, 220, 220, 0.04) 35%, rgba(220, 220, 220, 0.04) 100%),linear-gradient(150deg, rgba(83, 83, 83, 0.04) 0%, rgba(83, 83, 83, 0.04) 71%,rgba(6, 6, 6, 0.04) 71%, rgba(6, 6, 6, 0.04) 100%),linear-gradient(311deg, rgba(203, 203, 203, 0.04) 0%, rgba(203, 203, 203, 0.04) 58%,rgba(3, 3, 3, 0.04) 58%, rgba(3, 3, 3, 0.04) 100%),linear-gradient(137deg, rgba(110, 110, 110, 0.04) 0%, rgba(110, 110, 110, 0.04) 11%,rgba(226, 226, 226, 0.04) 11%, rgba(226, 226, 226, 0.04) 100%),linear-gradient(90deg, rgb(215, 19, 84),rgb(234, 119, 123))"})
+    });
+    $("#btn12_1").click(function(){
+        $(".circle12").animate({left: "80%"}, 500).animate({height: "300px"}, 500, "easeOutQuint").animate({opacity: ".5", borderRadius: "20%" }, 500, "easeOutQuint").animate({height: "60px"}, 500).animate({opacity: "1" , left: "0%" , borderRadius: "50%" }, 500);
+    });
+    $("#btn12_2").click(function(){
+        const tl = new TimelineLite();
+        tl.to (".circle12" , 0.5 , {left : "80%"});
+        tl.to (".circle12" , 0.5 , {height: "300px"});
+        tl.to (".circle12" , 0.5 , {opacity: ".5", borderRadius: "20%" });
+        tl.to (".circle12" , 0.5 , {height: "60px" });
+        tl.to (".circle12" , 0.5 , {opacity: "1" , left: "0%" , borderRadius: "50%"});
+    });
+    $("#btn12_3").click(function(){
+        const tl = new TimelineLite();
+        tl.to(".circle12", 1, {left: "80%",scale: "0.5",rotation:"100deg" });
+        tl.to(".circle12", 2, {left: "0%",opacity: 0.5, skewY: "720deg", rotation:"300deg",scale: "1" });
+        tl.to(".circle12", 1, {left: "90%", rotation:"1000deg" , borderRadius: "0%", scale: "0.5", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+        tl.to(".circle12", 1, {rotation:"-2000deg"});
+        tl.to(".circle12", 1, {opacity:1, left: "0", scale: "1", rotation:"-0deg"});
+    });
+   
+    //box13
+    $("#reset13").click(function(){
+        $(".circle13_1 , .circle13_2 , .circle13_3 , .circle13_4").animate({left : "0" , repeat: 0 }, 0);
+    });
+    $("#btn13_2").click(function(){
+       TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, ease: "power4.out"});
+       TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :2, ease: "power4.out"});
+       TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :3, ease: "power4.out"});
+       TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :4, ease: "power4.out"});
+    });
+    $("#btn13_3").click(function(){
+       TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, ease: "power4.out"});
+       TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :1, repeatDelay: 1, ease: "power4.out"});
+       TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :1, repeatDelay: 2, ease: "power4.out"});
+       TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :1, repeatDelay: 3, ease: "power4.out"});
+    });
+    $("#btn13_4").click(function(){
+       TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :1, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :2, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :3, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :4, yoyo:true , ease: "power4.out"});
+    });
+    $("#btn13_5").click(function(){
+       TweenMax.to(".circle13_1" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_2" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_3" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+       TweenMax.to(".circle13_4" , 2, { left: "80%" , repeat :-1, yoyo:true , ease: "power4.out"});
+    });
+
+  //box14
+  $("#reset14").click(function(){
+        $(".circle14_1, .circle14_2, .circle14_3, .circle14_4").animate({left : "0" }, 0)
+    });
+    $("#btn14_1").click(function(){
+        TweenMax.staggerTo ([".circle14_1", ".circle14_2", ".circle14_3", ".circle14_4"], 1 ,{left : "80%" , ease : "power3.out" }, .25)
+    });
+    $("#btn14_2").click(function(){
+        TweenMax.staggerTo ([".circle14_1", ".circle14_2", ".circle14_3", ".circle14_4"], 1 ,{left : "80%" , ease : "power1.out" , repeat :-1,rotationY: "800deg" , yoyo:true ,scale:".2" }, .25)
+    });
+
+    </script>
+
+</body>
+
+</html>

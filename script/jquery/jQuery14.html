@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery14</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li {list-style: none;}
+        a{text-decoration: none; color: #666;}
+        .tab_menu {width: 350px; margin: 100px auto;}
+        .tab_btn ul{overflow: hidden;}
+        .tab_btn li { float: left; width: 20%; text-align: center;}
+        .tab_btn li a{ background: #1e88e5; padding: 14px 10px 10px 10px; color: #fff; display: block;}
+        #tab_cont {width: 350px; height: 350px;}
+        #tab_cont.img1{background: url(img/01.jpg); background-size: 350px;}
+        #tab_cont.img2{background: url(img/02.jpg); background-size: 350px;}
+        #tab_cont.img3{background: url(img/03.jpg); background-size: 350px;}
+        #tab_cont.img4{background: url(img/04.jpg); background-size: 350px;}
+        #tab_cont.img5{background: url(img/05.jpg); background-size: 350px;}
+    </style>
+</head>
+<body>
+    <div class="tab_menu">
+        <div class="tab_btn">
+            <ul>
+                <li><a href="#">Tab1</a></li>
+                <li><a href="#">Tab2</a></li>
+                <li><a href="#">Tab3</a></li>
+                <li><a href="#">Tab4</a></li>
+                <li><a href="#">Tab5</a></li>
+            </ul>
+        </div>
+        <div id="tab_cont">    
+        </div>
+    </div>
+
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        // //글씨를 클릭하면 menu로  모두변경하기
+        // $(".tab_btn li").click(function(){
+        //     $(".tab_btn li").find("a").text("menu")
+        // })
+
+        //글씨 클릭하면 클릭한것 만 변경
+        // $(".tab_btn li").click(function(){
+        //     $(this).find("a").text("menu")
+        // })
+
+        //글씨 클릭하면  숫자넣어서 변경
+        // $(".tab_btn li").click(function(){
+        //     let target = $(this);
+        //     let index = target.index() +1;
+        //     target.find("a").text("menu"+index)
+        // })
+        //해당버튼 클릭하면 클래스 추가하기
+        $(".tab_btn li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index()+1;
+            target.find("a").text("menu"+index);
+            $("#tab_cont").removeClass().addClass("img"+index);
+        })
+    </script>
+</body>
+</html>
